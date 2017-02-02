@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	
+		<title>Home :: HudsonGTV</title>
+	
+		<link href = "stylesheet.css" type = "css" rel = "stylesheet" />
+		<link href = "http://assets-cloud.enjin.com/users/8642750/avatar/avatar.1430795791.png" type = "icon" rel = "icon">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<script src = "scripts.js" type = "text/javascript"></script>
+		<style type="text/css">
+		html, body, a:hover {
+			cursor: url(http://cur.cursors-4u.net/cursors/cur-11/cur1028.ani), url(http://cur.cursors-4u.net/cursors/cur-11/cur1027.png), progress !important;
+		}
+		</style>
+		<style type="text/css">
+		a href, a:link {
+			cursor: url(http://cur.cursors-4u.net/cursors/cur-9/cur862.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur862.png), progress !important;
+		}
+		</style>
+
+		<style>
+		body {
+			scrollbar-base-color: #FFDF01;
+			scrollbar-base-color: #FFDF01;
+			scrollbar-3dlight-color: #FFAA1E;
+			scrollbar-highlight-color: #FFB438;
+			scrollbar-track-color: grey;
+			scrollbar-arrow-color: #FF9F01;
+			scrollbar-shadow-color: #BC7401;
+			scrollbar-dark-shadow-color: #7D4D00;
+		}
+		</style>
+		
+		<!--<script>
+		if (screen.width <= 800) {
+			window.location = "index.html";
+		}
+  
+		</script>-->
+		
+	
+	</head>
+	
+	<body>
+	
+		<div id = "divOne">
+			
+			<div id = "navFixed">
+			
+				<div id = "navBar">
+					<div class = "buttons">
+						<h1>
+							<ul class = "buttons">
+								<li class = "fa fa-home" id = "buttonAlignment"> <font face="Arial Black"><a href = "index.html">Home</a></font></li>
+								<li class = "fa fa-youtube-square" id = "buttonAlignment"> <font face="Arial Black"><a href = "https://youtube.com/HudsonGTV">Channel</a></font></li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+								<li>
+									<a href = "index.html">
+										<span title = "HudsonGTV">
+											<img class = "animated fadeInDown" id="animated-example" src="images/HudsonGTV.png" onmouseover="this.src='images/HudsonGTVRollover.png'" onmouseout="this.src='images/HudsonGTV.png'" width = "405" height = "75" />
+										</span>
+									</a>
+								</li>
+								<li>&nbsp;&nbsp;&nbsp;</li>
+								<li class = "fa" id = "buttonAlignment"><font face="Arial Black"><a href = "index.html">Chat</a> </font><li id = "iconAlignment" class = "fa fa-comments-o"></li></li>
+								<li class = "fa" id = "buttonAlignment"><font face="Arial Black"><a href = "index.html">About</a> </font><li id = "iconAlignment" class = "fa fa-list"></li></li>
+								<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+							</ul>
+						</h1>
+					</div>
+				</div>
+			
+			</div>
+			<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+			<div class = "listsTop">
+			<h2>About Me:</h2>
+				<p>Sup! I'm Hudson!</p>
+			<h2>Favorite Movies:</h2>
+				<ul>
+					<li>Terminator</li>
+					<li>Mission Impossible</li>
+				</ul>
+			<h2>Favorite Video Games:</h2>
+				<ul>
+					<li>Minecraft</li>
+					<li>The Sims 4</li>
+				</ul>
+			<h2>Hobbies:</h2>
+				<ul>
+					<li>Coding</li>
+					<li>Gaming</li>
+					<li>Fencing</li>
+				</ul>
+				
+			</div>	
+			
+			<div class = "listsBottom">
+			
+				<h1>Cookie Clicker</h1>
+				<br />
+				<br />
+				<br />
+				<h2 id = "hudson">0</h2>
+				
+				<button class = "textButton" onclick = "OOPS()">GET A COOKIE!</button><br /><br />
+				<button class = "textButton" onclick = "eatStuff()">GET COOKIES!</button>
+				
+				<script>
+				
+				function eatStuff() {
+					setInterval(function cursorTimer(){OOPS();}, 100);
+				}
+				
+				function OOPS() {
+					document.getElementById("hudson").innerHTML = parseInt(document.getElementById("hudson").innerHTML) + 1;
+				}
+				
+				</script>
+				
+				<br /><br /><input id = "timer" class = "numberBox" type = "number" class = "textButton"></input>
+				<br /><br /><button class = "textButton" onclick = "countDown()">Arm Bomb</button>
+			
+				<script>
+					
+					function countDown() {
+					
+						var intervalHudson = setInterval(function cursorTimer(){count();}, 1000);
+						
+					}
+					
+					function count() {
+					
+						var temp = parseInt(document.getElementById("timer").innerHTML);
+					
+						if(temp < 1) {
+							clearInterval(intervalHudson);
+						}
+					
+						document.getElementById("timer").innerHTML = temp - 1;
+						
+					}
+					
+				</script>
+				
+				
+				<br /><br /><br /><br /><br />
+				
+				
+				<input id = "shiftValue" class = "textButton" type = "number" style="width: 200px" placeholder = "&nbsp;&nbsp;&nbsp;Shift Value" />
+				<br /><br /><br />
+				<input id = "decryptedTextField" class = "textButton" type = "text" placeholder = " Decrypted Text..." />
+				<br /><br />
+				<button id = "encryptText" class = "textButton" onClick = "textEncryption()">Encrypt</button>
+				<br /><br /><br />
+				<input id = "encryptedTextField" class = "textButton" type = "text" placeholder = " Encrypted Text..." />
+				<br /><br />
+				<button id = "decryptText" class = "textButton" onClick = "textDecryption()">Decrypt</button>
+				
+				<script>
+					
+					function textEncryption() {
+						
+						var shiftValueField = parseInt(document.getElementById("shiftValue").value);
+						
+						var encryptTextField = document.getElementById("decryptedTextField").value;
+						// for loop 
+						
+						var encryptString = "";
+						
+						for(var i = 0; i <= encryptTextField.length; i++) {
+							var newChar = encryptTextField.charAt(i);
+							var charAtStuff = newChar.charCodeAt() + shiftValueField;
+							
+							encryptString += String.fromCharCode(charAtStuff);
+						}
+						
+						var decryptTextField = document.getElementById("encryptedTextField");
+					
+						decryptTextField.value = encryptString;
+						
+					}
+					
+					function textDecryption() {
+						
+						var shiftValueField = parseInt(document.getElementById("shiftValue").value);
+						
+						var decryptTextField = document.getElementById("encryptedTextField").value;
+						// for loop 
+						
+						var decryptString = "";
+						
+						for(var i = 0; i <= decryptTextField.length; i++) {
+							var newChar = decryptTextField.charAt(i);
+							var charAtStuff = newChar.charCodeAt() + -shiftValueField;
+							
+							decryptString += String.fromCharCode(charAtStuff);
+						}
+						
+						var encryptTextField = document.getElementById("decryptedTextField");
+					
+						encryptTextField.value = decryptString;
+						
+					}
+					
+				</script>
+				
+				<br /><br /><br /><br />
+				
+			</div>
+			
+			
+		</div>
+		
+		<br /><br /><br /><br /><br /><br /><br /><br />
+		
+	</body>
+	
+</html>
