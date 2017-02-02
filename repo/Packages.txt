@@ -5,7 +5,7 @@ Maintainer: me <me.me@me.me>
 Filename: debs//packagename.deb
 Size: bytes
 Section: Foo
-Description: A flat and simple theme for Foo.
+Description: A flat and simple foo for bar.
 MD5sum: nvk3njjnv
 Author: HudsonGTV <me>
 Depiction: https://username.github.io/depic/foldername/index.html
