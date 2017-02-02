@@ -1,9 +1,9 @@
-Origin: My Repo
-Label: My Repo
+Origin: HudsonGTV Repository
+Label: HudsonGTV Repository
 Suite: stable
-Version: 1.0
-Codename: makingarepo
+Version: 0.1
+Codename: HKGTV
 Architectures: iphoneos-arm
 Components: main
-Description: My development repo.
+Description: HudsonGTV Dev Repository
 MD5Sum:
