@@ -1,16 +1,3 @@
-Package: com.mcbudder.foo
-Version: 0.0
-Architecture: iphoneos-arm
-Maintainer: me <me.me@me.me>
-Filename: debs//packagename.deb
-Size: bytes
-Section: Foo
-Description: A flat and simple foo for bar.
-MD5sum: nvk3njjnv
-Author: HudsonGTV <me>
-Depiction: https://username.github.io/depic/foldername/index.html
-Name: Foo
-
 Package: com.hudsongreen.roundfolders
 Version: 0.1
 Architecture: iphoneos-arm
