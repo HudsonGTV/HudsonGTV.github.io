@@ -9,9 +9,9 @@ Description: Broken RoundFolders theme
 Author: Hudson Green <support.mcbudder.com>
 Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.roundfolders/index.html
 Name: Round Folders
-MD5sum: C7AFCED7F8257D27A458EC37E23E4DFF
-SHA1: 1B8BB8406973C57B05B1C96F58DC8D8A953724DC
-SHA256: 742C2D0C2192E4E73F85B6F3FCB67C9A4E612EB7491FD7C77EC8C6348F7A992C
+MD5sum: c7afced7f8257d27a458ec37e23e4dff
+SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc
+SHA256: 742c2d0c2192e4e73f85b6f3fcb67c9a4e612eb7491fd7c77ec8c6348f7a992c
 
 
 Package: com.hudsongreen.androidsettingsicons
@@ -23,6 +23,6 @@ Filename: debs//com.hudsongreen.androidsettingsicons.deb
 Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.androidsettingsicons/index.html
 Author: Hudson Green
 Section: Themes
-MD5sum: F4688A8C45D39BEE19DF47AB4B121E91
-SHA1: BB98362B07D6902D441967AA32F061C1E56DBED3
-SHA256: 8958CB73AACD95E17A6D37CB3899B9BD16AF3BB4D2431531E470727F6C530B8B
+MD5sum: f4688a8c45d39bee19df47ab4b121e91
+SHA1: bb98362b07d6902d441967aa32f061c1e56dbed3
+SHA256: 8958cb73aacd95e17a6d37cb3899b9bd16af3bb4d2431531e470727f6c530b8b
