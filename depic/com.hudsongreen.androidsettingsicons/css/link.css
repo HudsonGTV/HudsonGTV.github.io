@@ -15,6 +15,7 @@ li.link-inner {
 
 .link-inner > div > label {
 	color: #000;
+	font-weight: bold;
 }
 
 img.icon {
@@ -28,4 +29,8 @@ img.icon {
 
 p {
 	font-weight: 300;
+}
+
+.link {
+	text-align: left;
 }
