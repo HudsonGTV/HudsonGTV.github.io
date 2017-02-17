@@ -21,9 +21,11 @@ Architecture: iphoneos-arm
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//com.hudsongreen.androidsettingsicons.deb
 Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.androidsettingsicons/index.html
-Author: Hudson Green
+Author: Hudson Green <support.mcbudder.com>
+Maintainer: Hudson Green <support.mcbudder.com>
 Section: Themes
 MD5sum: 799a966201f3f5c840632b4d6b210028
 SHA1: 20af812c9b24cd1fc69219262489f19b6e5c0ccf
 SHA256: f5182d92e918c9213533f51ddc696526cfab92a84a197a90abae137c8fe62724
+Icon: icon://androidsettingsicons.png
 
