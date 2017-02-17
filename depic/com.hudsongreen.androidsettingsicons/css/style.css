@@ -7,12 +7,12 @@ a,button {
   text-decoration:none
 }
 
-html {
-  background:#efeff4
-}
+/*html {
+  background: rgba(19, 19, 24, 0.65);
+}*/
 
 html .depiction {
-  background:0 0
+  background:0 0;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 
 .depiction body {
   margin-top:0;
-  margin-bottom:0
+  margin-bottom:0;
 }
 
 @media (min-width:708px) {
@@ -105,26 +105,25 @@ ul {
   margin:5px 0 35px;
   padding:0;
   list-style:none;
-  background:#fff
+  background: rgba(255, 255, 255, 0.15);
 }
 
 ul:after,ul:before {
   content:"";
   display:block;
   height:1px;
-  background:#c8c7cc
+  background: rgba(55, 55, 55, 0.25);
 }
 
 @media (min-width:708px) {
-ul:after,ul:before {
-  display:none
-}
+	ul:after,ul:before {
+	  display:none;
+	}
 }
 
 ul li {
-  border-bottom:1px solid #c8c7cc;
-  margin-left:15px;
-  padding:13px 15px 13px 0
+  border-bottom: 1px solid rgba(20, 19, 20, 0.25);
+  padding:13px 15px 13px 10px;
 }
 
 ul li:last-child {
@@ -133,12 +132,12 @@ ul li:last-child {
 
 ul .button,ul li [role="link"],ul li p {
   padding:13px 15px;
-  margin:-13px -15px
+  margin:-13px -15px;
 }
 
 ul .button+p,ul li [role="link"]+p,ul li p+p {
   padding-top:0;
-  margin-top:0
+  margin-top:0;
 }
 
 ul .button,ul li [role="link"] {
@@ -159,37 +158,6 @@ ul .button:after,ul li [role="link"]:after {
   width:10px;
   height:13px;
   margin-top:-6.5px
-}
-
-ul li>button {
-  font:inherit;
-  width:100%;
-  text-align:left
-}
-
-ul li .pull-in {
-  vertical-align:top
-}
-
-@media (max-width:708px) {
-ul li .pull-in {
-  margin:-13px -15px
-}
-}
-
-ul+[class="footer"],ul+p {
-  margin-top:-25px
-}
-
-img {
-  max-width:290px
-}
-
-blockquote {
-  border-left:4px solid #c9c9cd;
-  margin-left:20px;
-  padding-left:8px;
-  font-style:italic
 }
 
 code {

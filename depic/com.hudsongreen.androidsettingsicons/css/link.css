@@ -1,0 +1,31 @@
+.chevron {
+	background-repeat: no-repeat;
+	background-image: url(../../../assets/chevron.png);
+	background-position-x: calc(100% - 22px);
+}
+
+li.link-inner {
+	display: inline-block;
+}
+
+.link-inner > div {
+	display: inline-block;
+	width: 100vw;
+}
+
+.link-inner > div > label {
+	color: #000;
+}
+
+img.icon {
+	height: auto;
+	/* XXX: small differences due to font bugs */
+	margin: -7px 6px -9px 5px; /*June*/
+	max-height: 30px;
+	min-width: 30px;
+	width: 30px;
+}
+
+p {
+	font-weight: 300;
+}
