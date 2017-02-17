@@ -62,7 +62,7 @@ ul {
 	margin:5px 0 35px;
 	padding:0;
 	list-style:none;
-	background: rgba(255, 255, 255, 0.5);
+	background: rgba(255, 255, 255, 1);
 }
 
 ul:after,ul:before {
