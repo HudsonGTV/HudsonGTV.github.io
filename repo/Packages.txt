@@ -10,3 +10,13 @@ MD5sum: nvk3njjnv
 Author: HudsonGTV <me>
 Depiction: https://username.github.io/depic/foldername/index.html
 Name: Foo
+
+Package: com.hudsongreen.roundfolders
+Version: 0.1
+Architecture: iphoneos-arm
+Maintainer: Hudson Green
+Filename: debs//com.hudsongreen.roundfolders.deb
+Section: Themes
+Description: Broken RoundFolders theme.
+Author: HudsonGTV <me>
+Name: Round Folders
