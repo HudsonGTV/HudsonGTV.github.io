@@ -1,0 +1,21 @@
+Package: com.hudsongreen.roundfolders
+Version: 0.1
+Architecture: iphoneos-arm
+Maintainer: Hudson Green <support.mcbudder.com>
+Filename: debs//com.hudsongreen.roundfolders.deb
+Size: 37000
+Section: Themes
+Description: Broken RoundFolders theme
+Author: Hudson Green <support.mcbudder.com>
+Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.roundfolders/index.html
+Name: Round Folders
+
+Package: com.hudsongreen.androidsettingsicons
+Name: Android Settings Icons
+Version: 0.6
+Architecture: iphoneos-arm
+Description: Some icons in the iOS settings page to match those of Android
+Filename: debs//com.hudsongreen.androidsettingsicons.deb
+Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.androidsettingsicons/index.html
+Author: Hudson Green
+Section: Themes
