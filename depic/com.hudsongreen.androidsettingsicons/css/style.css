@@ -69,7 +69,8 @@ ul:after,ul:before {
 	content:"";
 	display:block;
 	height:1px;
-	background:#c8c7cc;
+	/*background:#c8c7cc;*/
+	background: rgba(200, 199, 204, 0.5);
 }
 
 @media (min-width:708px) {
@@ -79,7 +80,8 @@ ul:after,ul:before {
 }
 
 ul li {
-	border-bottom: 0.6px solid rgba(200, 199, 204, 0.9);
+	border-bottom: 0.6px solid rgba(200, 199, 204, 0.5);
+	margin-left: 0px;
 	padding: 13px 15px 13px 10px;
 }
 

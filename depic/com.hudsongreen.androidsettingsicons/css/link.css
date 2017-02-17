@@ -15,7 +15,7 @@ li.link-inner {
 
 .link-inner > div > label {
 	color: #000;
-	font-weight: bold;
+	font-family: -apple-system-font, Arial;
 }
 
 img.icon {
