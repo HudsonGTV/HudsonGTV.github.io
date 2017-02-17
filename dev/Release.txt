@@ -1,0 +1,9 @@
+Origin: HudsonGTV Repository
+Label: HudsonGTV Repository
+Suite: stable
+Version: 0.1
+Codename: HKGTV
+Architectures: iphoneos-arm
+Components: main
+Description: HudsonGTV Dev Repository
+MD5Sum:
