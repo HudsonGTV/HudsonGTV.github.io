@@ -1,7 +1,7 @@
 .chevron {
 	background-repeat: no-repeat;
 	background-image: url(../../../assets/chevron.png);
-	background-position-x: calc(100% - 22px);
+	background-position-x: 100%;
 }
 
 li.link-inner {
@@ -10,7 +10,7 @@ li.link-inner {
 
 .link-inner > div {
 	display: inline-block;
-	width: 100vw;
+	width: 100%;
 }
 
 .link-inner > div > label {
