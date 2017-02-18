@@ -2,12 +2,12 @@ Package: com.hudsongreen.roundfolders
 Version: 0.1
 Architecture: iphoneos-arm
 Maintainer: Hudson Green <support.mcbudder.com>
-Filename: debs//com.hudsongreen.roundfolders.deb
+Filename: debs//Themes/RoundFolders/com.hudsongreen.roundfolders.deb
 Size: 37000
 Section: Themes
 Description: Broken RoundFolders theme
 Author: Hudson Green <support.mcbudder.com>
-Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.roundfolders/index.html
+Depiction: depic//Themes/RoundFolders/index.html
 Name: Round Folders
 MD5sum: c7afced7f8257d27a458ec37e23e4dff
 SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc
@@ -16,16 +16,14 @@ SHA256: 742c2d0c2192e4e73f85b6f3fcb67c9a4e612eb7491fd7c77ec8c6348f7a992c
 
 Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
-Version: 0.6
+Version: 0.7
 Architecture: iphoneos-arm
 Description: Some icons in the iOS settings page to match those of Android
-Filename: debs//com.hudsongreen.androidsettingsicons.deb
-Depiction: https://hudsongtv.github.io/depic/com.hudsongreen.androidsettingsicons/index.html
+Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
+Depiction: depic//Themes/AndroidSettingsIcons/index.html
 Author: Hudson Green <support.mcbudder.com>
 Maintainer: Hudson Green <support.mcbudder.com>
 Section: Themes
-MD5sum: 799a966201f3f5c840632b4d6b210028
-SHA1: 20af812c9b24cd1fc69219262489f19b6e5c0ccf
-SHA256: f5182d92e918c9213533f51ddc696526cfab92a84a197a90abae137c8fe62724
-Icon: icon//androidsettingsicons.png
-
+MD5sum: 648f2eb5a513d4fb91afadcbe3e98406
+SHA1: 1cab4a6063635fef8453f241da23485ae7a03e39
+SHA256: a6ab215885f137fb641fca5ca77b6d6c586739a75946d7733d0e9533da8e9f82

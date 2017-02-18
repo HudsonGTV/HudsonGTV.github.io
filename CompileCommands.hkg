@@ -1,0 +1,13 @@
+su
+
+cd /var/mobile/Downloads/com.hudsongreen.<packagename>
+
+dpkg -b com.hudsongreen.<packagename>
+
+
+
+(Only run if error is "control directory has bad peermissions 777 (must be >=0755 and <=0775)")
+
+chmod -R 0755 'com.hudsongreen.<packagename>'
+
+dpkg -b com.hudsongreen.<packagename>

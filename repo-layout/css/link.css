@@ -15,7 +15,7 @@ li.link-inner {
 
 .link-inner > div > label {
 	color: #000;
-	font-family: -apple-system-font, Arial;
+	font-family: Arial, -apple-system-font;
 }
 
 img.icon {
@@ -34,3 +34,40 @@ p {
 .link {
 	text-align: left;
 }
+
+.repo-link {
+	margin-top: -1px;
+}
+
+.icon-top {
+	border-radius: 5px;
+}
+
+.changelog-list {
+	font-family: Arial, -apple-system-font;
+}
+
+.bugs-list {
+	font-family: Arial, -apple-system-font;
+}
+
+.version-number {
+	font-weight: bold;
+}
+
+.version-number.listed {
+	font-weight: normal;
+	font-size: 20px;
+}
+
+.version-number.listed.latest-ver {
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.right {
+	float: right;
+	font-family: Arial, -apple-system-font;
+}
+
+
