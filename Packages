@@ -7,7 +7,7 @@ Size: 37000
 Section: Themes
 Description: Broken RoundFolders theme
 Author: Hudson Green <support.mcbudder.com>
-Depiction: depic//Themes/RoundFolders/index.html
+Depiction: https://hudsongtv.github.io/depic/Themes/RoundFolders/index.html
 Name: Round Folders
 MD5sum: c7afced7f8257d27a458ec37e23e4dff
 SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc
@@ -20,7 +20,7 @@ Version: 0.7
 Architecture: iphoneos-arm
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
-Depiction: depic//Themes/AndroidSettingsIcons/index.html
+Depiction: https://hudsongtv.github.io/depic/Themes/AndroidSettingsIcons/index.html
 Author: Hudson Green <support.mcbudder.com>
 Maintainer: Hudson Green <support.mcbudder.com>
 Section: Themes
