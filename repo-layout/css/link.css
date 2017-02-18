@@ -59,6 +59,11 @@ p {
 	margin-bottom: 0px;
 }
 
+ul.is-supported:after, ul.is-supported:before {
+	background: green;
+	opacity: 0.5;
+}
+
 .support-number {
 	font-weight: bold;
 }
