@@ -31,7 +31,7 @@ SHA256: a6ab215885f137fb641fca5ca77b6d6c586739a75946d7733d0e9533da8e9f82
 
 Package: com.hudsongreen.cydia.RepoIcons
 Name: HKG Repository Icons
-Version: 1.0
+Version: 1.1
 Architecture: iphoneos-arm
 Section: Tweaks
 Author: Hudson Green, Folder Template by Eric Golde <cydia@hudsongreen.com>
@@ -42,6 +42,6 @@ Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
 Replaces: com.hudsongreen.cydia.RepoIcons
 Required: Yes
 Essential: Yes
-MD5sum: 22e594393c5717f668d6e2fd526b0b2b
-SHA1: a71f6a9ba8ec232c3d281b49e2649900e9e070a5
-SHA256: 2c1add47875d464bb8d4568902b75ca96a37c7606c6557c1e862a4e7c532cb6b
+MD5sum: a2e97227994bab8993b43b8e251f7fb4
+SHA1: 4a91fd758e1f4ecdaaff860078eb293a52818251
+SHA256: 46f97111d656b63ce8658a169ce2c3cc6567da69d140c0bb3ab5cdaa7d7eed12
