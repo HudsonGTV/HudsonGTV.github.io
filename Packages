@@ -1,13 +1,13 @@
 Package: com.hudsongreen.roundfolders
 Version: 0.1
 Architecture: iphoneos-arm
-Maintainer: Hudson Green <support.mcbudder.com>
+Author: Hudson Green <cydia@hudsongreen.com>
+Maintainer: Hudson Green <cydia@hudsongreen.com>
 Filename: debs//Themes/RoundFolders/com.hudsongreen.roundfolders.deb
 Size: 37000
 Section: Themes
 Description: Broken RoundFolders theme
-Author: Hudson Green <support.mcbudder.com>
-Depiction: https://hudsongtv.github.io/depic/Themes/RoundFolders/index.html
+Depiction: http://repo.hudsongreen.com/depic/Themes/RoundFolders/index.html
 Name: Round Folders
 MD5sum: c7afced7f8257d27a458ec37e23e4dff
 SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc
@@ -20,10 +20,28 @@ Version: 0.7
 Architecture: iphoneos-arm
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
-Depiction: https://hudsongtv.github.io/depic/Themes/AndroidSettingsIcons/index.html
-Author: Hudson Green <support.mcbudder.com>
-Maintainer: Hudson Green <support.mcbudder.com>
+Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
+Author: Hudson Green <cydia@hudsongreen.com>
+Maintainer: Hudson Green <cydia@hudsongreen.com>
 Section: Themes
 MD5sum: 648f2eb5a513d4fb91afadcbe3e98406
 SHA1: 1cab4a6063635fef8453f241da23485ae7a03e39
 SHA256: a6ab215885f137fb641fca5ca77b6d6c586739a75946d7733d0e9533da8e9f82
+
+
+Package: com.hudsongreen.cydia.RepoIcons
+Name: HKG Repository Icons
+Version: 1.0
+Architecture: iphoneos-arm
+Section: Tweaks
+Author: Hudson Green, Folder Template by Eric Golde <cydia@hudsongreen.com>
+Maintainer: Hudson Green <cydia@hudsongreen.com>
+Description: HKG Repo Icons (repo.hudsongreen.com)
+Filename: debs//Tweaks/RepoIcons/com.hudsongreen.cydia.RepoIcons.deb
+Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
+Replaces: com.hudsongreen.cydia.RepoIcons
+Required: Yes
+Essential: Yes
+MD5sum: 22e594393c5717f668d6e2fd526b0b2b
+SHA1: a71f6a9ba8ec232c3d281b49e2649900e9e070a5
+SHA256: 2c1add47875d464bb8d4568902b75ca96a37c7606c6557c1e862a4e7c532cb6b
