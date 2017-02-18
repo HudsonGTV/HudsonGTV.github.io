@@ -53,6 +53,16 @@ p {
 	font-family: Arial, -apple-system-font;
 }
 
+.link.is-supported {
+	background-color: lightgreen;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.support-number {
+	font-weight: bold;
+}
+
 .version-number {
 	font-weight: bold;
 }

@@ -65,7 +65,7 @@ body>p,h2,header .date,p[class="footer"] {
 }
 
 ul {
-	margin:5px 0 35px;
+	/*margin:5px 0 35px;*/
 	padding:0;
 	list-style:none;
 	/*background: rgba(255, 255, 255, 0.75);*/
