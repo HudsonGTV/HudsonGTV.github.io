@@ -29,8 +29,6 @@ if(iOS != false) {
 
 addFooter = (function(year) {
 	
-	$('footer').prepend('<div id="disqus_thread"></div>');
-	
 	$('footer').html('<h2 id="detected-version">'
 						+ 'iOS ' + iOS.toFixed(1) + '.x' +
 					'</h2>' +
@@ -38,6 +36,8 @@ addFooter = (function(year) {
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
 					'</h2>'
 	);
+	
+	$('footer').prepend('<div id="disqus_thread"></div>');
 	
 });
 
