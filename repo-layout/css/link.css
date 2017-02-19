@@ -8,6 +8,7 @@
 
 li.link-inner {
 	display: inline-block;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .link-inner > div {
@@ -61,7 +62,6 @@ p {
 
 ul.is-supported:after, ul.is-supported:before {
 	background: green;
-	opacity: 0.5;
 }
 
 .support-number {
@@ -85,6 +85,8 @@ ul.is-supported:after, ul.is-supported:before {
 .right {
 	float: right;
 	font-family: Arial, -apple-system-font;
+	font-weight: normal;
+	color: #8e8e9f !important;
 }
 
 
