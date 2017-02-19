@@ -9,6 +9,7 @@
 li.link-inner {
 	display: inline-block;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-user-select: none;
 }
 
 .link-inner > div {
@@ -74,13 +75,13 @@ p {
 	color: red !important;
 }
 
-ul.is-supported:after, ul.is-supported:before {
+/*ul.is-supported:after, ul.is-supported:before {
 	background: rgba(0, 55, 0, 0.0);
 }
 
 ul.is-unsupported:after, ul.is-unsupported:before {
 	background: rgba(255, 0, 0, 0.0);
-}
+}*/
 
 .support-number {
 	font-weight: bold;

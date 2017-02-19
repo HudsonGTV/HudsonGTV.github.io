@@ -46,8 +46,9 @@ body {
 body>p,h2,header .date,p[class="footer"] {
 	margin: 15px;
 	color: #6d6d72;
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 400;
+	font-family: Arial, -apple-system-font;
 }
 
 .cydia body>header {
@@ -60,25 +61,28 @@ body>p,h2,header .date,p[class="footer"] {
 
 .table-header {
 	text-align: left;
-	margin-bottom: 0px;
+	margin-bottom: -4px;
 	margin-left: 10px;
 }
 
 ul {
 	/*margin:5px 0 35px;*/
+	margin:9px 0 9px;
 	padding:0;
 	list-style:none;
 	/*background: rgba(255, 255, 255, 0.75);*/
 	background: white !important;
+	border-top: 1px solid rgba(200, 199, 204, 0.5);
+	border-bottom: 1px solid rgba(200, 199, 204, 0.5);
 }
 
-ul:after,ul:before {
+/*ul:after,ul:before {
 	content:"";
 	display:block;
 	height:1px;
-	/*background:#c8c7cc;*/
-	background: rgba(200, 199, 204, 0.5);
-}
+	/*background:#c8c7cc;*\/
+	background: rgba(200, 199, 204, 0.0);
+}*/
 
 @media (min-width:708px) {
 	ul:after,ul:before {
