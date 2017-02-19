@@ -14,50 +14,53 @@
 		<link rel="stylesheet" href="../../../repo-layout/css/link.css" />
 		
 		<!-- IDK Why I put this in the header -->
-		
 		<div class="repo-header"></div>
-		
-		<ul class="is-supported">
-			<li class="link is-supported">
-				<a class="link-inner">
-					<div>
-						<img class="icon" src="../../../assets/compatible.png">
-						<label class="support-text">Supports</label>
-						<label class="support-number right">&le; iOS 10.2</label>
-					</div>
-				</a>
-			</li>
-		</ul>
 		
 	</head>
 	
 	<body class="depiction">
 		
-		<main id="content" role="main">
+		<div id="inner-body-wrapper">
 			
-			<ul>
-				<li class="link">
-					<a href="index.html" class="link-inner chevron">
-						<div>
-							<img class="icon" src="../../../assets/description.png">
-							<label>Back to Description</label>
-						</div>
-					</a>
-				</li>
-				<li>
-					<div id="disqus_thread">Loading...</div>
-				</li>
-			</ul>
+			<main id="content" role="main">
+				
+				<ul class="is-supported">
+					<li class="link is-supported">
+						<a class="link-inner">
+							<div>
+								<img class="icon" src="../../../assets/compatible.png">
+								<label class="support-text">Supports</label>
+								<label class="support-number right">&le; iOS 10.2</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link">
+						<a href="index.html" class="link-inner chevron">
+							<div>
+								<img class="icon" src="../../../assets/description.png">
+								<label>Back to Description</label>
+							</div>
+						</a>
+					</li>
+					<li>
+						<div id="disqus_thread">Loading...</div>
+					</li>
+				</ul>
+				
+				<div class="table-insert-after"></div>
+				
+			</main>
 			
-			<div class="table-insert-after"></div>
+			<footer>
+				
+				<h2 id="detected-version"></h2>
+				
+			</footer>
 			
-		</main>
-		
-		<footer>
-			
-			<h2 id="detected-version"></h2>
-			
-		</footer>
+		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="../../../repo-layout/js/repo.js"></script>

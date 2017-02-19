@@ -7,9 +7,10 @@ a,button {
 	text-decoration: none;
 }
 
-html {
+#inner-body-wrapper {
 	/*background: #efeff4;*/
 	background: #1B1B1B;
+	padding-top: 9px;
 }
 
 html .depiction {
@@ -24,8 +25,15 @@ body {
 }
 
 footer {
-	background: linear-gradient(to bottom, #222 0%,#222 50%,#222 50%,#97979A 50%,#97979A 100%);;
+	background: linear-gradient(to bottom, #222 0%,#222 50%,#222 50%,#97979A 50%,#97979A 100%);
 	margin-top: 50px;
+	padding: 10px;
+}
+
+#page-bottom {
+	display: block;
+	/*background: #efeff4;*/
+	background-color: transparent;
 	padding: 10px;
 }
 

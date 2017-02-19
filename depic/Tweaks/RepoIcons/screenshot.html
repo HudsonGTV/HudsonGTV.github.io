@@ -13,60 +13,51 @@
 		<link rel="stylesheet" href="../../../repo-layout/css/style.css" />
 		<link rel="stylesheet" href="../../../repo-layout/css/link.css" />
 		
-		<!-- IDK Why I put this in the header -->
-		
-		<!--<ul class="repo-link">
-			<li class="link">
-				<a href="http://repo.hudsongreen.com/" class="link-inner chevron" target="_new">
-					<div>
-						<img class="icon icon-top" src="../../../assets/favicon.png">
-						<label>HKG Repository</label>
-					</div>
-				</a>
-			</li>
-		</ul>-->
-		
-		<ul class="is-supported">
-			<li class="link is-supported">
-				<a class="link-inner">
-					<div>
-						<img class="icon" src="../../../assets/compatible.png">
-						<label class="support-text">Supports</label>
-						<label class="support-number right">&le; iOS 10.2</label>
-					</div>
-				</a>
-			</li>
-		</ul>
-		
 	</head>
 	
 	<body class="depiction" data-version-min="6.0" data-version-max="10.2">
 		
-		<main id="content" role="main">
+		<div id="inner-body-wrapper">
 			
-			<ul>
-				<li class="link">
-					<a href="index.html" class="link-inner chevron">
+			<ul class="is-supported">
+				<li class="link is-supported">
+					<a class="link-inner">
 						<div>
-							<img class="icon" src="../../../assets/description.png">
-							<label>Back to Description</label>
+							<img class="icon" src="../../../assets/compatible.png">
+							<label class="support-text">Supports</label>
+							<label class="support-number right">&le; iOS 10.2</label>
 						</div>
 					</a>
 				</li>
-				<li>
-					<p>There are no screenshots for this item.</p>
-				</li>
 			</ul>
 			
-			<div class="table-insert-after"></div>
+			<main id="content" role="main">
+				
+				<ul>
+					<li class="link">
+						<a href="index.html" class="link-inner chevron">
+							<div>
+								<img class="icon" src="../../../assets/description.png">
+								<label>Back to Description</label>
+							</div>
+						</a>
+					</li>
+					<li>
+						<p>There are no screenshots for this item.</p>
+					</li>
+				</ul>
+				
+				<div class="table-insert-after"></div>
+				
+			</main>
 			
-		</main>
-		
-		<footer>
+			<footer>
+				
+				<h2 id="detected-version"></h2>
+				
+			</footer>
 			
-			<h2 id="detected-version"></h2>
-			
-		</footer>
+		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="../../../repo-layout/js/page/screenshot.js"></script>
