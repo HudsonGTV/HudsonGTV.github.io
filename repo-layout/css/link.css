@@ -142,6 +142,10 @@ ul.repo-link {
 	color: #000 !important;
 }
 
+#copyright {
+	color: #000;
+}
+
 /*
 static const int ButtonBarWidth_ = 60;
 static const int ButtonBarHeight_ = 48;
