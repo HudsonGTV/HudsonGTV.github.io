@@ -1,9 +1,9 @@
-Origin: HudsonGTV Repository
-Label: HudsonGTV Repository
+Origin: HKG Repository
+Label: HKG Repository
 Suite: stable
-Version: 1.0
-Codename: HKGTV
+Version: 1.2.1
+Codename: HKG
 Architectures: iphoneos-arm
 Components: main
-Description: HudsonGTV Dev Repository
+Description: HKG Repository
 MD5Sum:
