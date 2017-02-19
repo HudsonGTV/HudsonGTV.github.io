@@ -11,4 +11,19 @@ var iOS = parseFloat(
 	.replace('undefined', '3_2').replace('_', '.').replace('_', '')
 ) || false;
 
+var supportedVersionMin = $('.depiction').data('version-min');
+var supportedVersionMax = $('.depiction').data('version-max');
+
+if(iOS != false) {
+	
+	if(iOS < supportedVersionMin || iOS > supportedVersionMax) {
+		$('.is-supported').addClass('is-unsupported');
+		$('.is-supported').removeClass('is-supported');
+	}
+	
+} else {
+	$('.is-supported').addClass('is-unsupported');
+	$('.is-supported').removeClass('is-supported');
+}
+
 document.getElementById('detected-version').innerHTML = 'iOS ' + iOS;
