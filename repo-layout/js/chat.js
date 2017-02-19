@@ -4,7 +4,7 @@ var disqus_config = function () {
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
-$('footer').before('<div id="disqus_thread"></div>');
+//$('footer').before('<div id="disqus_thread"></div>');
 var d = document, s = d.createElement('script');
 s.src = '//hudsongtv.disqus.com/embed.js';
 s.setAttribute('data-timestamp', +new Date());
