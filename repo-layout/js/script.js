@@ -44,9 +44,10 @@ addFooter = (function(year) {
 addFooter(2017);
 
 var disqus_config = function () {
-	if(!$('body').hasClass('depiction')) {
+	if(!($('body').hasClass('depiction'))) {
 		this.page.url = 'global-chat';
-	} else {
+		console.log('Global Chat');
+	} else if($('body').hasClass('depiction')) {
 		this.page.url = window.location.url;
 		this.page.identifier = (window.location.pathname).replace('index', '').replace('screenshot', '').replace('changelog', '').replace('.html', '');
 	}
