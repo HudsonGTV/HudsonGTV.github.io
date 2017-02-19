@@ -1,6 +1,6 @@
 var disqus_config = function () {
 	this.page.url = window.location.url;
-	this.page.identifier = (window.location.pathname).replace('index', '').replace('screenshot', '').replace('changelog', '').replace('.html', '');
+	this.page.identifier = (window.location.pathname).replace('index', '').replace('screenshot', '').replace('changelog', '').replace('discussion', '').replace('.html', '');
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
