@@ -29,7 +29,7 @@ if(iOS != false) {
 
 addFooter = (function(year) {
 	
-	$('footer').html('<h2 id="detected-version">'
+	$('footer').html('<div id="disqus_thread"></div><h2 id="detected-version">'
 						+ 'iOS ' + iOS.toFixed(1) + '.x' +
 					'</h2>' +
 					'<h2 id="copyright">'
