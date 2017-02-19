@@ -58,7 +58,7 @@ p {
 	vertical-align: middle;
 }
 
-.link:active, .link:link {
+.link:link, .link:hover, .link:active {
 	background: #222 !important;
 }
 
@@ -66,7 +66,7 @@ p {
 	margin-top: -1px;
 }
 
-.repo-link > .link:active, .repo-link > .link:link {
+.repo-link > .link:link, .repo-link > .link:hover, .repo-link > .link:active {
 	background: #d9d9d9 !important;
 }
 
@@ -82,7 +82,7 @@ p {
 	font-family: Arial, -apple-system-font;
 }
 
-.link.is-supported, .link.is-supported:active {
+.link.is-supported, .link.is-supported:link, .link.is-supported:hover, .link.is-supported:active {
 	background-color: lightgreen !important;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -90,7 +90,7 @@ p {
 	border-bottom: 1px solid rgba(0, 55, 0, 0.25);
 }
 
-.link.is-unsupported, .link.is-unsupported:active {
+.link.is-unsupported, .link.is-unsupported:link, .link.is-unsupported:hover, .link.is-unsupported:active {
 	background-color: #FFDDDD !important;
 	margin-top: 0px;
 	margin-bottom: 0px;
