@@ -12,5 +12,3 @@ var iOS = parseFloat(
 ) || false;
 
 document.getElementById('detected-version').innerHTML = 'iOS ' + iOS;
-
-document.addEventListener("touchstart", function(){}, true);
