@@ -22,6 +22,12 @@ body {
 	text-align: center;
 }
 
+footer {
+	background: linear-gradient(to bottom, #222 0%,#222 50%,#222 50%,#efeff4 50%,#efeff4 100%);;
+	margin-top: 50px;
+	padding: 10px;
+}
+
 .cydia body {
 	margin-top: 35px;
 }
