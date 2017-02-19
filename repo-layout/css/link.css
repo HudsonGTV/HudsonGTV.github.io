@@ -1,5 +1,14 @@
 .chevron {
 	background-repeat: no-repeat;
+	/*background-image: url(../../assets/chevron@2x.png);*/
+	background-image: url(../../assets/chevronDarkTheme@2x.png);
+	background-position-x: 100%;
+	background-position-y: center;
+	background-size: 10px 13px;
+}
+
+.light-chevron {
+	background-repeat: no-repeat;
 	background-image: url(../../assets/chevron@2x.png);
 	background-position-x: 100%;
 	background-position-y: center;
@@ -22,7 +31,8 @@ a.link-inner {
 }
 
 .link-inner > div > label {
-	color: #000;
+	/*color: #000;*/
+	color: #fff;
 	font-family: Arial, -apple-system-font;
 }
 
@@ -91,6 +101,10 @@ ul.is-unsupported:after, ul.is-unsupported:before {
 	background: rgba(255, 0, 0, 0.0);
 }*/
 
+.support-text {
+	color: #000 !important;
+}
+
 .support-number {
 	font-weight: bold;
 }
@@ -115,6 +129,16 @@ ul.is-unsupported:after, ul.is-unsupported:before {
 	font-weight: normal;
 	color: #8e8e9f !important;
 	margin-top: 15px; /*June*/
+}
+
+ul.repo-link {
+	background: white !important;
+	border-top: 1px solid rgba(200, 199, 204, 0.5);
+	border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+}
+
+.light-link {
+	color: #000 !important;
 }
 
 /*

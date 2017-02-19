@@ -7,9 +7,10 @@ a,button {
 	text-decoration: none;
 }
 
-/*html {
-	background: #efeff4;
-}*/
+html {
+	/*background: #efeff4;*/
+	background: #1B1B1B;
+}
 
 html .depiction {
 	background: 0 0;
@@ -45,7 +46,8 @@ body {
 
 body>p,h2,header .date,p[class="footer"] {
 	margin: 15px;
-	color: #6d6d72;
+	/*color: #6d6d72;*/
+	color: #AFAFAF;
 	font-size: 15px;
 	font-weight: 400;
 	font-family: Arial, -apple-system-font;
@@ -70,10 +72,16 @@ ul {
 	margin:9px 0 9px;
 	padding:0;
 	list-style:none;
-	/*background: rgba(255, 255, 255, 0.75);*/
-	background: white !important;
-	border-top: 1px solid rgba(200, 199, 204, 0.5);
-	border-bottom: 1px solid rgba(200, 199, 204, 0.5);
+	/*background: white !important;*/
+	background: #111 !important;
+	/*border-top: 1px solid rgba(200, 199, 204, 0.5);
+	border-bottom: 1px solid rgba(200, 199, 204, 0.5);*/
+	border-top: 1px solid rgba(40, 59, 40, 0.5);
+	border-bottom: 1px solid rgba(40, 59, 40, 0.5);*/
+}
+
+li {
+	color: #fff;
 }
 
 /*ul:after,ul:before {
@@ -91,7 +99,8 @@ ul {
 }
 
 ul li {
-	border-bottom: 0.6px solid rgba(200, 199, 204, 0.5);
+	/*border-bottom: 0.6px solid rgba(200, 199, 204, 0.5);*/
+	border-bottom: 0.6px solid rgba(40, 59, 40, 0.5);
 	margin-left: 0px;
 	padding: 13px 15px 13px 10px;
 }
@@ -103,6 +112,7 @@ ul li:last-child {
 ul .button,ul li [role="link"],ul li p {
 	padding: 13px 15px;
 	margin: -13px -15px;
+	color: #fff;
 }
 
 ul .button+p,ul li [role="link"]+p,ul li p+p {
