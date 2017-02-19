@@ -44,7 +44,7 @@ addFooter(2017);
 var disqus_config = function () {
 	this.page.url = window.location.url;
 	this.page.identifier = window.location.pathname;
-}
+};
 
 function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
