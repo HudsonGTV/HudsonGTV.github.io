@@ -83,8 +83,8 @@ ul {
 	background: #111 !important;
 	/*border-top: 1px solid rgba(200, 199, 204, 0.5);
 	border-bottom: 1px solid rgba(200, 199, 204, 0.5);*/
-	border-top: 1px solid rgba(40, 59, 40, 0.5);
-	border-bottom: 1px solid rgba(40, 59, 40, 0.5);*/
+	border-top: 1px solid rgba(57, 59, 57, 0.5);
+	border-bottom: 1px solid rgba(57, 59, 57, 0.5);
 }
 
 li {
@@ -107,7 +107,7 @@ li {
 
 ul li {
 	/*border-bottom: 0.6px solid rgba(200, 199, 204, 0.5);*/
-	border-bottom: 0.6px solid rgba(40, 59, 40, 0.5);
+	border-bottom: 0.6px solid rgba(57, 59, 57, 0.5);
 	margin-left: 0px;
 	padding: 13px 15px 13px 10px;
 }
@@ -205,6 +205,10 @@ footer :last-child {
   font-style: normal;
   font-weight: 100;
   src: local('Roboto Thin'), local('Roboto-Thin'), url(https://fonts.gstatic.com/s/roboto/v15/vzIUHo9z-oJ4WgkpPOtg13YhjbSpvc47ee6xR_80Hnw.woff) format('woff');
+}
+
+.table-insert-after {
+	display: none !important;
 }
 
 
