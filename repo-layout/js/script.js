@@ -41,7 +41,9 @@ addFooter = (function(year) {
 
 addFooter(2017);
 
-this.page.identifier = window.location.pathname;
+var disqus_config = function () {
+	this.page.identifier = window.location.pathname;
+}
 
 function() { // DON'T EDIT BELOW THIS LINE
 var d = document, s = d.createElement('script');
