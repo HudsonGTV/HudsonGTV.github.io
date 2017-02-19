@@ -58,8 +58,16 @@ p {
 	vertical-align: middle;
 }
 
+.link:active {
+	background: #222 !important;
+}
+
 .repo-link {
 	margin-top: -1px;
+}
+
+.repo-link > .link:active {
+	background: #d9d9d9 !important;
 }
 
 .icon-top {
@@ -74,16 +82,16 @@ p {
 	font-family: Arial, -apple-system-font;
 }
 
-.link.is-supported {
-	background-color: lightgreen;
+.link.is-supported, .link.is-supported:active {
+	background-color: lightgreen !important;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	border-top: 1px solid rgba(0, 55, 0, 0.25);
 	border-bottom: 1px solid rgba(0, 55, 0, 0.25);
 }
 
-.link.is-unsupported {
-	background-color: #FFDDDD;
+.link.is-unsupported, .link.is-unsupported:active {
+	background-color: #FFDDDD !important;
 	margin-top: 0px;
 	margin-bottom: 0px;
 	border-top: 1px solid rgba(55, 0, 0, 0.25);
