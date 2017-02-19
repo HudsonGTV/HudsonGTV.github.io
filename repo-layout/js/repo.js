@@ -1,5 +1,6 @@
 InsertRepoLink = (function() {
-	$('ul.is-supported').before(
+	
+	$('div.repo-header').before(
 		'<ul class="repo-link">' +
 			'<li class="link">' +
 				'<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_new">' +
@@ -11,6 +12,9 @@ InsertRepoLink = (function() {
 			'</li>' +
 		'</ul>'
 	);
+	
+	
+	
 });
 
 InsertRepoLink();
