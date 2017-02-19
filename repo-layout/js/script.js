@@ -40,3 +40,7 @@ addFooter = (function(year) {
 });
 
 addFooter(2017);
+
+$('.link').attr('ontouchstart', '');
+
+
