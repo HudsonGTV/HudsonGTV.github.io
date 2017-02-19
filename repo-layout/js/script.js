@@ -37,8 +37,6 @@ addFooter = (function(year) {
 					'</h2>'
 	);
 	
-	$('footer').before('<div id="disqus_thread"></div>');
-	
 });
 
 addFooter(2017);
