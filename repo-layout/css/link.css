@@ -58,10 +58,28 @@ p {
 	background-color: lightgreen;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	border-top: 1px solid rgba(0, 55, 0, 0.25);
+	border-bottom: 1px solid rgba(0, 55, 0, 0.25);
+}
+
+.link.is-unsupported {
+	background-color: #FFDDDD;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-top: 1px solid rgba(55, 0, 0, 0.25);
+	border-bottom: 1px solid rgba(55, 0, 0, 0.25);
+}
+
+.link.is-unsupported > a > div > label.right {
+	color: red !important;
 }
 
 ul.is-supported:after, ul.is-supported:before {
-	background: green;
+	background: rgba(0, 55, 0, 0.0);
+}
+
+ul.is-unsupported:after, ul.is-unsupported:before {
+	background: rgba(255, 0, 0, 0.0);
 }
 
 .support-number {
@@ -89,4 +107,8 @@ ul.is-supported:after, ul.is-supported:before {
 	color: #8e8e9f !important;
 }
 
+/*
+static const int ButtonBarWidth_ = 60;
+static const int ButtonBarHeight_ = 48;
+*/
 
