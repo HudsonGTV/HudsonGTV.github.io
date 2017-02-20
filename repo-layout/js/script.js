@@ -42,6 +42,6 @@ addFooter = (function(year) {
 addFooter(2017);
 
 $('.link').attr('ontouchstart', '');
-$('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo v.2.5.0</div>');
+$('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo v2.5.1</div>');
 
 
