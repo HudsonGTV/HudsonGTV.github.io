@@ -14,6 +14,8 @@ var iOS = parseFloat(
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
+var repoVersion = 'v2.9.1';
+
 if(iOS != false) {
 	
 	if(iOS < supportedVersionMin || iOS > supportedVersionMax) {
@@ -42,6 +44,8 @@ addFooter = (function(year) {
 addFooter(2017);
 
 $('.link').attr('ontouchstart', '');
-$('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo v2.5.1</div>');
+
+$('.version-num').html(repoVersion);
+$('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
 
