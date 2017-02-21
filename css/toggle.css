@@ -47,7 +47,7 @@ input#toggle + label:after {
   top: 0;
   left: 0px;
   border-radius: 15px;
-  background: white;
+  background: /*white*/black;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2), 0 2px 4px rgba(0, 0, 0, .2);
   -moz-transition: .25s ease-in-out;
   -webkit-transition: .25s ease-in-out;
