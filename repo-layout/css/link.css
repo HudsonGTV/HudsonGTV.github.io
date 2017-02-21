@@ -58,6 +58,30 @@ p {
 	vertical-align: middle;
 }
 
+.link-no-click {
+	text-align: left;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+}
+
+.link-disabled {
+	text-align: left;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	vertical-align: middle;
+	background: #222 !important;
+	/*color: rgba(255, 255, 255, 0.25) !important;*/
+}
+
+.link-disabled > a {
+	opacity: 0.25;
+}
+
+/*.icon-disabled {
+	opacity: 0.25;
+}*/
+
 .link:link, .link:hover, .link:active {
 	background: #222 !important;
 }

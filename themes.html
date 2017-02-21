@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		
+		<title>Themes - HKG Repository</title>
+		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+		
+		<link rel="icon" type="image/png" href="assets/favicon.png">
+		
+		<link rel="stylesheet" href="repo-layout/css/style.css" />
+		<link rel="stylesheet" href="repo-layout/css/link.css" />
+		<link rel="stylesheet" href="css/toggle.css" />
+		
+		<!-- IDK Why I put this in the header -->
+		<div class="repo-header"></div>
+		
+	</head>
+
+	<body>
+
+	<body class="depiction">
+		
+		<ul class="repo-link" style="background: #111 !important; border-bottom: 1px solid rgba(57, 59, 57, 0.5);">
+			<li class="link">
+				<a href="index.html" class="link-inner chevron">
+					<div>
+						<img class="icon icon-top" src="assets/favicon.png">
+						<label class="link">HKG Repository</label>
+					</div>
+				</a>
+			</li>
+		</ul>
+		
+		<div id="inner-body-wrapper">
+			
+			<main id="content" role="main">
+				
+				<ul>
+					<li class="link-no-click" ontouchstart="">
+						<a class="link-inner">
+							<div>
+								<img class="icon" src="assets/changelog.png">
+								<label class="sort-toggle-text">Reverse Order</label>
+								<label class="right toggle-wrapper">
+									<input type="checkbox" name="toggle" id="toggle" />
+									<label for="toggle"></label>
+								</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<h2 class="table-header">Latest Themes</h2>
+				<ul class="reversable-list">
+					
+					<li class="link-disabled">
+						<a class="link-inner chevron">
+							<div>
+								<img class="icon icon-disabled" src="assets/current-version.png">
+								<label class="link-disabled">More Coming Soon...</label>
+								<label class="chevron-right"></label>
+							</div>
+						</a>
+					</li>
+					
+					<li class="link" ontouchstart="">
+						<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://repo.hudsongreen.com/&package=com.hudsongreen.androidsettingsicons" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/theme.png">
+								<label>Android Settings Icons</label>
+								<label class="chevron-right">Open in Cydia</label>
+							</div>
+						</a>
+					</li>
+					
+					<li class="link" ontouchstart="">
+						<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http://repo.hudsongreen.com/&package=com.hudsongreen.roundfolders" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/theme.png">
+								<label>Round Folders</label>
+								<label class="chevron-right">Open in Cydia</label>
+							</div>
+						</a>
+					</li>
+					
+				</ul>
+				
+				<br />
+				
+				<ul>
+					<li class="link" ontouchstart="">
+						<a href="discussion.html" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/discussion.png">
+								<label>Discussion</label>
+								<label class="chevron-right">Under Development</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link">
+						<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/cydia.png">
+								<label>Add to Cydia</label>
+							</div>
+						</a>
+					</li>
+					<li class="link" ontouchstart="">
+						<a href="tweaks.html" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/tweak.png">
+								<label>Latest Tweaks</label>
+								<label class="chevron-right"></label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link" ontouchstart="">
+						<a href="safari://https://twitter.com/HKGTV" class="link-inner chevron" target="_new">
+							<div>
+								<img class="icon" src="assets/twitter.png">
+								<label>Twitter</label>
+								<label class="chevron-right">@HKGTV</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+			</main>
+			
+			<footer>
+				
+				<h2 id="detected-version"></h2>
+				
+			</footer>
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="repo-layout/js/script.js"></script>
+		<script src="js/reverseList.js"></script>
+		
+	</body>
+</html>
