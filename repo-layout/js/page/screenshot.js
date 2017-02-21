@@ -21,7 +21,7 @@ LoadScreenshotLinks = (function() {
 		'</ul>' +
 		'<ul>' +
 			'<li class="link">' +
-				'<a href="safari://https://twitter.com/HKGTV" class="link-inner chevron" target="_new">' +
+				'<a href="twitter:///user?screen_name=HKGTV" class="link-inner chevron" target="_new">' +
 					'<div>' +
 						'<img class="icon" src="../../../assets/twitter.png">' +
 						'<label>Follow Developer</label>' +
