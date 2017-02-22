@@ -24,9 +24,9 @@ Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
 Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
-MD5sum: 3824cf81078fde4a9751bdd6ce40fb49
-SHA1: 5f4422709bcf7d1478ca91e3e6beac6adb023d76
-SHA256: b5e0de9c67372e98ef7f5477942be77b8ecb49d22b7344d266ed58a954c40446
+MD5sum: 81227974e1c92fc5c5ba2095271a1267
+SHA1: 0989efc85f3070c207842db22bf673cce9e0f711
+SHA256: 4a4db601823e92bb5ef73912f07a5e91e465100eb31a77d89d8d456289ca247d
 
 
 Package: com.hudsongreen.cydia.RepoIcons
