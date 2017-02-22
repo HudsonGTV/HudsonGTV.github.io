@@ -6,14 +6,14 @@ NO TOUCHY TOUCHY
 	margin-top: 9px;
 }
 
-input#toggle {
+input.toggle-input {
   max-height: 0;
   max-width: 0;
   opacity: 0;
   position: absolute;
 }
 
-input#toggle + label {
+input.toggle-input + label {
   display: block;
   position: relative;
   box-shadow: inset 0 0 0px 1px #d5d5d5;
@@ -23,7 +23,7 @@ input#toggle + label {
   border-radius: 15px;
 }
 
-input#toggle + label:before {
+input.toggle-input + label:before {
   content: "";
   position: absolute;
   display: block;
@@ -38,7 +38,7 @@ input#toggle + label:before {
   transition: .25s ease-in-out;
 }
 
-input#toggle + label:after {
+input.toggle-input + label:after {
   content: "";
   position: absolute;
   display: block;
@@ -54,12 +54,12 @@ input#toggle + label:after {
   transition: .25s ease-in-out;
 }
 
-input#toggle:checked + label:before {
+input.toggle-input:checked + label:before {
   width: 50px;
   background: rgba(19, 191, 17, 1);
 }
 
-input#toggle:checked + label:after {
+input.toggle-input:checked + label:after {
   left: 20px;
   box-shadow: inset 0 0 0 1px rgba(19, 191, 17, 1), 0 2px 4px rgba(0, 0, 0, .2);
 }
