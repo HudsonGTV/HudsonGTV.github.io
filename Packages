@@ -5,7 +5,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Filename: debs//Themes/RoundFolders/com.hudsongreen.roundfolders.deb
 Size: 37000
-Section: HKG_Themes
+Section: HKG_-_Themes
 Description: Broken RoundFolders theme
 Depiction: http://repo.hudsongreen.com/depic/Themes/RoundFolders/index.html
 Name: Round Folders
@@ -18,7 +18,7 @@ Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
 Version: 0.7
 Architecture: iphoneos-arm
-Section: HKG_Themes
+Section: HKG_-_Themes
 Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
@@ -31,9 +31,9 @@ SHA256: a6ab215885f137fb641fca5ca77b6d6c586739a75946d7733d0e9533da8e9f82
 
 Package: com.hudsongreen.cydia.RepoIcons
 Name: HKG Repository Icons
-Version: 1.1.3
+Version: 1.1.4
 Architecture: iphoneos-arm
-Section: HKG_Tweaks
+Section: HKG_-_Tweaks
 Author: Hudson Green, Eric Golde
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: HKG Repo Icons (repo.hudsongreen.com)
@@ -42,7 +42,8 @@ Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
 Replaces: com.hudsongreen.cydia.RepoIcons
 Required: Yes
 Essential: Yes
-MD5sum: b413783ce7f77769a8a387c40e22b788
-SHA1: 8f7ca5a0e8ccac06e875d893426b6ad08015a16b
-SHA256: 9738e5b014db8aa3af9977cae2535578fe6a75207e7320c13f7adfb7838c7150
+MD5sum: bcaf4b262a4869a6d0ab0103bce9fe4d
+SHA1: 4f60731a709b3517b5c8a531459a039d7fea01a0
+SHA256: 50b72cdc001e0d82e5930d26ac4212050c332152a1d9187034ad29d6cc26a72c
+
 
