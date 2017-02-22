@@ -16,7 +16,7 @@ SHA256: 742c2d0c2192e4e73f85b6f3fcb67c9a4e612eb7491fd7c77ec8c6348f7a992c
 
 Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
-Version: 0.7
+Version: 0.7.1
 Architecture: iphoneos-arm
 Section: HKG_-_Themes
 Author: Hudson Green <cydia@hudsongreen.com>
@@ -24,10 +24,9 @@ Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
 Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
-MD5sum: 648f2eb5a513d4fb91afadcbe3e98406
-SHA1: 1cab4a6063635fef8453f241da23485ae7a03e39
-SHA256: a6ab215885f137fb641fca5ca77b6d6c586739a75946d7733d0e9533da8e9f82
-Icon: http://repo.hudsongreen.com/icon/androidsettingsicons.png
+MD5sum: 3824cf81078fde4a9751bdd6ce40fb49
+SHA1: 5f4422709bcf7d1478ca91e3e6beac6adb023d76
+SHA256: b5e0de9c67372e98ef7f5477942be77b8ecb49d22b7344d266ed58a954c40446
 
 
 Package: com.hudsongreen.cydia.RepoIcons
@@ -35,7 +34,7 @@ Name: HKG Repository Icons
 Version: 1.1.4
 Architecture: iphoneos-arm
 Section: HKG_-_Tweaks
-Author: Hudson Green <cydia@hudsongreen>
+Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: HKG Repo Icons (repo.hudsongreen.com)
 Filename: debs//Tweaks/RepoIcons/com.hudsongreen.cydia.RepoIcons.deb
