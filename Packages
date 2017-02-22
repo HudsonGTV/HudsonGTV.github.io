@@ -16,7 +16,7 @@ SHA256: 742c2d0c2192e4e73f85b6f3fcb67c9a4e612eb7491fd7c77ec8c6348f7a992c
 
 Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
-Version: 0.7.1
+Version: 0.7.2
 Architecture: iphoneos-arm
 Section: HKG_-_Themes
 Author: Hudson Green <cydia@hudsongreen.com>
@@ -24,9 +24,9 @@ Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
 Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
-MD5sum: 81227974e1c92fc5c5ba2095271a1267
-SHA1: 0989efc85f3070c207842db22bf673cce9e0f711
-SHA256: 4a4db601823e92bb5ef73912f07a5e91e465100eb31a77d89d8d456289ca247d
+MD5sum: 44d713698ae65e4d45c1138ff1d2d1ae
+SHA1: 5279b0310dde0d2fa8f86b17da98a17e6300c82a
+SHA256: 89aae9b5b68c592a7d793ed6cc57b1630e861eac221ce5dba8d1251dfc05f09a
 
 
 Package: com.hudsongreen.cydia.RepoIcons

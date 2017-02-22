@@ -1,6 +1,6 @@
 Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
-Version: 0.7.1
+Version: 0.7.2
 Architecture: iphoneos-arm
 Description: Some icons in the iOS settings page to match those of Android
 Author: Hudson Green <cydia@hudsongreen.com>
