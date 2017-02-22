@@ -34,7 +34,7 @@ Name: HKG Repository Icons
 Version: 1.1.4
 Architecture: iphoneos-arm
 Section: HKG_-_Tweaks
-Author: Hudson Green, Eric Golde
+Author: Hudson Green <cydia@hudsongreen>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: HKG Repo Icons (repo.hudsongreen.com)
 Filename: debs//Tweaks/RepoIcons/com.hudsongreen.cydia.RepoIcons.deb
