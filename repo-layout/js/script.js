@@ -14,7 +14,7 @@ var iOS = parseFloat(
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
-var repoVersion = 'v2.9.1';
+var repoVersion = 'v3.2.1';
 
 if(iOS != false) {
 	
