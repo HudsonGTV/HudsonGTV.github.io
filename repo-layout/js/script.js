@@ -48,4 +48,8 @@ $('.link').attr('ontouchstart', '');
 $('.version-num').html(repoVersion);
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
-$(window).unload( function () { $('a').blur(); } );
+$("a").on("touchstart", function(e) {
+    setTimeout(function() {
+        $("a").blur(); // Works... but I should do this every time?
+    }, 800);
+});
