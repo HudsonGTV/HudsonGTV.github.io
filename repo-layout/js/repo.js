@@ -3,7 +3,7 @@ InsertRepoLink = (function() {
 	$('div.repo-header').before(
 		'<ul class="repo-link">' +
 			'<li class="link">' +
-				'<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_new">' +
+				'<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_blank">' +
 					'<div>' +
 						'<img class="icon icon-top" src="../../../assets/favicon.png">' +
 						'<label class="light-link">HKG Repository</label>' +
