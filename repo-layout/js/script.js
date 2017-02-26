@@ -14,10 +14,10 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v3.3.0-r4';
-//var repoVersion = 'v3.2.1-beta.1';
-//var repoVersion = 'v3.2.1b-1';
-//var repoVersion = 'v3.2.1r-2';
+var repoVersion = 'v2.3.1-r2';
+//var repoVersion = 'v2.2.1-beta.1';
+//var repoVersion = 'v2.2.1b-1';
+//var repoVersion = 'v2.2.1r-2';
 
 //var iPhoneModel = '6';
 
