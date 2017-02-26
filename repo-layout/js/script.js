@@ -14,7 +14,10 @@ var iOS = parseFloat(
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
-var repoVersion = 'v3.2.1-beta.1';
+//var repoVersion = 'v3.2.1-beta.1';
+//var repoVersion = 'v3.2.1b-1';
+//var repoVersion = 'v3.2.1r-2';
+var repoVersion = 'v3.3.0-r1';
 
 if(iOS != false) {
 	
@@ -32,7 +35,7 @@ if(iOS != false) {
 addFooter = (function(year) {
 	
 	$('footer').html('</div><h2 id="detected-version">'
-						+ 'iOS ' + iOS.toFixed(1) + '.x' +
+						+ 'iOS ' + iOS.toFixed(1) + '.x' + navigator.userAgent +
 					'</h2>' +
 					'<h2 id="copyright">'
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
@@ -48,15 +51,32 @@ $('.link').attr('ontouchstart', '');
 $('.version-num').html(repoVersion);
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
-$("a").on("touchstart", function(e) {
-    setTimeout(function() {
-        $("a").blur(); // Works... but I should do this every time?
-    }, 800);
+$("a").parent().on("touchstart", function(e) {
+	
+	console.log($(this));
+	
+	var selectedElement = $(this);
+	
+	if(selectedElement.hasClass('link')) {
+		
+		selectedElement.addClass('link-active');
+		
+	}
+	
+	setTimeout(function() {
+			selectedElement.blur(); // Works... but I should do this every time?
+			selectedElement.removeClass('link-active');
+		}, 800);
+	
 });
 
+
+
+/*
 $(window).bind("pageshow", function() {
     var form = $('a'); 
     // let the browser natively reset defaults
     form[0].reset();
 	alert("BACK/FORWARD");
 });
+*/
