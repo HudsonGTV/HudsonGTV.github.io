@@ -11,16 +11,25 @@ var iOS = parseFloat(
 	.replace('undefined', '3_2').replace('_', '.').replace('_', '')
 ) || false;
 
-var fulliOS = ('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[2])
-	/*.replace('undefined', '3_2').replace('_', '.').replace('_', '');*/
+var fulliOS = ('' + (/CPU.*OS ([0-9_]{1,8})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1]);
+
+fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
+
+/*var verMajor = fulliOS.split('.')[0];
+var verMinor = fulliOS.split('.')[1];
+var verFix   = fulliOS.split('.')[2];*/
 
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
+/** FUTUREPROOFING **/
+//var supportedVersionMinBug = $('.depiction').data('version-min-bug');
+//var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
+
 //var repoVersion = 'v3.2.1-beta.1';
 //var repoVersion = 'v3.2.1b-1';
 //var repoVersion = 'v3.2.1r-2';
-var repoVersion = 'v3.3.0-r1';
+var repoVersion = 'v3.3.0-r2';
 
 if(iOS != false) {
 	
@@ -32,13 +41,14 @@ if(iOS != false) {
 } else {
 	$('.is-supported').addClass('is-unsupported');
 	$('.is-supported').removeClass('is-supported');
-	iOS = 0.0;
+	iOS = 0;
+	fulliOS = '[Not iOS]';
 }
 
 addFooter = (function(year) {
 	
 	$('footer').html('</div><h2 id="detected-version">'
-						+ 'iOS ' + iOS.toFixed(1) + '.x ' + fulliOS +
+						+ 'iOS ' + fulliOS + '  ' +
 					'</h2>' +
 					'<h2 id="copyright">'
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
