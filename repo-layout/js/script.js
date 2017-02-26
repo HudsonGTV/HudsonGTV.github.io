@@ -54,10 +54,8 @@ $("a").on("touchstart", function(e) {
     }, 800);
 });
 
-/*
-window.onpageshow = function(event) {
-    if (event.persisted) {
-        alert("From back / forward cache.");
-    }
-};
-*/
+$(window).bind("pageshow", function() {
+    var form = $('a'); 
+    // let the browser natively reset defaults
+    form[0].reset();
+});
