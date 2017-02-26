@@ -22,6 +22,8 @@ body {
 	font: 16px 'Roboto', -apple-system-font,".Helvetica NeueUI","Helvetica Neue",sans-serif;
 	margin: 0px 0 0px;
 	text-align: center;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none; /* Disable selection/copy in UIWebView */
 }
 
 footer {
