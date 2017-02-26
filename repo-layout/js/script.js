@@ -58,4 +58,5 @@ $(window).bind("pageshow", function() {
     var form = $('a'); 
     // let the browser natively reset defaults
     form[0].reset();
+	alert("BACK/FORWARD");
 });
