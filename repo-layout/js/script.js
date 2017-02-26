@@ -8,6 +8,8 @@ var fulliOS = ('' + (/CPU.*OS ([0-9_]{1,8})|(CPU like).*AppleWebKit.*Mobile/i.ex
 //var verMinor = fulliOS.split('.')[1];
 //var verFix   = fulliOS.split('.')[2];
 
+var isInCydia = false;
+
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
@@ -21,11 +23,16 @@ var repoVersion = 'v2.3.1-r2';
 
 //var iPhoneModel = '6';
 
+
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
 
 /*document.body.addEventListener('touchforcechange',function(e) {
 	iPhoneModel = iPhoneModel + 'S';
 });*/
+
+window.addEventListener('pageshow', function(e) {
+	
+});
 
 if(iOS != false) {
 	
@@ -73,10 +80,26 @@ $("a").parent().on("touchstart", function(e) {
 	}
 	
 	setTimeout(function() {
+		if(true) {
 			selectedElement.blur(); // Works... but I should do this every time?
 			selectedElement.removeClass('link-active');
-		}, 800);
+		}
+	}, 800);
 	
+});
+
+$(function() {
+		
+	if(typeof cydia != 'undefined') {
+		isInCydia = true;
+	}
+	
+	if(isInCydia == false) {
+		$('a').each(function() {
+			$(this).attr('target', '_self');
+		});
+	}
+
 });
 
 /*(function(a) {
