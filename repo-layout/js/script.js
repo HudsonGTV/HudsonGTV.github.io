@@ -11,6 +11,9 @@ var iOS = parseFloat(
 	.replace('undefined', '3_2').replace('_', '.').replace('_', '')
 ) || false;
 
+var fulliOS = ('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1])
+	/*.replace('undefined', '3_2').replace('_', '.').replace('_', '.');*/
+
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
@@ -35,7 +38,7 @@ if(iOS != false) {
 addFooter = (function(year) {
 	
 	$('footer').html('</div><h2 id="detected-version">'
-						+ 'iOS ' + iOS.toFixed(1) + '.x' + navigator.userAgent +
+						+ 'iOS ' + iOS.toFixed(1) + '.x ' + fulliOS +
 					'</h2>' +
 					'<h2 id="copyright">'
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
