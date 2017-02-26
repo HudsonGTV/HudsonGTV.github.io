@@ -121,7 +121,7 @@ $("a").parent().on("touchend", function(e) {
 	
 });
 
-$(function() {
+/*$(function() {
 		
 	if(typeof cydia != 'undefined') {
 		isInCydia = true;
@@ -133,7 +133,7 @@ $(function() {
 		});
 	}
 
-});
+});*/
 
 /*(function(a) {
 	"use strict";
