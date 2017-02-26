@@ -147,10 +147,11 @@ var pos = 0;
 var msg = "Latest Tweaks";
 function Scroll()
 {
-document.title = 'HKG Repository: ' + msg.substring(pos, msg.length) + space + msg.substring(0,pos).substring(0, 10);
-pos++;
-if (pos > msg.length) pos = 0;
-window.setTimeout("Scroll()", speed);
+	var animatedText = msg.substring(pos, msg.length) + space + msg.substring(0,pos);
+	document.title = 'HKG Repository: ' + animatedText.substring(0, 10);
+	pos++;
+	if (pos > msg.length) pos = 0;
+	window.setTimeout("Scroll()", speed);
 }
 Scroll();
 -->
