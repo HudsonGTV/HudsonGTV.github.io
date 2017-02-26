@@ -116,7 +116,7 @@ $("a").parent().on("touchend", function(e) {
 	var selectedElement = $(this);
 	
 	if(pageIsActive && !pageIsInactive) {
-		TouchSelectHightlight(selectedElement, 800);
+		TouchSelectHightlight(selectedElement, 1200);
 	}
 	
 });
