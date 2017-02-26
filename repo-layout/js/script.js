@@ -29,7 +29,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 //var repoVersion = 'v3.2.1-beta.1';
 //var repoVersion = 'v3.2.1b-1';
 //var repoVersion = 'v3.2.1r-2';
-var repoVersion = 'v3.3.0-r2';
+var repoVersion = 'v3.3.0-r3';
 
 if(iOS != false) {
 	
@@ -48,7 +48,7 @@ if(iOS != false) {
 addFooter = (function(year) {
 	
 	$('footer').html('</div><h2 id="detected-version">'
-						+ 'iOS ' + fulliOS + '  ' +
+						+ navigator.platform + ' - iOS ' + fulliOS + '  ' +
 					'</h2>' +
 					'<h2 id="copyright">'
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
