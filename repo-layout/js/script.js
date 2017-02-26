@@ -20,7 +20,6 @@ var repoVersion = 'v3.3.0-r4';
 //var repoVersion = 'v3.2.1r-2';
 
 //var iPhoneModel = '6';
-var foo = navigator.hardwareConcurrency;
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
 
@@ -45,7 +44,7 @@ if(iOS != false) {
 addFooter = (function(year) {
 	
 	$('footer').html('</div><h2 id="detected-version">'
-						+ navigator.platform + ' - iOS ' + fulliOS + '  ' + foo +
+						+ navigator.platform + ' - iOS ' + fulliOS +
 					'</h2>' +
 					'<h2 id="copyright">'
 						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
