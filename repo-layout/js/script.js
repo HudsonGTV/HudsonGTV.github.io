@@ -16,12 +16,15 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.3.1-r2';
+var repoVersion = 'v2.3.1-r4';
 //var repoVersion = 'v2.2.1-beta.1';
 //var repoVersion = 'v2.2.1b-1';
 //var repoVersion = 'v2.2.1r-2';
 
 //var iPhoneModel = '6';
+
+var pageIsActive = false;
+var pageIsInactive = false;
 
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
@@ -29,10 +32,6 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 /*document.body.addEventListener('touchforcechange',function(e) {
 	iPhoneModel = iPhoneModel + 'S';
 });*/
-
-window.addEventListener('pageshow', function(e) {
-	
-});
 
 if(iOS != false) {
 	
@@ -60,12 +59,39 @@ addFooter = (function(year) {
 	
 });
 
+TouchSelectHightlight = (function(selectedElement, timeout) {
+	setTimeout(function() {
+		if(true) {
+			selectedElement.blur(); // Works... but I should do this every time?
+			selectedElement.removeClass('link-active');
+		}
+	}, timeout);
+});
+
 addFooter((new Date).getFullYear());
 
 $('.link').attr('ontouchstart', '');
 
 $('.version-num').html(repoVersion);
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
+
+pageShowHideEvent = (function() {
+	
+	window.addEventListener('pagehide', function(e) {
+		pageIsActive = false;
+		pageIsInactive = true;
+		console.log('page hidden');
+	});
+
+	window.addEventListener('pageshow', function(e) {
+		pageIsActive = true;
+		pageIsInactive = false;
+		console.log('page shown');
+	});
+	
+});
+
+pageShowHideEvent();
 
 $("a").parent().on("touchstart", function(e) {
 	
@@ -79,16 +105,23 @@ $("a").parent().on("touchstart", function(e) {
 		
 	}
 	
-	setTimeout(function() {
-		if(true) {
-			selectedElement.blur(); // Works... but I should do this every time?
-			selectedElement.removeClass('link-active');
-		}
-	}, 800);
+});
+
+$("a").parent().on("touchend", function(e) {
+	
+	pageShowHideEvent();
+	
+	console.log($(this));
+	
+	var selectedElement = $(this);
+	
+	if(pageIsActive && !pageIsInactive) {
+		TouchSelectHightlight(selectedElement, 800);
+	}
 	
 });
 
-/*$(function() {
+$(function() {
 		
 	if(typeof cydia != 'undefined') {
 		isInCydia = true;
@@ -100,7 +133,7 @@ $("a").parent().on("touchstart", function(e) {
 		});
 	}
 
-});*/
+});
 
 /*(function(a) {
 	"use strict";
