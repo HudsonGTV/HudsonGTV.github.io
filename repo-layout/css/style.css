@@ -233,9 +233,9 @@ body.alert-body-bg {
 #alert-popup {
 	position: fixed;
 	text-align: center;
-	width: 200px;
-	top: calc(50% - 100px);
-	left: calc(50% - 100px);
+	width: 250px;
+	top: calc(50% - 125px);
+	left: calc(50% - 125px);
 }
 
 .alert-title {
@@ -243,12 +243,14 @@ body.alert-body-bg {
 	font-family: Arial;
 	font-weight: bold;
 	margin-bottom: 10px;
+	font-size: 18px;
 }
 
 .alert-string {
 	color: #fff;
 	opacity: 0.9;
 	margin-bottom: 15px;
+	font-size: 18px;
 }
 
 .alert-button {
