@@ -105,9 +105,12 @@ $("a").parent().on("touchstart", function(e) {
 		
 	}
 	
+	document.addEventListener('touchmove', TouchSelectHightlight(selectedElement, 600));
+    document.addEventListener('touchend', TouchSelectHightlight(selectedElement, 600));
+	
 });
 
-$("a").parent().on("touchend", function(e) {
+/*$("a").parent().on("touchend", function(e) {
 	
 	pageShowHideEvent();
 	
@@ -116,10 +119,13 @@ $("a").parent().on("touchend", function(e) {
 	var selectedElement = $(this);
 	
 	if(pageIsActive && !pageIsInactive) {
-		TouchSelectHightlight(selectedElement, 1200);
 	}
 	
-});
+	$(window).focus(function(){
+		TouchSelectHightlight(selectedElement, 600);
+	});
+	
+});*/
 
 /*$(function() {
 		
