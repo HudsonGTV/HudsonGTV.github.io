@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		
+		<title>HKG Repository</title>
+		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+		
+		<link rel="icon" type="image/png" href="assets/favicon.png">
+		
+		<link rel="stylesheet" href="repo-layout/css/style.css" />
+		<link rel="stylesheet" href="repo-layout/css/link.css" />
+		
+		<!-- IDK Why I put this in the header -->
+		<div class="repo-header"></div>
+		
+	</head>
+
+	<body>
+
+	<body class="depiction">
+		
+		<ul class="repo-link" style="background: #111 !important; border-bottom: 1px solid rgba(57, 59, 57, 0.5);">
+			<li class="link-no-click">
+				<a onClick="alert('HKG Repository: Test Alert')" class="link-inner info">
+					<div>
+						<img class="icon icon-top" src="assets/favicon.png">
+						<label class="link-no-click">HKG Repository</label>
+						<label class="version-num info-right info-about"></label>
+						
+					</div>
+				</a>
+			</li>
+		</ul>
+		
+		<div id="inner-body-wrapper">
+			
+			<main id="content" role="main">
+				
+				<ul>
+					<li class="link">
+						<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/cydia.png">
+								<label>Add to Cydia</label>
+							</div>
+						</a>
+					</li>
+					
+					<li>
+						<p>H.K.G. Repository</p>
+						<p>The first repository (that I know of) to use a black UI. #BlackReposMatter</p>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link" ontouchstart="">
+						<a href="discussion.html" target="_blank" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/discussion.png">
+								<label>Discussion</label>
+								<label class="chevron-right">Under Development</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link" ontouchstart="">
+						<a href="tweaks.html" target="_blank" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/tweak.png">
+								<label>Latest Tweaks</label>
+								<label class="chevron-right"></label>
+							</div>
+						</a>
+					</li>
+					<li class="link" ontouchstart="">
+						<a href="themes.html" target="_blank" class="link-inner chevron">
+							<div>
+								<img class="icon" src="assets/theme.png">
+								<label>Latest Themes</label>
+								<label class="chevron-right"></label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+				<ul>
+					<li class="link" ontouchstart="">
+						<a href="twitter:///user?screen_name=HKGTV" class="link-inner chevron" target="_blank">
+							<div>
+								<img class="icon" src="assets/twitter.png">
+								<label>Twitter</label>
+								<label class="chevron-right">@HKGTV</label>
+							</div>
+						</a>
+					</li>
+				</ul>
+				
+			</main>
+			
+			<footer>
+				
+				<h2 id="detected-version"></h2>
+				
+			</footer>
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="repo-layout/js/script.js"></script>
+		
+	</body>
+</html>
