@@ -105,8 +105,8 @@ $("a").parent().on("touchstart", function(e) {
 		
 	}
 	
-	document.addEventListener('touchmove', TouchSelectHightlight(selectedElement, 600));
-    document.addEventListener('touchend', TouchSelectHightlight(selectedElement, 600));
+	document.addEventListener('touchmove', TouchSelectHightlight(selectedElement, 800));
+    document.addEventListener('touchend', TouchSelectHightlight(selectedElement, 800));
 	
 });
 
