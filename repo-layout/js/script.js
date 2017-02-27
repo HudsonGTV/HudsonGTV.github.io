@@ -56,7 +56,7 @@ addFooter = (function(year) {
 						+ navigator.platform + ' - iOS ' + fulliOS +
 					'</h2>' +
 					'<h2 id="copyright">'
-						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
+						+ '&copy; ' + year + ' HKG Repo - All rights reserved - <a href="about.html" target="_popup">About</a>' +
 					'</h2>'
 	);
 	
