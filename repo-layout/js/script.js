@@ -62,10 +62,11 @@ addFooter = (function(year) {
 
 TouchSelectHightlight = (function(selectedElement, timeout) {
 	setTimeout(function() {
-		if(true) {
-			selectedElement.blur(); // Works... but I should do this every time?
+		//if(true) {
+		//	selectedElement.blur(); // Works... but I should do this every time?
 			selectedElement.removeClass('link-active');
-		}
+			$('.link-active').removeClass('link-active');
+		//}
 	}, timeout);
 });
 
@@ -112,7 +113,7 @@ $("a").parent().on("touchstart", function(e) {
 });
 
 $(window).focus(function() {
-	TouchSelectHightlight(selectedElement, 800);
+	TouchSelectHightlight($('.link-active'), 800);
 	console.log('focus');
 });
 
