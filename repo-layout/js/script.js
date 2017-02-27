@@ -16,7 +16,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.3.2-r1';
+var repoVersion = 'v2.4.0-r1';
 //var repoVersion = 'v2.2.1-beta.1';
 //var repoVersion = 'v2.2.1b-1';
 //var repoVersion = 'v2.2.1r-2';
@@ -131,6 +131,26 @@ $("a").parent().on("touchend", function(e) {
 	//}
 	
 	TouchSelectHightlight(selectedElement, 600);
+	
+});
+
+alertBox = (function(alertTitle, alertStr, dismissButton, palertStyleEnabled) {
+	
+	$('body').wrapInner('<div class="alert-blur"></div>');
+	$('body').addClass('alert-body-bg');
+	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
+	
+	$('.alert-button').on("touchend", function() {
+		$('body').removeClass('alert-body-bg');
+		$('body > .alert-blur').contents().unwrap();
+		$('#alert-popup').remove();
+	});
+	
+	$('.alert-button').click(function() {
+		$('body').removeClass('alert-body-bg');
+		$('body > .alert-blur').contents().unwrap();
+		$('#alert-popup').remove();
+	});
 	
 });
 

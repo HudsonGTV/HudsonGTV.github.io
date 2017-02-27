@@ -221,5 +221,61 @@ footer :last-child {
 	display: none !important;
 }
 
+.alert-blur {
+	filter: blur(15px);
+	pointer-events: none;
+}
+
+body.alert-body-bg {
+	background: #222;
+}
+
+#alert-popup {
+	position: fixed;
+	text-align: center;
+	width: 200px;
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+}
+
+.alert-title {
+	color: #fff;
+	font-family: Arial;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.alert-string {
+	color: #fff;
+	opacity: 0.9;
+	margin-bottom: 15px;
+}
+
+.alert-button {
+	background: darkred;
+	color: white;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 4px;
+	height: 25px;
+	line-height: 25px;
+	transform: scale(1.0);
+	transition: transform 0.5s;
+}
+
+.alert-button:hover, alert-button:link, .alert-button:active {
+	background: white;
+	color: darkred;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 5px;
+	border-radius: 4px;
+	height: 25px;
+	line-height: 25px;
+	transform: scale(1.05);
+	transition: transform 0.5s;
+}
+
 
 
