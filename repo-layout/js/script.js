@@ -16,7 +16,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.4.0-r1';
+var repoVersion = 'v2.4.0-r2';
 //var repoVersion = 'v2.2.1-beta.1';
 //var repoVersion = 'v2.2.1b-1';
 //var repoVersion = 'v2.2.1r-2';
@@ -141,17 +141,21 @@ alertBox = (function(alertTitle, alertStr, dismissButton, palertStyleEnabled) {
 	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
 	
 	$('.alert-button').on("touchend", function() {
-		$('body').removeClass('alert-body-bg');
-		$('body > .alert-blur').contents().unwrap();
-		$('#alert-popup').remove();
+		AlertKill();
 	});
 	
 	$('.alert-button').click(function() {
+		AlertKill();
+	});
+	
+});
+
+AlertKill = (function() {
+	setTimeout(function() {
 		$('body').removeClass('alert-body-bg');
 		$('body > .alert-blur').contents().unwrap();
 		$('#alert-popup').remove();
-	});
-	
+	}, 75);
 });
 
 /*$(".info-about").on("touchend", function(e) {
