@@ -16,7 +16,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.3.1-r5';
+var repoVersion = 'v2.3.2-r1';
 //var repoVersion = 'v2.2.1-beta.1';
 //var repoVersion = 'v2.2.1b-1';
 //var repoVersion = 'v2.2.1r-2';
@@ -74,7 +74,7 @@ addFooter((new Date).getFullYear());
 
 $('.link').attr('ontouchstart', '');
 
-$('.version-num').html(repoVersion + ' ');
+$('.version-num').html(repoVersion);
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
 /*pageShowHideEvent = (function() {

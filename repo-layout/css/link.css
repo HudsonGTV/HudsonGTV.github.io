@@ -20,12 +20,12 @@
 	background-repeat: no-repeat;
 	/*background-image: url(../../assets/chevron@2x.png);*/
 	background-image: url(../../assets/infoDarkTheme@2x.png);
-	width: calc(100% + 3px) !important;
 	background-position-x: calc(100% + 0px);
 	background-position-y: center;
 	background-size: 23px 23px;
 	overflow: visible !important;
-	padding-right: 2px;
+	padding-right: 5px;
+	width: calc(100% - 2px);
 }
 
 li.link-inner {
