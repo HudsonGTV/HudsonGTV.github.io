@@ -233,9 +233,9 @@ body.alert-body-bg {
 #alert-popup {
 	position: fixed;
 	text-align: center;
-	width: 250px;
+	width: calc(100vw - 100px);
 	top: calc(50% - 125px);
-	left: calc(50% - 125px);
+	left: calc(50% - (100vw - 100px) / 2);
 }
 
 .alert-title {
