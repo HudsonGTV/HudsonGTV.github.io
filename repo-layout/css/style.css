@@ -224,6 +224,7 @@ footer :last-child {
 .alert-blur {
 	filter: blur(15px);
 	pointer-events: none;
+	transition: filter 0.5s;
 }
 
 body.alert-body-bg {
@@ -237,7 +238,7 @@ body.alert-body-bg {
 	max-width: 300px;
 	top: calc(50% - 125px);
 	left: calc(50% - (100vw - 100px) / 2);
-	animation: fadein 0.75s;
+	animation: fadein 0.5s;
 }
 
 .alert-title {
