@@ -158,9 +158,8 @@ $("body").on("touchmove", function() {
 
 AlertKill = (function() {
 	
-	$('#alert-popup').fadeOut(500);
-	
 	if(!userDraggedFinger) {
+		$('#alert-popup').fadeOut(500);
 		setTimeout(function() {
 			$('body').removeClass('alert-body-bg');
 			$('body > .alert-blur').contents().unwrap();
@@ -171,6 +170,7 @@ AlertKill = (function() {
 	} else {
 		userDraggedFinger = false;
 	}
+	
 });
 
 /*$(".info-about").on("touchend", function(e) {
