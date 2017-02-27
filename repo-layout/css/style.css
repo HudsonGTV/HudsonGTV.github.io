@@ -234,8 +234,10 @@ body.alert-body-bg {
 	position: fixed;
 	text-align: center;
 	width: calc(100vw - 100px);
+	max-width: 300px;
 	top: calc(50% - 125px);
 	left: calc(50% - (100vw - 100px) / 2);
+	animation: fadein 0.75s;
 }
 
 .alert-title {
@@ -278,6 +280,14 @@ body.alert-body-bg {
 	transform: scale(1.05);
 	transition: transform 0.5s;
 }
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
 
 
 
