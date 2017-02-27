@@ -25,6 +25,7 @@
 	background-position-y: center;
 	background-size: 23px 23px;
 	overflow: visible !important;
+	padding-right: 2px;
 }
 
 li.link-inner {
