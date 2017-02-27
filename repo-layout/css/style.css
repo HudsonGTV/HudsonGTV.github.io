@@ -254,7 +254,7 @@ body.alert-body-bg {
 }
 
 .alert-button {
-	background: darkred;
+	background: rgba(200, 0, 0, 0.75);
 	color: white;
 	font-family: Arial;
 	font-weight: bold;
@@ -267,7 +267,7 @@ body.alert-body-bg {
 }
 
 .alert-button:hover, alert-button:link, .alert-button:active {
-	background: white;
+	background: rgba(255, 255, 255, 0.95);
 	color: darkred;
 	font-family: Arial;
 	font-weight: bold;
