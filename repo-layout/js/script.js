@@ -74,7 +74,7 @@ addFooter((new Date).getFullYear());
 
 $('.link').attr('ontouchstart', '');
 
-$('.version-num').html(repoVersion);
+$('.version-num').html(repoVersion + ' ');
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
 /*pageShowHideEvent = (function() {
