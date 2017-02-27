@@ -56,7 +56,7 @@ addFooter = (function(year) {
 						+ navigator.platform + ' - iOS ' + fulliOS +
 					'</h2>' +
 					'<h2 id="copyright">'
-						+ '&copy; ' + year + ' HKG Repo - All rights reserved - <a href="about.html" target="_popup">About</a>' +
+						+ '&copy; ' + year + ' HKG Repo - All rights reserved' +
 					'</h2>'
 	);
 	
@@ -77,7 +77,7 @@ addFooter((new Date).getFullYear());
 $('.link').attr('ontouchstart', '');
 
 $('.version-num').html(repoVersion);
-$('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
+$('#inner-body-wrapper').after('<div id="page-bottom"><a href="about.html" target="_popup">HKG Repo ' + repoVersion + '</a></div>');
 
 /*pageShowHideEvent = (function() {
 	
