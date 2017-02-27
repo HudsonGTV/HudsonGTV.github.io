@@ -16,7 +16,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.3.1-r4';
+var repoVersion = 'v2.3.1-r5';
 //var repoVersion = 'v2.2.1-beta.1';
 //var repoVersion = 'v2.2.1b-1';
 //var repoVersion = 'v2.2.1r-2';
@@ -25,6 +25,7 @@ var repoVersion = 'v2.3.1-r4';
 
 var pageIsActive = false;
 var pageIsInactive = false;
+var selectedElement = $('.link-active');
 
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
@@ -97,7 +98,7 @@ $("a").parent().on("touchstart", function(e) {
 	
 	console.log($(this));
 	
-	var selectedElement = $(this);
+	selectedElement = $(this);
 	
 	if(selectedElement.hasClass('link')) {
 		
@@ -105,9 +106,14 @@ $("a").parent().on("touchstart", function(e) {
 		
 	}
 	
-	document.addEventListener('touchmove', TouchSelectHightlight(selectedElement, 800));
-    document.addEventListener('touchend', TouchSelectHightlight(selectedElement, 800));
+	//document.addEventListener('touchmove', TouchSelectHightlight(selectedElement, 800));
+    //document.addEventListener('touchend', TouchSelectHightlight(selectedElement, 800));
 	
+});
+
+$(window).focus(function() {
+	TouchSelectHightlight(selectedElement, 800);
+	console.log('focus');
 });
 
 /*$("a").parent().on("touchend", function(e) {
@@ -116,7 +122,7 @@ $("a").parent().on("touchstart", function(e) {
 	
 	console.log($(this));
 	
-	var selectedElement = $(this);
+	selectedElement = $(this);
 	
 	if(pageIsActive && !pageIsInactive) {
 	}
