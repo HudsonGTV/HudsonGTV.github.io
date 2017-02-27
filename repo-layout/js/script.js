@@ -164,8 +164,10 @@ AlertKill = (function() {
 		setTimeout(function() {
 			$('body').removeClass('alert-body-bg');
 			$('body > .alert-blur').contents().unwrap();
-			//$('#alert-popup').remove();
 		}, 75);
+		setTimeout(function() {
+			$('#alert-popup').remove();
+		}, 500);
 	} else {
 		userDraggedFinger = false;
 	}
