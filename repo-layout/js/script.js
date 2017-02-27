@@ -23,9 +23,9 @@ var repoVersion = 'v2.3.1-r5';
 
 //var iPhoneModel = '6';
 
-var pageIsActive = false;
-var pageIsInactive = false;
-var selectedElement = $('.link-active');
+//var pageIsActive = false;
+//var pageIsInactive = false;
+//var selectedElement = $('.link-active');
 
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
@@ -63,9 +63,9 @@ addFooter = (function(year) {
 TouchSelectHightlight = (function(selectedElement, timeout) {
 	setTimeout(function() {
 		//if(true) {
-		//	selectedElement.blur(); // Works... but I should do this every time?
+			selectedElement.blur(); // Works... but I should do this every time?
 			selectedElement.removeClass('link-active');
-			$('.link-active').removeClass('link-active');
+			//$('.link-active').removeClass('link-active');
 		//}
 	}, timeout);
 });
@@ -77,7 +77,7 @@ $('.link').attr('ontouchstart', '');
 $('.version-num').html(repoVersion);
 $('#inner-body-wrapper').after('<div id="page-bottom">HKG Repo ' + repoVersion + '</div>');
 
-pageShowHideEvent = (function() {
+/*pageShowHideEvent = (function() {
 	
 	window.addEventListener('pagehide', function(e) {
 		pageIsActive = false;
@@ -91,9 +91,9 @@ pageShowHideEvent = (function() {
 		console.log('page shown');
 	});
 	
-});
+});*/
 
-pageShowHideEvent();
+//pageShowHideEvent();
 
 $("a").parent().on("touchstart", function(e) {
 	
@@ -104,6 +104,8 @@ $("a").parent().on("touchstart", function(e) {
 	if(selectedElement.hasClass('link')) {
 		
 		selectedElement.addClass('link-active');
+		
+		//TouchSelectHightlight(selectedElement, 800);
 		
 	}
 	
@@ -117,22 +119,20 @@ $(window).focus(function() {
 	console.log('focus');
 });
 
-/*$("a").parent().on("touchend", function(e) {
+$("a").parent().on("touchend", function(e) {
 	
-	pageShowHideEvent();
+	//pageShowHideEvent();
 	
 	console.log($(this));
 	
 	selectedElement = $(this);
 	
-	if(pageIsActive && !pageIsInactive) {
-	}
+	//if(pageIsActive && !pageIsInactive) {
+	//}
 	
-	$(window).focus(function(){
-		TouchSelectHightlight(selectedElement, 600);
-	});
+	TouchSelectHightlight(selectedElement, 600);
 	
-});*/
+});
 
 /*$(function() {
 		
