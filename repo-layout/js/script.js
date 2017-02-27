@@ -158,7 +158,7 @@ $("body").on("touchmove", function() {
 
 AlertKill = (function() {
 	
-	$('#alert-popup').fadeOut(500, swing);
+	$('#alert-popup').fadeOut(500);
 	
 	if(!userDraggedFinger) {
 		setTimeout(function() {
