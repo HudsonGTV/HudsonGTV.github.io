@@ -16,6 +16,16 @@
 	height: 44px !important;
 }
 
+.info {
+	background-repeat: no-repeat;
+	/*background-image: url(../../assets/chevron@2x.png);*/
+	background-image: url(../../assets/infoDarkTheme@2x.png);
+	background-position-x: calc(100% + 0px);
+	background-position-y: center;
+	background-size: 20px 20px;
+	overflow: visible !important;
+}
+
 li.link-inner {
 	display: inline-block;
 }
@@ -173,6 +183,15 @@ ul.is-unsupported:after, ul.is-unsupported:before {
 }
 
 .chevron-right {
+	float: right;
+	font-family: Arial, -apple-system-font;
+	font-weight: normal;
+	color: #8e8e9f !important;
+	margin-top: 15px; /*June*/
+	margin-right: 25px;
+}
+
+.info-right {
 	float: right;
 	font-family: Arial, -apple-system-font;
 	font-weight: normal;

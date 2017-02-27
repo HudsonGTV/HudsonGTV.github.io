@@ -134,6 +134,14 @@ $("a").parent().on("touchend", function(e) {
 	
 });
 
+/*$(".info-about").on("touchend", function(e) {
+	
+	selectedElement = $(this);
+	
+	
+	
+});*/
+
 /*$(function() {
 		
 	if(typeof cydia != 'undefined') {
