@@ -27,6 +27,8 @@ var repoVersion = 'v2.4.0-r2';
 //var pageIsInactive = false;
 //var selectedElement = $('.link-active');
 
+var userDraggedFinger = false;
+
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
 
@@ -150,12 +152,21 @@ alertBox = (function(alertTitle, alertStr, dismissButton, palertStyleEnabled) {
 	
 });
 
+$("body").on("touchmove", function() {
+	userDraggedFinger = true;
+});
+
 AlertKill = (function() {
-	setTimeout(function() {
-		$('body').removeClass('alert-body-bg');
-		$('body > .alert-blur').contents().unwrap();
-		$('#alert-popup').remove();
-	}, 75);
+	
+	if(!userDraggedFinger) {
+		setTimeout(function() {
+			$('body').removeClass('alert-body-bg');
+			$('body > .alert-blur').contents().unwrap();
+			$('#alert-popup').remove();
+		}, 75);
+	} else {
+		userDraggedFinger = false;
+	}
 });
 
 /*$(".info-about").on("touchend", function(e) {
