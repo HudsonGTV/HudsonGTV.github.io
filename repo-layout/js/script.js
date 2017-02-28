@@ -182,26 +182,29 @@ AlertKill = (function() {
 	
 	$(document).on(clickEnded, function() {
 		
-		if(forceCancelled) {
-			
-			force = 0.0;
-			
-			$('#force-touch-popup').remove();
-			
-			isAlreadyWrapped = false;
-			
-			ForceMenuKill();
-			
-			//$('label.link-no-click').html(force);
-			
-			forceCancelled = false;
-			forceMenuExists = false;
-			
-			return;
-			
+		if(force <= 0.1)
+			if(forceCancelled) {
+
+				force = 0.0;
+
+				//$('#force-touch-popup').remove();
+
+				isAlreadyWrapped = false;
+
+				ForceMenuKill();
+
+				//$('label.link-no-click').html(force);
+
+				forceCancelled = false;
+				forceMenuExists = false;
+
+				return;
+
+			}
+
+			forceCancelled = true;
+
 		}
-		
-		forceCancelled = true;
 		
 	});
 	
