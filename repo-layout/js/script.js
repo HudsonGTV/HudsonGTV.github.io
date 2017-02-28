@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r11 (DB)';
+var repoVersion = 'v2.5.2-r12';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -116,7 +116,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	}
 	
 	if(alertStr == '__strInsertTechnicalInfo') {
-		alertStr = 'Version 2.5.2-r11 (01F48A3)';
+		alertStr = 'Version 2.5.2-r12 (01F48A4)';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
@@ -190,6 +190,10 @@ AlertKill = (function() {
 					'</div>'
 				);
 				
+				$('#force-touch-popup').hide();
+				$('#force-touch-popup').addClass('ft-open');
+				$('#force-touch-popup').show(250);
+				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
 			}
@@ -212,7 +216,7 @@ AlertKill = (function() {
 				
 				if(forceCancelled) {
 				
-					$('#force-touch-popup').remove();
+					//$('#force-touch-popup').remove();
 
 					isAlreadyWrapped = false;
 
@@ -243,8 +247,15 @@ AlertKill = (function() {
 	});
 	
 	ForceMenuKill = (function() {
+		
+		$('#force-touch-popup').hide(250);
+		
 		document.body.style.overflow = "visible";
-		$('#force-touch-popup').remove();
+		
+		setTimeout(function() {
+			$('#force-touch-popup').remove();
+		}, 250);
+		
 		$('body').removeClass('ft-bg');
 		$('body > .alert-blur.ft-blur').contents().unwrap();
 		//$('#force-touch-popup').css('display', 'none');

@@ -241,9 +241,17 @@ ul.repo-link {
 	margin: 12.5px;
 	text-align: left;
 	width: calc(100vw - 25px);
-	top: 50px;
+	top: -50px;
 	/*opacity: 0.75;*/
 	min-height: 50px;
+	transform: translateY(100px);
+	transition: transform 0.25s;
+	transition-duration: 250ms;
+}
+
+.ft-open {
+	transform: scale(1);
+	transition: transform 0.25s;
 }
 
 .ft-blur {
