@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r5.1';
+var repoVersion = 'v2.5.2-r5.1.1';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -182,7 +182,7 @@ AlertKill = (function() {
 	
 	$(document).on(clickEnded, function() {
 		
-		if(force <= 0.1) {
+		if(!userDraggedFinger) {
 			if(forceCancelled) {
 
 				force = 0.0;
@@ -204,6 +204,8 @@ AlertKill = (function() {
 
 			forceCancelled = true;
 
+		} else {
+			userDraggedFinger = false;
 		}
 		
 	});
