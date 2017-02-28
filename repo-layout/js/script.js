@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r11 (DEBUG)';
+var repoVersion = 'v2.5.2-r11 (debug)';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -171,13 +171,25 @@ AlertKill = (function() {
 			
 			if(force >= 0.001 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur ft-blur"></div>');
-				$('body').addClass('alert-body-bg ft-bg');
+				$('body').addClass('ft-bg');
 				document.body.style.overflow = "hidden";
 				isAlreadyWrapped = true;
 			}
 
 			if(force >= 0.75 && !forceMenuExists) {
-				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1"><i class="forceTouchIcon fa fa-home" aria-hidden="true"></i><i class="forceTouchText">Home</i></a></div>');
+				$('body').append(
+					'<div id="force-touch-popup">' +
+						'<a href="#" data-target="http://repo.hudsongreen.com/" class="force-touch-link ft-1">' +
+							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Home</i>' +
+						'</a>' +
+						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-2">' +
+							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Dismiss</i>' +
+						'</a>' +
+					'</div>'
+				);
+				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
 			}
@@ -192,16 +204,18 @@ AlertKill = (function() {
  
 	}/*, {only: 'touch'}*/);
 	
+	$('#force-touch-popup').children().on(clickStart, function(e) {
+		e.stopPropanhgation();
+	});
+	
 	$(document).on(clickEnded, function() {
 		
 		if(!userDraggedFinger) {
 			
-			forceCancelled = true;
-			
-			if(forceCancelled) {
+			setTimeout(function() {
 				
-				setTimeout(function() {
-					
+				if(forceCancelled) {
+				
 					$('#force-touch-popup').remove();
 
 					isAlreadyWrapped = false;
@@ -211,23 +225,31 @@ AlertKill = (function() {
 					//$('label.link-no-click').html(force);
 
 					return;
-					
-				}, 250);
 
-			}
-
-			//forceCancelled = true;
-
+				}
+				
+				forceCancelled = true;
+				
+			}, 150);
+			
 		} else {
 			userDraggedFinger = false;
 		}
 		
 	});
 	
+	KillAllMenus = (function() {
+		$('#force-touch-popup').remove();
+
+		isAlreadyWrapped = false;
+
+		ForceMenuKill();
+	});
+	
 	ForceMenuKill = (function() {
 		document.body.style.overflow = "visible";
 		$('#force-touch-popup').remove();
-		$('body').removeClass('alert-body-bg ft-bg');
+		$('body').removeClass('ft-bg');
 		$('body > .alert-blur.ft-blur').contents().unwrap();
 		//$('#force-touch-popup').css('display', 'none');
 		//$('#force-touch-popup').html(' ');

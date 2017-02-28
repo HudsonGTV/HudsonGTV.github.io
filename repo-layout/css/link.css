@@ -280,6 +280,10 @@ i.forceTouchText {
 	opacity: 1.0 !important;
 }
 
+body.ft-bg {
+	background: #222;
+}
+
 #copyright {
 	color: #000;
 }
