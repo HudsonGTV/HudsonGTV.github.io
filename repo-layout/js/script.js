@@ -170,19 +170,14 @@ AlertKill = (function() {
 			
 			if(force <= 0.75) {
 				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
-				window.navigator.vibrate(200);
 			}
 
 			if(force >= 0.75 && !forceMenuExists) {
 				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1">Home</a></div>');
 				forceMenuExists = true;
+				window.navigator.vibrate(200);
 			}
 
-		}
-		
-		if(force <= 0.75) {
-			$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
-			window.navigator.vibrate(200);
 		}
  
 	}/*, {only: 'touch'}*/);
