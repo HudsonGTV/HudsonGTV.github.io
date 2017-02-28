@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.1-rc1';
+var repoVersion = 'v2.5.1-b1';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -158,7 +158,7 @@ AlertKill = (function() {
 
 			console.log(force);
 
-			$('label.link-no-click').html(force);
+			//$('label.link-no-click').html(force);
 			
 			if(force >= 0.001 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur"></div>');
@@ -182,13 +182,21 @@ AlertKill = (function() {
 		
 		if(forceCancelled) {
 			
-			force = 0.0;
-			
-			isAlreadyWrapped = false;
-			
-			ForceMenuKill();
-			
-			$('label.link-no-click').html(force);
+			$(document).on(clickEnded, function() {
+				
+				force = 0.0;
+				
+				isAlreadyWrapped = false;
+				
+				ForceMenuKill();
+				
+				//$('label.link-no-click').html(force);
+				
+				forceCancelled = false;
+				
+				return;
+				
+			});
 			
 			forceCancelled = false;
 			
@@ -203,7 +211,7 @@ AlertKill = (function() {
 	ForceMenuKill = (function() {
 		$('body').removeClass('alert-body-bg');
 		$('body > .alert-blur').contents().unwrap();
-		$('body > #force-touch-popup').contents().unwrap();
+		$('#force-touch-popup').remove();
 	});
 	
 })();
