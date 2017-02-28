@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r5.2';
+var repoVersion = 'v2.5.2-r5.2.1';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -177,23 +177,14 @@ AlertKill = (function() {
 				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1">Home</a></div>');
 				forceMenuExists = true;
 			}
-			
-			if(force < 0.75 && !forceMenuExists) {
-				force = 0.0;
-
-				//$('#force-touch-popup').remove();
-
-				isAlreadyWrapped = false;
-
-				ForceMenuKill();
-
-				//$('label.link-no-click').html(force);
-
-				forceCancelled = false;
-				forceMenuExists = false;
-			}
 
 		}
+		
+		if(force <= 0.75) {
+			$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
+			window.navigator.vibrate(200);
+		}
+ 
 	}/*, {only: 'touch'}*/);
 	
 	$(document).on(clickEnded, function() {
