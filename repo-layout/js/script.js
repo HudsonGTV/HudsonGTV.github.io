@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2.1-r1';
+var repoVersion = 'v2.5.2-r11';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -111,6 +111,14 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 
 alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	
+	if(alertTitle == '') {
+		alertTitle = 'HKG Repository';
+	}
+	
+	if(alertStr == '__strInsertTechnicalInfo') {
+		alertStr = 'Version 2.5.2-r11 (01F48A3)';
+	}
+	
 	$('body').wrapInner('<div class="alert-blur"></div>');
 	$('body').addClass('alert-body-bg');
 	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
@@ -167,15 +175,17 @@ AlertKill = (function() {
 				document.body.style.overflow = "hidden";
 				isAlreadyWrapped = true;
 			}
-			
-			if(force <= 0.75 && !forceMenuExists) {
-				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
-			}
 
 			if(force >= 0.75 && !forceMenuExists) {
-				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1">Home</a></div>');
+				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1"><i class="forceTouchIcon fa fa-home" aria-hidden="true"></i><i class="forceTouchText">Home</i></a></div>');
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
+			}
+			
+			if(force < 0.75 && !forceMenuExists) {
+				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
+			} else if(force >= 0.75) {
+				$('.ft-blur').css({'filter': 'blur(' + (0.75 * 22.5) + 'px)'});
 			}
 
 		}
@@ -186,8 +196,6 @@ AlertKill = (function() {
 		
 		if(!userDraggedFinger) {
 			if(forceCancelled) {
-
-				force = 0.0;
 
 				//$('#force-touch-popup').remove();
 
