@@ -14,18 +14,15 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.0-b1';
+var repoVersion = 'v2.5.0-b2';
 
+var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
 var clickEnded = ('ontouchend' in document.documentElement)  ? 'touchend' : 'mouseup';
 
 var userDraggedFinger = false;
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
-
-/*document.body.addEventListener('touchforcechange',function(e) {
-	iPhoneModel = iPhoneModel + 'S';
-});*/
 
 (function() {
 	
@@ -112,14 +109,16 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 
 alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	
-	$('body').wrapInner('<div class="alert-blur"></div>');
-	$('body').addClass('alert-body-bg');
-	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
-	
-	$('.alert-button').on(clickEnded, function() {
-		AlertKill();
-	});
-	
+	if(force <= 0.2) {
+		$('body').wrapInner('<div class="alert-blur"></div>');
+		$('body').addClass('alert-body-bg');
+		$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
+		
+		$('.alert-button').on(clickEnded, function() {
+			AlertKill();
+		});
+		
+	}
 	
 });
 
@@ -148,12 +147,47 @@ AlertKill = (function() {
 	3D TOUCH EVENTS
 **/
 
-Pressure.set('.icon.icon-top', {
-  change: function(force, event){
-    console.log(force);
-	$('label.link-no-click').html(force);
-  }
-});
+(function() {
+	
+	Pressure.set('.force-touch-nav', {
+		change: function(force, event) {
+
+			console.log(force);
+
+			$('label.link-no-click').html(force);
+
+			var target = '';
+
+			$('body').on(clickStart, function(e) {
+				target = $(e.target).attr('class');
+			});
+
+			if(force >= 0.99 && target != 'info-btn-right') {
+				$('body').wrapInner('<div class="alert-blur"></div>');
+				$('body').addClass('alert-body-bg');
+				force = 0.0;
+			}
+
+		}
+	}, {only: 'touch'});
+	
+	$(document).on(clickEnded, function() {
+		
+		force = 0.0;
+		
+		ForceMenuKill();
+		
+		$('label.link-no-click').html(force);
+		
+	});
+	
+	ForceMenuKill = (function() {
+		$('body').removeClass('alert-body-bg');
+		$('body > .alert-blur').contents().unwrap();
+	});
+	
+})();
+
 
 /*
 $(".info-about").on("touchend", function(e) {

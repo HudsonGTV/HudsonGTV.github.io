@@ -28,6 +28,14 @@
 	width: calc(100% - 2px);
 }
 
+.info-btn-right {
+	position: absolute;
+	width: 23px;
+	height: 23px;
+	right: 12px;
+	margin-top: -22px;
+}
+
 li.link-inner {
 	display: inline-block;
 }
