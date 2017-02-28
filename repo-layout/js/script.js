@@ -203,6 +203,7 @@ AlertKill = (function() {
 	ForceMenuKill = (function() {
 		$('body').removeClass('alert-body-bg ft-bg');
 		$('body > .alert-blur.ft-blur').contents().unwrap();
+		$('#force-touch-popup').html(' ');
 		$('#force-touch-popup').remove();
 	});
 	
