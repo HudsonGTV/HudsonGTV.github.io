@@ -168,7 +168,7 @@ AlertKill = (function() {
 				isAlreadyWrapped = true;
 			}
 			
-			if(force <= 0.75) {
+			if(force <= 0.75 && !forceMenuExists) {
 				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
 			}
 
