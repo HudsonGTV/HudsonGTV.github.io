@@ -182,7 +182,7 @@ AlertKill = (function() {
 	
 	$(document).on(clickEnded, function() {
 		
-		if(force <= 0.1)
+		if(force <= 0.1) {
 			if(forceCancelled) {
 
 				force = 0.0;
