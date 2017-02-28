@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r11 (DEBUG)';
+var repoVersion = 'v2.5.2-r11 (DB)';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -184,8 +184,8 @@ AlertKill = (function() {
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
 						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-2">' +
-							//'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
-							'<i class="forceTouchText">Dismiss If I Won\'t Close On Double Tap</i>' +
+							'<i class="forceTouchIcon fa fa-times" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Click If I Don\'t Close On Double Tap</i>' +
 						'</a>' +
 					'</div>'
 				);
@@ -203,10 +203,6 @@ AlertKill = (function() {
 		}
  
 	}/*, {only: 'touch'}*/);
-	
-	$('#force-touch-popup').children().on(clickStart, function(e) {
-		e.stopPropanhgation();
-	});
 	
 	$(document).on(clickEnded, function() {
 		
