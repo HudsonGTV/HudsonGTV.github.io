@@ -172,7 +172,7 @@ AlertKill = (function() {
 			}
 
 			if(force >= 0.75) {
-				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-1">Home</a></div>');
+				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1">Home</a></div>');
 			}
 
 		}
