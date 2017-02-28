@@ -182,9 +182,9 @@ AlertKill = (function() {
 				window.navigator.vibrate(200);
 			}
 			
-			if(force < 0.75 && !forceMenuExists) {
+			if(force <= 0.75 && !forceMenuExists) {
 				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
-			} else if(force >= 0.75) {
+			} else if(force > 0.75) {
 				$('.ft-blur').css({'filter': 'blur(' + (0.75 * 22.5) + 'px)'});
 			}
 
@@ -195,18 +195,16 @@ AlertKill = (function() {
 	$(document).on(clickEnded, function() {
 		
 		if(!userDraggedFinger) {
+			forceCancelled = true;
 			if(forceCancelled) {
 
-				//$('#force-touch-popup').remove();
+				$('#force-touch-popup').remove();
 
 				isAlreadyWrapped = false;
 
 				ForceMenuKill();
 
 				//$('label.link-no-click').html(force);
-
-				forceCancelled = false;
-				forceMenuExists = false;
 
 				return;
 
@@ -230,6 +228,10 @@ AlertKill = (function() {
 		
 		//var element = document.getElementById("force-touch-popup");
 		//element.parentNode.removeChild(element);
+		
+		forceCancelled = false;
+		forceMenuExists = false;
+		
 	});
 	
 })();
