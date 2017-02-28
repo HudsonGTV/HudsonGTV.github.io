@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r1';
+var repoVersion = 'v2.5.2-r2';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -161,13 +161,13 @@ AlertKill = (function() {
 			//$('label.link-no-click').html(force);
 			
 			if(force >= 0.001 && !isAlreadyWrapped) {
-				$('body').wrapInner('<div class="alert-blur"></div>');
-				$('body').addClass('alert-body-bg');
+				$('body').wrapInner('<div class="alert-blur ft-blur"></div>');
+				$('body').addClass('alert-body-bg ft-bg');
 				isAlreadyWrapped = true;
 			}
 			
 			if(force <= 0.75) {
-				$('.alert-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
+				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
 				window.navigator.vibrate(200);
 			}
 
@@ -201,8 +201,8 @@ AlertKill = (function() {
 	});
 	
 	ForceMenuKill = (function() {
-		$('body').removeClass('alert-body-bg');
-		$('body > .alert-blur').contents().unwrap();
+		$('body').removeClass('alert-body-bg ft-bg');
+		$('body > .alert-blur.ft-blur').contents().unwrap();
 		$('#force-touch-popup').remove();
 	});
 	
