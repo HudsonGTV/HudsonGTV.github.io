@@ -182,7 +182,7 @@ AlertKill = (function() {
 	
 	$(document).on(clickEnded, function() {
 		
-		if(forceCancelled && !userDraggedFinger) {
+		if(forceCancelled) {
 			
 			force = 0.0;
 			
