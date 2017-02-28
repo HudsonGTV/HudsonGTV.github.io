@@ -207,7 +207,7 @@ AlertKill = (function() {
 		$('body > .alert-blur.ft-blur').contents().unwrap();
 		//$('#force-touch-popup').css('display', 'none');
 		//$('#force-touch-popup').html(' ');
-		//$('#force-touch-popup').remove();
+		$('#force-touch-popup').remove();
 		
 		//var element = document.getElementById("force-touch-popup");
 		//element.parentNode.removeChild(element);
