@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.0-b6';
+var repoVersion = 'v2.5.1-rc1';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -66,6 +66,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 
 })();
 
+
 /**
 	MANAGE TABLE LINKS (MAINLY HIGHLIGHTING SELECTED TABLE LINKS)
 **/
@@ -102,6 +103,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	});
 
 })();
+
 
 /**
 	PAGE ALERT POPUPS
@@ -149,6 +151,7 @@ AlertKill = (function() {
 (function() {
 	
 	var isAlreadyWrapped = false;
+	var forceCancelled = false;
 	
 	Pressure.set('.info-btn-main', {
 		change: function(force, event) {
@@ -157,7 +160,7 @@ AlertKill = (function() {
 
 			$('label.link-no-click').html(force);
 			
-			if(force >= 0.01 && !isAlreadyWrapped) {
+			if(force >= 0.001 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur"></div>');
 				$('body').addClass('alert-body-bg');
 				isAlreadyWrapped = true;
@@ -169,7 +172,7 @@ AlertKill = (function() {
 			}
 
 			if(force >= 0.75) {
-				//$('body').addClass('alert-body-bg');
+				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-1">Home</a></div>');
 			}
 
 		}
@@ -177,19 +180,30 @@ AlertKill = (function() {
 	
 	$(document).on(clickEnded, function() {
 		
-		force = 0.0;
+		if(forceCancelled) {
+			
+			force = 0.0;
+			
+			isAlreadyWrapped = false;
+			
+			ForceMenuKill();
+			
+			$('label.link-no-click').html(force);
+			
+			forceCancelled = false;
+			
+			return;
+			
+		}
 		
-		isAlreadyWrapped = false;
-		
-		ForceMenuKill();
-		
-		$('label.link-no-click').html(force);
+		forceCancelled = true;
 		
 	});
 	
 	ForceMenuKill = (function() {
 		$('body').removeClass('alert-body-bg');
 		$('body > .alert-blur').contents().unwrap();
+		$('body > #force-touch-popup').contents().unwrap();
 	});
 	
 })();

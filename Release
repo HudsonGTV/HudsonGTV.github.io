@@ -1,7 +1,7 @@
 Origin: HKG Repository
 Label: HKG Repository
 Suite: stable
-Version: 2.5.0-b6
+Version: v2.5.1-rc1
 Codename: HKG
 Architectures: iphoneos-arm
 Components: main
