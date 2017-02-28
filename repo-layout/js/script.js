@@ -184,8 +184,8 @@ AlertKill = (function() {
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
 						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-2">' +
-							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
-							'<i class="forceTouchText">Dismiss</i>' +
+							//'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Dismiss If I Won\'t Close On Double Tap</i>' +
 						'</a>' +
 					'</div>'
 				);
