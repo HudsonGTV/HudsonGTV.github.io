@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.1-b1';
+var repoVersion = 'v2.5.1-r1';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -182,21 +182,13 @@ AlertKill = (function() {
 		
 		if(forceCancelled) {
 			
-			$(document).on(clickEnded, function() {
-				
-				force = 0.0;
-				
-				isAlreadyWrapped = false;
-				
-				ForceMenuKill();
-				
-				//$('label.link-no-click').html(force);
-				
-				forceCancelled = false;
-				
-				return;
-				
-			});
+			force = 0.0;
+			
+			isAlreadyWrapped = false;
+			
+			ForceMenuKill();
+			
+			//$('label.link-no-click').html(force);
 			
 			forceCancelled = false;
 			
