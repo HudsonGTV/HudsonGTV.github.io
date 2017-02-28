@@ -152,6 +152,7 @@ AlertKill = (function() {
 	
 	var isAlreadyWrapped = false;
 	var forceCancelled = false;
+	var forceMenuExists = false;
 	
 	Pressure.set('.info-btn-main', {
 		change: function(force, event) {
@@ -171,8 +172,9 @@ AlertKill = (function() {
 				window.navigator.vibrate(200);
 			}
 
-			if(force >= 0.75) {
+			if(force >= 0.75 && !forceMenuExists) {
 				$('body').append('<div id="force-touch-popup"><a href="http://repo.hudsongreen.com/" class="force-touch-link ft-1">Home</a></div>');
+				forceMenuExists = true;
 			}
 
 		}
@@ -193,6 +195,7 @@ AlertKill = (function() {
 			//$('label.link-no-click').html(force);
 			
 			forceCancelled = false;
+			forceMenuExists = false;
 			
 			return;
 			
