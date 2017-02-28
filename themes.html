@@ -25,11 +25,14 @@
 	<body class="depiction">
 		
 		<ul class="repo-link" style="background: #111 !important; border-bottom: 1px solid rgba(57, 59, 57, 0.5);">
-			<li class="link">
-				<a href="index.html" class="link-inner chevron">
+			<li class="link-no-click">
+				<a class="link-inner force-touch-nav info">
 					<div>
+						<div class="info-btn-main"></div>
 						<img class="icon icon-top" src="assets/favicon.png">
-						<label style="background: transparent;">HKG Repository</label>
+						<label class="link-no-click">HKG Repository</label>
+						<label class="version-num info-right info-about"></label>
+						<div class="info-btn-right" onClick="alertBox('HKG Repository', 'null', 'Dismiss', true)"></div>
 					</div>
 				</a>
 			</li>
@@ -146,6 +149,7 @@
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="repo-layout/js/pressure.js"></script>
 		<script src="repo-layout/js/script.js"></script>
 		<script src="js/reverseList.js"></script>
 		
