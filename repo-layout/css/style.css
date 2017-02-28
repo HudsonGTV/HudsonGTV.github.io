@@ -234,10 +234,10 @@ body.alert-body-bg {
 #alert-popup {
 	position: fixed;
 	text-align: center;
-	width: calc(100vw - 100px);
+	width: 250px;
 	max-width: 300px;
 	top: calc(50% - 125px);
-	left: calc(50% - (100vw - 100px) / 2);
+	left: calc(50% - 125px);
 	animation: fadein 0.5s;
 }
 
