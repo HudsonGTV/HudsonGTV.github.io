@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.0-b3';
+var repoVersion = 'v2.5.0-b4';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -157,12 +157,12 @@ AlertKill = (function() {
 
 			$('label.link-no-click').html(force);
 			
-			if(force >= 0.1 && !isAlreadyWrapped) {
+			if(force >= 0.01 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur"></div>');
 				isAlreadyWrapped = true;
 			}
 			
-			$('.alert-blur').css('filter', 'blur(' + (force * 10) + 'px) !important');
+			$('.alert-blur').css('filter', 'blur(' + (force.toFixed(2) * 10) + 'px) !important');
 
 			if(force >= 1.0) {
 				$('body').addClass('alert-body-bg');
