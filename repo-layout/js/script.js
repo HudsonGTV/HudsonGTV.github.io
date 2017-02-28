@@ -148,6 +148,8 @@ AlertKill = (function() {
 
 (function() {
 	
+	var isAlreadyWrapped = false;
+	
 	Pressure.set('.info-btn-main', {
 		change: function(force, event) {
 
@@ -155,10 +157,12 @@ AlertKill = (function() {
 
 			$('label.link-no-click').html(force);
 			
-			if(force >= 0.1) {
+			if(force >= 0.1 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur"></div>');
-				$('.alert-blur').css('filter', 'blur(' + (force * 10) + 'px) !important');
+				isAlreadyWrapped = true;
 			}
+			
+			$('.alert-blur').css('filter', 'blur(' + (force * 10) + 'px) !important');
 
 			if(force >= 1.0) {
 				$('body').addClass('alert-body-bg');
@@ -171,6 +175,8 @@ AlertKill = (function() {
 	$(document).on(clickEnded, function() {
 		
 		force = 0.0;
+		
+		isAlreadyWrapped = false;
 		
 		ForceMenuKill();
 		
