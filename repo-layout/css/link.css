@@ -247,6 +247,10 @@ ul.repo-link {
 	opacity: 0.5;
 }
 
+.ft-blur {
+	overflow-x: hidden !important;
+}
+
 .force-touch-link {
 	color: black;
 	display: block;
