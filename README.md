@@ -1,1 +1,1 @@
-HKG Repo Code! Feel free to use thi for reference, but please do NOT copy any code and/or assets! I worked hard on them, so please respect that. Again, feel free to use this repo for reference just don't take anything off of it.
+HKG Repo Code! Feel free to use this for reference, but please do NOT copy any code and/or assets! I worked hard on them, so please respect that. Again, feel free to use this repo for reference just don't take anything off of it.
