@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.0-b2';
+var repoVersion = 'v2.5.0-b3';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -109,16 +109,14 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 
 alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	
-	if(force <= 0.2) {
-		$('body').wrapInner('<div class="alert-blur"></div>');
-		$('body').addClass('alert-body-bg');
-		$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
-		
-		$('.alert-button').on(clickEnded, function() {
-			AlertKill();
-		});
-		
-	}
+	$('body').wrapInner('<div class="alert-blur"></div>');
+	$('body').addClass('alert-body-bg');
+	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
+	$('.info-btn-main').css('pointer-events', 'none');
+	
+	$('.alert-button').on(clickEnded, function() {
+		AlertKill();
+	});
 	
 });
 
@@ -136,6 +134,7 @@ AlertKill = (function() {
 		}, 75);
 		setTimeout(function() {
 			$('#alert-popup').remove();
+			$('.info-btn-main').css('pointer-events', 'auto');
 		}, 500);
 	} else {
 		userDraggedFinger = false;
@@ -149,27 +148,21 @@ AlertKill = (function() {
 
 (function() {
 	
-	Pressure.set('.force-touch-nav', {
+	Pressure.set('.info-btn-main', {
 		change: function(force, event) {
 
 			console.log(force);
 
 			$('label.link-no-click').html(force);
 
-			var target = '';
-
-			$('body').on(clickStart, function(e) {
-				target = $(e.target).attr('class');
-			});
-
-			if(force >= 0.99 && target != 'info-btn-right') {
+			if(force >= 1.0) {
 				$('body').wrapInner('<div class="alert-blur"></div>');
 				$('body').addClass('alert-body-bg');
 				force = 0.0;
 			}
 
 		}
-	}, {only: 'touch'});
+	}/*, {only: 'touch'}*/);
 	
 	$(document).on(clickEnded, function() {
 		

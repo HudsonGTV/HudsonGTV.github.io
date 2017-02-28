@@ -28,6 +28,13 @@
 	width: calc(100% - 2px);
 }
 
+.info-btn-main {
+	position: absolute;
+	width: calc(100% - 35px);
+	height: 47px;
+	right: 35px;
+}
+
 .info-btn-right {
 	position: absolute;
 	width: 23px;
