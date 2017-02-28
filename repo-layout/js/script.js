@@ -164,6 +164,7 @@ AlertKill = (function() {
 			if(force >= 0.001 && !isAlreadyWrapped) {
 				$('body').wrapInner('<div class="alert-blur ft-blur"></div>');
 				$('body').addClass('alert-body-bg ft-bg');
+				document.body.style.overflow = "hidden";
 				isAlreadyWrapped = true;
 			}
 			
@@ -211,6 +212,7 @@ AlertKill = (function() {
 	});
 	
 	ForceMenuKill = (function() {
+		document.body.style.overflow = "visible";
 		$('#force-touch-popup').remove();
 		$('body').removeClass('alert-body-bg ft-bg');
 		$('body > .alert-blur.ft-blur').contents().unwrap();
