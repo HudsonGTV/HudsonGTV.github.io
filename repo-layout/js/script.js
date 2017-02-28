@@ -184,6 +184,8 @@ AlertKill = (function() {
 			
 			force = 0.0;
 			
+			$('#force-touch-popup').remove();
+			
 			isAlreadyWrapped = false;
 			
 			ForceMenuKill();
@@ -207,8 +209,8 @@ AlertKill = (function() {
 		//$('#force-touch-popup').html(' ');
 		//$('#force-touch-popup').remove();
 		
-		var element = document.getElementById("force-touch-popup");
-		element.parentNode.removeChild(element);
+		//var element = document.getElementById("force-touch-popup");
+		//element.parentNode.removeChild(element);
 	});
 	
 })();
