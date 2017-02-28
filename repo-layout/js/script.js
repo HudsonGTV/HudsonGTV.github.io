@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.0-b5';
+var repoVersion = 'v2.5.0-b6';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -165,8 +165,7 @@ AlertKill = (function() {
 			
 			if(force <= 0.75) {
 				$('.alert-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
-			} else {
-				$('.alert-blur').css('filter', 'blur(15px)');
+				window.navigator.vibrate(200);
 			}
 
 			if(force >= 0.75) {
