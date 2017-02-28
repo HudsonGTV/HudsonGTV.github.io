@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r2';
+var repoVersion = 'v2.5.2-r3';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -203,8 +203,12 @@ AlertKill = (function() {
 	ForceMenuKill = (function() {
 		$('body').removeClass('alert-body-bg ft-bg');
 		$('body > .alert-blur.ft-blur').contents().unwrap();
-		$('#force-touch-popup').html(' ');
-		$('#force-touch-popup').remove();
+		//$('#force-touch-popup').css('display', 'none');
+		//$('#force-touch-popup').html(' ');
+		//$('#force-touch-popup').remove();
+		
+		var element = document.getElementById("force-touch-popup");
+		element.parentNode.removeChild(element);
 	});
 	
 })();
