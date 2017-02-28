@@ -154,9 +154,13 @@ AlertKill = (function() {
 			console.log(force);
 
 			$('label.link-no-click').html(force);
+			
+			if(force >= 0.1) {
+				$('body').wrapInner('<div class="alert-blur"></div>');
+				$('.alert-blur').css('filter', 'blur(' + (force * 10) + 'px) !important');
+			}
 
 			if(force >= 1.0) {
-				$('body').wrapInner('<div class="alert-blur"></div>');
 				$('body').addClass('alert-body-bg');
 				force = 0.0;
 			}
