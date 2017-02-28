@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r11 (debug)';
+var repoVersion = 'v2.5.2-r11 (DEBUG)';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -179,7 +179,7 @@ AlertKill = (function() {
 			if(force >= 0.75 && !forceMenuExists) {
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a href="#" data-target="http://repo.hudsongreen.com/" class="force-touch-link ft-1">' +
+						'<a href="index.html" data-target="http://repo.hudsongreen.com/" class="force-touch-link ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
