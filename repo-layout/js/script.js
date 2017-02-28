@@ -163,9 +163,13 @@ AlertKill = (function() {
 				isAlreadyWrapped = true;
 			}
 			
-			$('.alert-blur').css({'filter': 'blur(' + (force.toFixed(2) * 10) + 'px)'});
+			if(force <= 0.75) {
+				$('.alert-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
+			} else {
+				$('.alert-blur').css('filter', 'blur(15px)');
+			}
 
-			if(force >= 1.0) {
+			if(force >= 0.75) {
 				//$('body').addClass('alert-body-bg');
 			}
 
