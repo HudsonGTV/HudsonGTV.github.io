@@ -14,7 +14,7 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r11 (debug)';
+var repoVersion = 'v2.5.2-r11 (DEBUG)';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -212,7 +212,7 @@ AlertKill = (function() {
 
 					return;
 					
-				}, 75);
+				}, 250);
 
 			}
 
