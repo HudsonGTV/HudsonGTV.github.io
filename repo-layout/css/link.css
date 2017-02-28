@@ -249,6 +249,7 @@ ul.repo-link {
 
 .ft-blur {
 	overflow-x: hidden !important;
+	height: 100vh;
 }
 
 .force-touch-link {
