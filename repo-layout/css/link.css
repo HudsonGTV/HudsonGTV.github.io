@@ -252,8 +252,8 @@ ul.repo-link {
 }
 
 .force-touch-link {
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	padding-left: 15px;
 	padding-top: 3px;
 	/*border-radius: 10px;*/
@@ -266,21 +266,22 @@ ul.repo-link {
 }
 
 .forceTouchIcon {
-	height: 35px;
+	height: 45px;
 	font-size: 30px !important;
 	margin-right: 10px;
+	line-height: 50px !important;
 	vertical-align: middle;
 	display: inline-block;
 }
 
 i.forceTouchText {
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: -webkit-baseline-middle;
 	font-style: normal !important;
 }
 
 .ft-1, .ft-top {
-	margin-top: -3px !important;
+	/*margin-top: -3px !important;*/
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
