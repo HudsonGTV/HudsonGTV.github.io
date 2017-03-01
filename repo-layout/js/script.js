@@ -204,13 +204,13 @@ AlertKill = (function() {
 			
 			if(force <= 0.75 && !forceMenuExists) {
 				$('.ft-blur').css({
-					'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)',
-					'transform': 'scale(' + ((-(force.toFixed(2) * 10) / 40) + 1) + ')'
+					'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'//,
+					//'transform': 'scale(' + ((-(force.toFixed(2) * 10) / 40) + 1) + ')'
 				});
 			} else if(force > 0.75) {
 				$('.ft-blur').css({
-					'filter': 'blur(' + (0.75 * 22.5) + 'px)',
-					'transform': 'scale(0.80)'
+					'filter': 'blur(' + (0.75 * 22.5) + 'px)'//,
+					//'transform': 'scale(0.80)'
 				});
 			}
 
