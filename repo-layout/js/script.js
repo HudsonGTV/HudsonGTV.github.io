@@ -122,16 +122,26 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	}
 	
 	if(alertStr == '__strInsertTechnicalInfo') {
-		alertStr = 'Version ' + repoVersionRaw + ' (' + repoVersionHex + ')' + '<br />' +
+		alertTitle = alertTitle + '<br /><i style="font-style: normal; font-weight: normal;">Version ' + repoVersionRaw +
+			' <b>(</b><i style="font-style: normal; font-weight: 100; opacity: 0.8;">' + repoVersionHex + '</i><b>)</b></i>';
+		
+		alertStr = '' +
 			'To Use The Navigation Menu with 3D touch, 3D touch on the the H.K.G. Repo text. You must have a 3D touch enabled ' +
-			'device AND must be viewing this <a href="safari://http://repo.hudsongreen.com/">in Safari</a> due to Cydia\'s built in browser lacking 3D touch support. ' +
-			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the ';
+			'device AND must be viewing this <a target="_system" href="http://repo.hudsongreen.com/">in Safari</a> due to ' +
+			'Cydia\'s built in browser lacking 3D touch support. ' +
+			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the H.K.G. Repo text.';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
 	$('body').addClass('alert-body-bg');
 	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
-	$('.info-btn-main').css('pointer-events', 'none');
+	//$('.info-btn-main').css('pointer-events', 'none');
+	
+	if(alertStr.length > 50) {
+		
+		$('#alert-popup').css('top', 'calc(50% - ' + (alertStr.length / 2 + 125) * 0.6 + 'px)');
+		
+	}
 	
 	$('.alert-button').on(clickEnded, function() {
 		AlertKill();
