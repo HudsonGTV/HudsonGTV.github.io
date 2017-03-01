@@ -14,7 +14,8 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersion = 'v2.5.2-r12';
+var repoVersionRaw = '2.5.3-r1';
+var repoVersion = 'v' + repoVersionRaw;
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -120,7 +121,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	}
 	
 	if(alertStr == '__strInsertTechnicalInfo') {
-		alertStr = 'Version 2.5.2-r12 (01F48A4)';
+		alertStr = 'Version ' + repoVersionRaw + ' (01F48FD)';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
