@@ -282,7 +282,7 @@ AlertKill = (function() {
 		
 		setTimeout(function() {
 			$('#force-touch-popup').remove();
-		}, 250);
+		}, 245);
 		
 		$('body').removeClass('ft-bg');
 		$('#inner-body-wrapper > .alert-blur.ft-blur').contents().unwrap();
