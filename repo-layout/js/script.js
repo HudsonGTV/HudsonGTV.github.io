@@ -134,7 +134,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	
 });
 
-$("body").on("touchmove", function() {
+$("body").on('touchmove', function() {
 	userDraggedFinger = true;
 });
 
@@ -213,7 +213,9 @@ AlertKill = (function() {
 					//'transform': 'scale(0.80)'
 				});
 			}
-
+			
+			jQuery('body').bind('touchmove', function(e){e.preventDefault()});
+			
 		}
  
 	}/*, {only: 'touch'}*/);
@@ -251,6 +253,8 @@ AlertKill = (function() {
 	});
 	
 	ForceMenuKill = (function() {
+		
+		jQuery('body').unbind('touchmove');
 		
 		$('#force-touch-popup').hide(250);
 		
