@@ -124,6 +124,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	if(alertStr == '__strInsertTechnicalInfo') {
 		alertStr = 'Version ' + repoVersionRaw + ' (' + repoVersionHex + ')' + '<br />' +
 			'To Use The Navigation Menu with 3D touch, 3D touch on the the H.K.G. Repo text. You must have a 3D touch enabled ' +
+			'device AND must be viewing this <a href="safari://http://repo.hudsongreen.com/">in Safari</a> due to Cydia\'s built in browser lacking 3D touch support. ' +
 			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the ';
 	}
 	
