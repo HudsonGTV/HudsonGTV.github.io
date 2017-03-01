@@ -122,7 +122,9 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	}
 	
 	if(alertStr == '__strInsertTechnicalInfo') {
-		alertStr = 'Version ' + repoVersionRaw + ' (' + repoVersionHex + ')';
+		alertStr = 'Version ' + repoVersionRaw + ' (' + repoVersionHex + ')' + '<br />' +
+			'To Use The Navigation Menu with 3D touch, 3D touch on the the H.K.G. Repo text. You must have a 3D touch enabled ' +
+			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the ';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
