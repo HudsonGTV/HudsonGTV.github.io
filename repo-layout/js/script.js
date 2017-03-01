@@ -181,15 +181,20 @@ AlertKill = (function() {
 			}
 
 			if(force >= 0.75 && !forceMenuExists) {
+				
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a href="index.html" data-target="http://repo.hudsongreen.com/" class="force-touch-link ft-1">' +
+						'<a href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
-						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-2">' +
+						'<a href="http://repo.hudsongreen.com/about" target="_popup" class="force-touch-link ft-middle ft-2">' +
+							'<i class="forceTouchIcon fa fa-info-circle" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">About Us</i>' +
+						'</a>' +
+						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-3">' +
 							'<i class="forceTouchIcon fa fa-times" aria-hidden="true"></i>' +
-							'<i class="forceTouchText">Click If I Don\'t Close On Double Tap</i>' +
+							'<i class="forceTouchText">Force Close</i>' +
 						'</a>' +
 					'</div>'
 				);
@@ -200,6 +205,7 @@ AlertKill = (function() {
 				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
+				
 			}
 			
 			if(force <= 0.75 && !forceMenuExists) {
@@ -217,8 +223,7 @@ AlertKill = (function() {
 			jQuery('body').bind('touchmove', function(e){e.preventDefault()});
 			
 		}
- 
-	}/*, {only: 'touch'}*/);
+	}, {only: 'touch'});
 	
 	$(document).on(clickEnded, function() {
 		

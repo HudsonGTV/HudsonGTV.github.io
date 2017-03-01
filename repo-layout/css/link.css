@@ -234,17 +234,17 @@ ul.repo-link {
 	display: block;
 	color: white;
 	font-family: Arial;
-	font-weight: bold;
+	/*font-weight: bold;*/
 	position: fixed;
 	/*background: #090909;
 	border-radius: 10px;*/
 	margin: 12.5px;
 	text-align: left;
-	width: calc(100vw - 25px);
+	/*width: calc(100vw - 25px);*/
 	top: -50px;
 	/*opacity: 0.75;*/
 	min-height: 50px;
-	transform: translateY(100px);
+	transform: translateY(90px);
 	transition: transform 0.25s;
 	transition-duration: 250ms;
 }
@@ -263,6 +263,7 @@ ul.repo-link {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 15px;
+	padding-right: 50px;
 	padding-top: 3px;
 	/*border-radius: 10px;*/
 	color: white;
@@ -270,7 +271,7 @@ ul.repo-link {
 	line-height: 100%;
 	vertical-align: middle;
 	background: #090909;
-	opacity: 0.75;
+	opacity: 0.60;
 }
 
 .forceTouchIcon {
@@ -280,6 +281,8 @@ ul.repo-link {
 	line-height: 50px !important;
 	vertical-align: middle;
 	display: inline-block;
+	width: 30px;
+	text-align: center;
 }
 
 i.forceTouchText {
@@ -288,13 +291,17 @@ i.forceTouchText {
 	font-style: normal !important;
 }
 
-.ft-1, .ft-top {
+.ft-top {
 	/*margin-top: -3px !important;*/
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }
 
-.ft-2, .ft-bottom {
+.ft-middle {
+	border-top: 1px solid #222;
+}
+
+.ft-bottom {
 	border-top: 1px solid #222;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
