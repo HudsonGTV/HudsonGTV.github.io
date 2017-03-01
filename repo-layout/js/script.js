@@ -244,7 +244,7 @@ AlertKill = (function() {
 	
 	var tapped = false;
 	
-	$(".info-btn-main").on("touchstart",function(e) {
+	$(".info-btn-main").on(clickStart, function(e) {
 		
 		if(!tapped) { 							/* SINGLE TAP */
 		
