@@ -14,9 +14,9 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersionRaw = '2.5.3-r3';
+var repoVersionRaw = '2.5.4-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F48FF';
+var repoVersionHex = '01F4961';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -170,7 +170,12 @@ AlertKill = (function() {
 	
 	Pressure.set('.info-btn-main', {
 		change: function(force, event) {
-
+			ForceTouchMenu(force, event);
+		}
+	}, {only: 'touch'});
+	
+	ForceTouchMenu = (function(force, e) {
+		
 			console.log(force);
 
 			//$('label.link-no-click').html(force);
@@ -235,8 +240,32 @@ AlertKill = (function() {
 				e.preventDefault();
 			});
 			
+	});
+	
+	var tapped = false;
+	
+	$(".info-btn-main").on("touchstart",function(e) {
+		
+		if(!tapped) { 							/* SINGLE TAP */
+		
+			tapped = setTimeout(function() {
+				
+				tapped = null;
+				
+			}, 300);
+			
+		} else {								/* DOUBLE TAP */
+			
+			clearTimeout(tapped);
+			tapped = null;
+			
+			ForceTouchMenu(1.0, e);
+			
 		}
-	}, {only: 'touch'});
+		
+		e.preventDefault();
+		
+	});
 	
 	$('#inner-body-wrapper').on(clickEnded, function() {
 		
