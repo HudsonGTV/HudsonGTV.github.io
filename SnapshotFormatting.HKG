@@ -1,0 +1,16 @@
+SNAPSHOT LAYOUT
+
+XXwYYa
+
+XX is the current Year
+w stand for week (well, at least I think)
+YY the current week of the year
+a if more than one snapshot is released they would put a b c ...
+
+PA means pre-alpha
+A means alpha
+B means beta
+AR means alpha-release
+BR means beta-release
+RC means release candidate
+ST means stable
