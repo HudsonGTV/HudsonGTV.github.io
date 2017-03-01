@@ -14,8 +14,9 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersionRaw = '2.5.3-r1';
+var repoVersionRaw = '2.5.3-r2';
 var repoVersion = 'v' + repoVersionRaw;
+var repoVersionHex = '01F48FE';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -121,7 +122,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	}
 	
 	if(alertStr == '__strInsertTechnicalInfo') {
-		alertStr = 'Version ' + repoVersionRaw + ' (01F48FD)';
+		alertStr = 'Version ' + repoVersionRaw + ' (' + repoVersionHex + ')';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
@@ -185,7 +186,7 @@ AlertKill = (function() {
 				
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
+						'<a href="index.html" class="force-touch-link ft-top ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
@@ -193,7 +194,11 @@ AlertKill = (function() {
 							'<i class="forceTouchIcon fa fa-info-circle" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">About Us</i>' +
 						'</a>' +
-						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-3">' +
+						'<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="force-touch-link ft-middle ft-3">' +
+							'<i class="forceTouchIcon fa fa-plus" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Add To Cydia</i>' +
+						'</a>' +
+						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-4">' +
 							'<i class="forceTouchIcon fa fa-times" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Force Close</i>' +
 						'</a>' +
@@ -226,7 +231,7 @@ AlertKill = (function() {
 		}
 	}, {only: 'touch'});
 	
-	$(document).on(clickEnded, function() {
+	$('#inner-body-wrapper').on(clickEnded, function() {
 		
 		if(!userDraggedFinger) {
 			
@@ -245,6 +250,8 @@ AlertKill = (function() {
 				forceCancelled = true;
 				
 			}, 150);
+			
+			return;
 			
 		} else {
 			userDraggedFinger = false;
