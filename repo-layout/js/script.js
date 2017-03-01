@@ -114,7 +114,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 	
 	if(alertTitle == '') {
-		alertTitle = 'HKG Repository';
+		alertTitle = 'H.K.G. Repository';
 	}
 	
 	if(alertStr == '') {
@@ -198,7 +198,7 @@ AlertKill = (function() {
 							'<i class="forceTouchIcon fa fa-plus" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Add To Cydia</i>' +
 						'</a>' +
-						'<a href="#" onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-4">' +
+						'<a onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-4">' +
 							'<i class="forceTouchIcon fa fa-times" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Force Close</i>' +
 						'</a>' +
@@ -209,9 +209,9 @@ AlertKill = (function() {
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
 				
-				var e = new jQuery.Event("click");
+				var e = new jQuery.Event('clickEnded');
 				e.pageX = 0;
-				e.pageY = 0;
+				e.pageY = 250;
 				$("#inner-body-wrapper").trigger(e);
 				
 				forceMenuExists = true;
