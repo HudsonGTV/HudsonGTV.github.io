@@ -14,9 +14,9 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersionRaw = '2.5.3-r2';
+var repoVersionRaw = '2.5.3-r3';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F48FE';
+var repoVersionHex = '01F48FF';
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -209,10 +209,10 @@ AlertKill = (function() {
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
 				
-				var e = new jQuery.Event('clickEnded');
-				e.pageX = 0;
-				e.pageY = 250;
-				$("#inner-body-wrapper").trigger(e);
+				//var e = new jQuery.Event('clickEnded');
+				//e.pageX = 0;
+				//e.pageY = 250;
+				//$("#inner-body-wrapper").trigger(e);
 				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
@@ -231,7 +231,9 @@ AlertKill = (function() {
 				});
 			}
 			
-			jQuery('body').bind('touchmove', function(e){e.preventDefault()});
+			jQuery('body').bind('touchmove', function(e) { 
+				e.preventDefault();
+			});
 			
 		}
 	}/*, {only: 'touch'}*/);
@@ -290,12 +292,25 @@ AlertKill = (function() {
 		//var element = document.getElementById("force-touch-popup");
 		//element.parentNode.removeChild(element);
 		
+		isAlreadyWrapped = false;
 		forceCancelled = false;
 		forceMenuExists = false;
+		
+		RefreshPressureJS();
 		
 	});
 	
 })();
+
+RefreshPressureJS = (function() {
+	
+	$('#pressure-js').remove();
+
+	$.getScript("http://repo.hudsongreen.com/repo-layout/js/pressure.js", function() {
+		$('script:last').attr('id', 'pressure-js');
+	});
+	
+});
 
 
 /*
