@@ -209,10 +209,10 @@ AlertKill = (function() {
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
 				
-				//var e = new jQuery.Event("click");
-				//e.pageX = 0;
-				//e.pageY = 0;
-				//$("#inner-body-wrapper").trigger(e);
+				var e = new jQuery.Event("click");
+				e.pageX = 0;
+				e.pageY = 0;
+				$("#inner-body-wrapper").trigger(e);
 				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
