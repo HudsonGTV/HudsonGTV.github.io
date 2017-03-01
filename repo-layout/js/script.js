@@ -174,7 +174,7 @@ AlertKill = (function() {
 			//$('label.link-no-click').html(force);
 			
 			if(force >= 0.001 && !isAlreadyWrapped) {
-				$('body').wrapInner('<div class="alert-blur ft-blur"></div>');
+				$('#inner-body-wrapper').wrapInner('<div class="alert-blur ft-blur"></div>');
 				$('body').addClass('ft-bg');
 				document.body.style.overflow = "hidden";
 				isAlreadyWrapped = true;
@@ -203,9 +203,15 @@ AlertKill = (function() {
 			}
 			
 			if(force <= 0.75 && !forceMenuExists) {
-				$('.ft-blur').css({'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)'});
+				$('.ft-blur').css({
+					'filter': 'blur(' + (force.toFixed(2) * 22.5) + 'px)',
+					'transform': 'scale(' + ((-(force.toFixed(2) * 10) / 40) + 1) + ')'
+				});
 			} else if(force > 0.75) {
-				$('.ft-blur').css({'filter': 'blur(' + (0.75 * 22.5) + 'px)'});
+				$('.ft-blur').css({
+					'filter': 'blur(' + (0.75 * 22.5) + 'px)',
+					'transform': 'scale(0.80)'
+				});
 			}
 
 		}
@@ -219,14 +225,10 @@ AlertKill = (function() {
 			setTimeout(function() {
 				
 				if(forceCancelled) {
-				
-					//$('#force-touch-popup').remove();
 
 					isAlreadyWrapped = false;
 
 					ForceMenuKill();
-
-					//$('label.link-no-click').html(force);
 
 					return;
 
@@ -243,10 +245,8 @@ AlertKill = (function() {
 	});
 	
 	KillAllMenus = (function() {
-		$('#force-touch-popup').remove();
-
 		isAlreadyWrapped = false;
-
+		
 		ForceMenuKill();
 	});
 	
@@ -261,7 +261,7 @@ AlertKill = (function() {
 		}, 250);
 		
 		$('body').removeClass('ft-bg');
-		$('body > .alert-blur.ft-blur').contents().unwrap();
+		$('#inner-body-wrapper > .alert-blur.ft-blur').contents().unwrap();
 		//$('#force-touch-popup').css('display', 'none');
 		//$('#force-touch-popup').html(' ');
 		
