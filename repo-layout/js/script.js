@@ -236,7 +236,7 @@ AlertKill = (function() {
 			});
 			
 		}
-	}/*, {only: 'touch'}*/);
+	}, {only: 'touch'});
 	
 	$('#inner-body-wrapper').on(clickEnded, function() {
 		
@@ -296,13 +296,13 @@ AlertKill = (function() {
 		forceCancelled = false;
 		forceMenuExists = false;
 		
-		RefreshPressureJS();
+		//RefreshPressureJS();
 		
 	});
 	
 })();
 
-RefreshPressureJS = (function() {
+/*RefreshPressureJS = (function() {
 	
 	$('#pressure-js').remove();
 
@@ -310,7 +310,7 @@ RefreshPressureJS = (function() {
 		$('script:last').attr('id', 'pressure-js');
 	});
 	
-});
+});*/
 
 
 /*
