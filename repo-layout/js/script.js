@@ -209,6 +209,11 @@ AlertKill = (function() {
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
 				
+				//var e = new jQuery.Event("click");
+				//e.pageX = 0;
+				//e.pageY = 0;
+				//$("#inner-body-wrapper").trigger(e);
+				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
 				
@@ -229,11 +234,11 @@ AlertKill = (function() {
 			jQuery('body').bind('touchmove', function(e){e.preventDefault()});
 			
 		}
-	}, {only: 'touch'});
+	}/*, {only: 'touch'}*/);
 	
 	$('#inner-body-wrapper').on(clickEnded, function() {
 		
-		if(!userDraggedFinger) {
+		//if(!userDraggedFinger) {
 			
 			setTimeout(function() {
 				
@@ -253,9 +258,9 @@ AlertKill = (function() {
 			
 			return;
 			
-		} else {
-			userDraggedFinger = false;
-		}
+		//} else {
+		//	userDraggedFinger = false;
+		//}
 		
 	});
 	
