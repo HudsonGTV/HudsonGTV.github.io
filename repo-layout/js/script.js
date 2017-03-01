@@ -115,6 +115,10 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 		alertTitle = 'HKG Repository';
 	}
 	
+	if(alertStr == '') {
+		alertStr == 'Error: null';
+	}
+	
 	if(alertStr == '__strInsertTechnicalInfo') {
 		alertStr = 'Version 2.5.2-r12 (01F48A4)';
 	}
