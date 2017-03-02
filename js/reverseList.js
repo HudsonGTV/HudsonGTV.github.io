@@ -44,6 +44,22 @@ IsInputChecked = (function(wasClicked = false) {
 			}
 		}
 		
+		//////////////////////////////////////////////////////////////////////
+		
+		if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) != 'undefined') {
+			if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) == 'checked') {
+				$(this).prop('checked', true);
+				toggleIsOn = true;
+			} else {
+				$(this).prop('checked', false);
+				toggleIsOn = false;
+			}
+		} else {
+			localStorage.setItem('HKG_Toggle_Check_ID_' + dataID, 'unchecked');
+		}
+		
+		//////////////////////////////////////////////////////////////////////
+		
 		toggleValues[dataID] = toggleIsOn;
 		toggleTypes[dataID] = dataType;
 		
@@ -64,16 +80,6 @@ IsInputChecked = (function(wasClicked = false) {
 				ReverseList(list);
 			}
 			
-		}
-		
-		if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) != 'undefined') {
-			if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) == 'checked') {
-				$(this).prop('checked', true);
-			} else {
-				$(this).prop('checked', false);
-			}
-		} else {
-			localStorage.setItem('HKG_Toggle_Check_ID_' + dataID, 'unchecked');
 		}
 		
 	});
