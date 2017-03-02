@@ -39,7 +39,7 @@ IsInputChecked = (function(wasClicked = false) {
 			}
 		} else {
 			toggleIsOn = false;
-			if(wasClicked && !disableCheckStateSave == 'false') {
+			if(wasClicked && disableCheckStateSave == 'false') {
 				localStorage.setItem(('HKG_Toggle_Check_ID_' + dataID), 'unchecked');
 			}
 		}
