@@ -109,7 +109,8 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	addFooter();
 
 	$('.version-num').html(repoVersion);
-	$('#inner-body-wrapper').after('<div id="page-bottom"><a href="about.html" target="_popup">HKG Repo ' + repoVersion + '</a></div>');
+	$('#inner-body-wrapper').after('<div id="page-bottom"><a href="about.html" target="_popup" style="color: #111;">HKG Repo ' +
+		repoVersion + ' (' + repoVersionHex + ')</a></div>');
 
 })();
 
@@ -126,8 +127,6 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	/* RUN ON TOUCH START */
 	$("a").parent().on(clickStart, function(e) {
 		
-		//console.log($(this));
-		
 		selectedElement = $(this);
 		
 		if(selectedElement.hasClass('link')) {
@@ -140,8 +139,6 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	
 	/* RUN ON TOUCH END */
 	$("a").parent().on(clickEnded, function(e) {
-		
-		//console.log($(this));
 		
 		selectedElement = $(this);
 		
@@ -239,10 +236,6 @@ AlertKill = (function() {
 	}, {only: 'touch'});
 	
 	ForceTouchMenu = (function(force, e) {
-		
-			//console.log(force);
-
-			//$('label.link-no-click').html(force);
 			
 			if(force >= 0.001 && !isAlreadyWrapped) {
 				$('#inner-body-wrapper').wrapInner('<div class="alert-blur ft-blur"></div>');
@@ -281,11 +274,6 @@ AlertKill = (function() {
 				$('#force-touch-popup').hide();
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
-				
-				//var e = new jQuery.Event('clickEnded');
-				//e.pageX = 0;
-				//e.pageY = 250;
-				//$("#inner-body-wrapper").trigger(e);
 				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
