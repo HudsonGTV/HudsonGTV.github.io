@@ -7,6 +7,10 @@ var toggleTypes = [];
 
 var lastTouchEnd = 0;
 
+var disableCheckStateSave = 'undefined';
+
+var dataID = $(this).attr('toggle-id');
+
 ReverseList = (function(list) {
 	
 	list = $(list);
@@ -16,17 +20,28 @@ ReverseList = (function(list) {
 	
 });
 
-IsInputChecked = (function() {
+IsInputChecked = (function(wasClicked = false) {
 	
 	$('#toggle').each(function() {
 		
-		var dataID = $(this).attr('toggle-id');
 		var dataType = $(this).attr('toggle-type').toString();
 		
-		if($(this).is(':checked')) {
+		if($(this).attr('disable-cache-save') != undefined) {
+			disableCheckStateSave = $(this).attr('disable-cache-save').toString();
+		} else {
+			disableCheckStateSave = 'false';
+		}
+		
+		if($(this).prop('checked') == true) {
 			toggleIsOn = true;
+			if(wasClicked && disableCheckStateSave == 'false') {
+				localStorage.setItem(('HKG_Toggle_Check_ID_' + dataID), 'checked');
+			}
 		} else {
 			toggleIsOn = false;
+			if(wasClicked && !disableCheckStateSave == 'false') {
+				localStorage.setItem(('HKG_Toggle_Check_ID_' + dataID), 'unchecked');
+			}
 		}
 		
 		toggleValues[dataID] = toggleIsOn;
@@ -36,8 +51,6 @@ IsInputChecked = (function() {
 			
 			var list = $(this).attr('reverse-list');
 			
-			//console.log(toggleIsOn);
-			
 			if(toggleIsOn) {
 				
 				ReverseList(list);
@@ -46,11 +59,21 @@ IsInputChecked = (function() {
 				
 				
 			} else if(!hasBeenClicked) {
-				
+				// STOP FROM CONTINUING TO THE NEXT STATEMENT
 			} else if(!toggleIsOn) {
 				ReverseList(list);
 			}
 			
+		}
+		
+		if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) != 'undefined') {
+			if(localStorage.getItem('HKG_Toggle_Check_ID_' + dataID) == 'checked') {
+				$(this).prop('checked', true);
+			} else {
+				$(this).prop('checked', false);
+			}
+		} else {
+			localStorage.setItem('HKG_Toggle_Check_ID_' + dataID, 'unchecked');
 		}
 		
 	});
@@ -61,7 +84,7 @@ IsInputChecked();
 
 $('#toggle').click(function() {
 	hasBeenClicked = true;
-	IsInputChecked();
+	IsInputChecked(true);
 });
 
 /*IsInputChecked = (function(dataType) {

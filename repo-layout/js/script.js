@@ -6,9 +6,11 @@ var consoleEx = $(document);
 
 jQuery.fn.extend({
 	
-	tagln: function(tag = 'H.K.G', text = '', tagColorfg = 'ffffff', tagColorbg = '3F51B5', textColorfg = 'ffffff', textColorbg = 'transparent', radius = 5) {
+	tagln: function(tag = 'H.K.G', text = '', tagColorfg = '#fff', tagColorbg = '#3F51B5', textColorfg = '#fff', textColorbg = 'transparent', radius = 5) {
 		return this.each(function() {
-			setTimeout(console.log.bind(console, '%c ' + tag + ' %c  ' + text, 'background: #' + tagColorbg + ';color:#' + tagColorfg + ';padding:5px;border-radius: ' + radius + 'px;line-height: 26px;', ''));
+			setTimeout(console.log.bind(console, '%c ' + tag + ' %c  :  ' + text, 'background: ' + tagColorbg + ';color: ' +
+				tagColorfg + ';padding:2px;border-radius: ' + radius + 'px; line-height: 30px; font-weight: bold;' +
+				'font-size: 15px;', ''));
 		});
 	},
 	
@@ -43,9 +45,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.5.5-r1';
+var repoVersionRaw = '2.5.6-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F49C5';
+var repoVersionHex = '01F4A29';
 
 var year = (new Date).getFullYear();
 
@@ -335,35 +337,28 @@ AlertKill = (function() {
 	
 	$('#inner-body-wrapper').on(clickEnded, function() {
 		
-		//if(!userDraggedFinger) {
+		setTimeout(function() {
 			
-			setTimeout(function() {
-				
-				if(forceCancelled) {
+			if(forceCancelled) {
 
-					isAlreadyWrapped = false;
+				isAlreadyWrapped = false;
 
-					ForceMenuKill();
+				ForceMenuKill();
 
-					return;
+				return;
 
-				}
-				
-				forceCancelled = true;
-				
-			}, 150);
+			}
 			
-			return;
+			forceCancelled = true;
 			
-		//} else {
-		//	userDraggedFinger = false;
-		//}
+		}, 150);
+		
+		return;
 		
 	});
 	
 	KillAllMenus = (function() {
 		isAlreadyWrapped = false;
-		
 		ForceMenuKill();
 	});
 	
@@ -381,11 +376,6 @@ AlertKill = (function() {
 		
 		$('body').removeClass('ft-bg');
 		$('#inner-body-wrapper > .alert-blur.ft-blur').contents().unwrap();
-		//$('#force-touch-popup').css('display', 'none');
-		//$('#force-touch-popup').html(' ');
-		
-		//var element = document.getElementById("force-touch-popup");
-		//element.parentNode.removeChild(element);
 		
 		isAlreadyWrapped = false;
 		forceCancelled = false;
@@ -403,7 +393,7 @@ UserOpenedDevTools = (function() {
 		' H.K.G. - All rights (and code) reserved!\nDo not copy/sell!',
 		'font-weight: bold; text-align: center; color: red; font-size: 35px;');
 	
-	consoleEx.tagln('Important', 'Close this window... plzzz!!!');
+	consoleEx.tagln('IMPORTANT', 'Close this window... plzzz!!!');
 	
 });
 
@@ -430,12 +420,15 @@ $(function() {
 			var linkTarget = $(this).attr('target');
 			if(linkTarget == '_blank' || linkTarget == '_popup' || linkTarget == '_system') {
 				$(this).attr('target', '_self');
-				//console.log('Replacing with target="_self"');
+				consoleEx.tagln('DEBUG', 'Replacing with target="_self"', '#500', '#f09000');
 			}
 		});
 	}
 	
 });
+
+
+
 
 /*RefreshPressureJS = (function() {
 	
@@ -452,8 +445,6 @@ $(function() {
 $(".info-about").on("touchend", function(e) {
 	
 	selectedElement = $(this);
-	
-	
 	
 });
 
