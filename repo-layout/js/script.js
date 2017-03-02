@@ -1,3 +1,30 @@
+/**
+	TERRIBLY WRITTEN CONSOLE.LOG ALTERNATIVE
+**/
+
+var consoleEx = $(document);
+
+jQuery.fn.extend({
+	
+	tagln: function(tag = 'H.K.G', text = '', tagColorfg = 'ffffff', tagColorbg = '3F51B5', textColorfg = 'ffffff', textColorbg = 'transparent', radius = 5) {
+		return this.each(function() {
+			setTimeout(console.log.bind(console, '%c ' + tag + ' %c  ' + text, 'background: #' + tagColorbg + ';color:#' + tagColorfg + ';padding:5px;border-radius: ' + radius + 'px;line-height: 26px;', ''));
+		});
+	},
+	
+	println: function(text, customCSS = '') {
+		return this.each(function() {
+			setTimeout(console.log.bind(console, '%c' + text, customCSS, ''));
+		});
+	}
+	
+});
+
+
+/**
+	MAIN SCRIPTS
+**/
+
 var iOS = parseFloat(
 	('' + (/CPU.*OS ([0-9_]{1,5})|(CPU like).*AppleWebKit.*Mobile/i.exec(navigator.userAgent) || [0,''])[1])
 	.replace('undefined', '3_2').replace('_', '.').replace('_', '')
@@ -14,9 +41,13 @@ var supportedVersionMax = $('.depiction').data('version-max');
 var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
-var repoVersionRaw = '2.5.4-r1';
+var isInCydiaFrame = false;
+
+var repoVersionRaw = '2.5.5-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F4961';
+var repoVersionHex = '01F49C5';
+
+var year = (new Date).getFullYear();
 
 var force = 0.0;
 var clickStart = ('ontouchstart' in document.documentElement)  ? 'touchstart' : 'mousedown';
@@ -25,6 +56,18 @@ var clickEnded = ('ontouchend' in document.documentElement)  ? 'touchend' : 'mou
 var userDraggedFinger = false;
 
 fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.') || false;
+
+(function(a) {
+	
+	"use strict";
+	
+	navigator.userAgent.indexOf("Cydia") != -1 ? (
+		a.title=a.title.split(" \u00b7 ")[0],
+		a.documentElement.classList.add("cydia"),
+		isInCydiaFrame = true
+	):a.documentElement.classList.remove("cydia","depiction");
+	
+})(document);
 
 (function() {
 	
@@ -42,7 +85,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		fulliOS = '[Not iOS]';
 	}
 
-	addFooter = (function(year) {
+	addFooter = (function() {
 		
 		$('footer').html('</div><h2 id="detected-version">'
 							+ navigator.platform + ' - iOS ' + fulliOS +
@@ -61,7 +104,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		}, timeout);
 	});
 
-	addFooter((new Date).getFullYear());
+	addFooter();
 
 	$('.version-num').html(repoVersion);
 	$('#inner-body-wrapper').after('<div id="page-bottom"><a href="about.html" target="_popup">HKG Repo ' + repoVersion + '</a></div>');
@@ -81,7 +124,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	/* RUN ON TOUCH START */
 	$("a").parent().on(clickStart, function(e) {
 		
-		console.log($(this));
+		//console.log($(this));
 		
 		selectedElement = $(this);
 		
@@ -96,7 +139,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	/* RUN ON TOUCH END */
 	$("a").parent().on(clickEnded, function(e) {
 		
-		console.log($(this));
+		//console.log($(this));
 		
 		selectedElement = $(this);
 		
@@ -127,14 +170,19 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 		
 		alertStr = '' +
 			'To Use The Navigation Menu with 3D touch, 3D touch on the the H.K.G. Repo text. You must have a 3D touch enabled ' +
-			'device AND must be viewing this <a target="xxx" href="http://repo.hudsongreen.com/">in Safari</a> due to ' +
-			'Cydia\'s built in browser lacking 3D touch support. ' +
+			'device AND must be viewing this <a target="xxx" href="http://repo.hudsongreen.com/">' +
+			'<hkg class="safari-link">in Safari</hkg></a> due to Cydia\'s built in browser lacking 3D touch support. ' +
 			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the H.K.G. Repo text.';
 	}
 	
 	$('body').wrapInner('<div class="alert-blur"></div>');
 	$('body').addClass('alert-body-bg');
 	$('body').append('<div id="alert-popup"><div class="alert-title">' + alertTitle + '</div><div class="alert-body"><div class="alert-string">' + alertStr + '</div><div class="alert-button">' + dismissButton + '</div></div></div>');
+	
+	if(!isInCydiaFrame) {
+		$('.safari-link').unwrap();
+	}
+	
 	//$('.info-btn-main').css('pointer-events', 'none');
 	
 	if(alertStr.length > 50) {
@@ -171,6 +219,7 @@ AlertKill = (function() {
 	
 });
 
+
 /**
 	3D TOUCH EVENTS
 **/
@@ -189,7 +238,7 @@ AlertKill = (function() {
 	
 	ForceTouchMenu = (function(force, e) {
 		
-			console.log(force);
+			//console.log(force);
 
 			//$('label.link-no-click').html(force);
 			
@@ -222,6 +271,10 @@ AlertKill = (function() {
 						'</a>' +
 					'</div>'
 				);
+				
+				if(!isInCydiaFrame) {
+					$('.force-touch-link').attr('target', '_self');
+				}
 				
 				$('#force-touch-popup').hide();
 				$('#force-touch-popup').addClass('ft-open');
@@ -344,6 +397,46 @@ AlertKill = (function() {
 	
 })();
 
+UserOpenedDevTools = (function() {
+	
+	consoleEx.println('© ' + year +
+		' H.K.G. - All rights (and code) reserved!\nDo not copy/sell!',
+		'font-weight: bold; text-align: center; color: red; font-size: 35px;');
+	
+	consoleEx.tagln('Important', 'Close this window... plzzz!!!');
+	
+});
+
+UserOpenedDevTools();
+
+$(document).keydown(function(event) {
+	
+	console.clear();
+	setTimeout(console.clear.bind(console, '', '', ''));
+	
+	UserOpenedDevTools();
+	
+});
+
+
+/**
+	FUNCTIONS FOR NON-CYDIA WEB VIEWS/BROWSERS
+**/
+
+$(function() {
+	
+	if(!isInCydiaFrame) {
+		$('a').each(function() {
+			var linkTarget = $(this).attr('target');
+			if(linkTarget == '_blank' || linkTarget == '_popup' || linkTarget == '_system') {
+				$(this).attr('target', '_self');
+				//console.log('Replacing with target="_self"');
+			}
+		});
+	}
+	
+});
+
 /*RefreshPressureJS = (function() {
 	
 	$('#pressure-js').remove();
@@ -379,14 +472,6 @@ $(function() {
 	}
 
 });
-
-(function(a) {
-	"use strict";
-	navigator.userAgent.indexOf("Cydia")!=-1?(
-		a.title=a.title.split(" \u00b7 ")[0],
-		a.documentElement.classList.add("cydia")
-	):a.documentElement.classList.remove("cydia","depiction")
-})(document)
 */
 
 

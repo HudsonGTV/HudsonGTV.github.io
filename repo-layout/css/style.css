@@ -39,10 +39,6 @@ footer {
 	padding: 10px;
 }
 
-.cydia body {
-	margin-top: 35px;
-}
-
 .depiction body {
 	margin-top: 0;
 	margin-bottom: 0;
@@ -68,14 +64,6 @@ body>p,h2,header .date,p[class="footer"] {
 	font-size: 15px;
 	font-weight: 400;
 	font-family: Arial, -apple-system-font;
-}
-
-.cydia body>header {
-	display:none;
-}
-
-.cydia body>header+p {
-	margin-top:-20px;
 }
 
 .table-header {
