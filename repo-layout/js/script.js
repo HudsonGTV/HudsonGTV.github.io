@@ -111,7 +111,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	$('.version-num').html(repoVersion);
 	$('#inner-body-wrapper').after(
 		'<div id="page-bottom">' +
-			'<a href="about.html" target="_popup" style="color: #111; border-bottom: 1px solid rgba(0, 0, 0, 0.25);">' +
+			'<a href="/about.html" target="_popup" style="color: #111; border-bottom: 1px solid rgba(0, 0, 0, 0.25);">' +
 				'HKG Repo ' + repoVersion + ' (' + repoVersionHex + ')' +
 			'</a>' +
 		'</div>'
