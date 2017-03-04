@@ -45,9 +45,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.5.6-r1';
+var repoVersionRaw = '2.6.0-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F4A29';
+var repoVersionHex = '01F6EE1';
 
 var year = (new Date).getFullYear();
 
@@ -409,13 +409,38 @@ $(document).keydown(function(event) {
 $(function() {
 	
 	if(!isInCydiaFrame) {
+		
 		$('a').each(function() {
 			var linkTarget = $(this).attr('target');
 			if(linkTarget == '_blank' || linkTarget == '_popup' || linkTarget == '_system') {
 				$(this).attr('target', '_self');
-				consoleEx.tagln('DEBUG', 'Replacing with target="_self"', '#500', '#f09000');
+				consoleEx.tagln('DEBUG', 'Replaced link targets to target="_self"', '#500', '#f09000');
 			}
 		});
+		
+		var packageName = $('body').attr('package-name').toString();
+		var packageIcon = $('body').attr('package-icon').toString();
+		var packageVersion = $('body').attr('package-version').toString();
+		
+		$('.repo-link').addClass('repo-link-dark');
+		$('.light-link').addClass('link').removeClass('light-link');
+		$('.light-chevron').addClass('chevron').removeClass('light-chevron');
+		$('body').css('background', '#1B1B1B');
+		
+		$('#web-view-header').html(
+			'<div id="web-header">' +
+				'<div id="package-icon">' +
+					'<div>' +
+						'<span><img src="../../../icon/' + packageIcon + '"></span>' +
+					'</div>' +
+				'</div>' +
+				'<div id="web-content">' +
+					'<p id="web-name">' + packageName + '</p>' +
+					'<p id="web-latest">' + packageVersion + '</p>' +
+				'</div>' +
+			'</div>'
+		);
+		
 	}
 	
 });

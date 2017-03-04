@@ -1,6 +1,7 @@
 InsertRepoLink = (function() {
 	
 	$('div.repo-header').before(
+		'<div id="web-view-header"></div>' +
 		'<ul class="repo-link">' +
 			'<li class="link">' +
 				'<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_blank">' +

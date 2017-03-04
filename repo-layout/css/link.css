@@ -129,6 +129,10 @@ p {
 	background: #d9d9d9 !important;
 }
 
+.repo-link-dark > .link-active {
+	background: #222 !important;
+}
+
 .icon-top {
 	border-radius: 5px;
 }
@@ -224,6 +228,13 @@ ul.repo-link {
 	border-bottom: 1px solid #c8c7cc;
 	margin-bottom: -9px;
 	position: relative;
+}
+
+ul.repo-link.repo-link-dark {
+	background: #111 !important;
+	border-bottom: 1px solid rgba(57, 59, 57, 0.5);
+	border-top: 1px solid rgba(57, 59, 57, 0.5);
+	color: #fff !important;
 }
 
 .light-link {
