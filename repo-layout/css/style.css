@@ -329,6 +329,7 @@ body.alert-body-bg {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	color: #fff;
 }
 
 #web-latest {

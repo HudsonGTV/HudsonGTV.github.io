@@ -431,7 +431,7 @@ $(function() {
 			'<div id="web-header">' +
 				'<div id="package-icon">' +
 					'<div>' +
-						'<span><img src="../../../icon/' + packageIcon + '"></span>' +
+						'<span><img src="http://repo.hudsongreen.com/icon/' + packageIcon + '"></span>' +
 					'</div>' +
 				'</div>' +
 				'<div id="web-content">' +
