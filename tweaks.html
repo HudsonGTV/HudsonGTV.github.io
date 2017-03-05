@@ -21,7 +21,7 @@
 		
 	</head>
 	
-	<body class="depiction">
+	<body class="depiction main-page">
 		
 		<ul class="repo-link" style="background: #111 !important; border-bottom: 1px solid rgba(57, 59, 57, 0.5);">
 			<li class="link-no-click">
@@ -41,19 +41,35 @@
 			
 			<main id="content" role="main">
 				
+				<h2 class="table-header">Options</h2>
 				<ul>
+					
 					<li class="link-no-click" ontouchstart="">
 						<a class="link-inner">
 							<div>
 								<img class="icon" src="assets/changelog.png">
 								<label class="sort-toggle-text">Reverse Order</label>
 								<label class="right toggle-wrapper">
-									<input type="checkbox" name="toggle" id="toggle" class="toggle-input reverseToggle" toggle-id="0" toggle-type="reverse" reverse-list=".reversable-list" />
-									<label for="toggle"></label>
+									<input type="checkbox" name="reverse-toggle" id="toggle reverse-toggle" class="toggle-input" toggle-id="0" toggle-type="reverse" reverse-list=".reversable-list" />
+									<label for="toggle reverse-toggle"></label>
 								</label>
 							</div>
 						</a>
 					</li>
+					
+					<li class="link-no-click" ontouchstart="">
+						<a class="link-inner">
+							<div>
+								<img class="icon" src="assets/safari.png">
+								<label class="sort-toggle-text">Open In Safari</label>
+								<label class="right toggle-wrapper">
+									<input type="checkbox" name="web-toggle" id="toggle web-toggle" class="toggle-input" toggle-id="1" toggle-type="packageLink" />
+									<label for="toggle web-toggle"></label>
+								</label>
+							</div>
+						</a>
+					</li>
+					
 				</ul>
 				
 				<h2 class="table-header">Latest Tweaks</h2>
@@ -69,12 +85,12 @@
 						</a>
 					</li>
 					
-					<li class="link" ontouchstart="">
-						<a href="cydia://package/com.hudsongreen.cydia.RepoIcons" target="_blank" class="link-inner chevron">
+					<li id="package-link" class="link" ontouchstart="">
+						<a cydia-link="cydia://package/com.hudsongreen.cydia.RepoIcons" web-link="Tweaks/RepoIcons" target="_blank" class="link-inner chevron">
 							<div>
 								<img class="icon" src="assets/tweak.png">
 								<label>HKG Repo Icons</label>
-								<label class="chevron-right">Open in Cydia</label>
+								<label class="chevron-right package-right">Open in Cydia</label>
 							</div>
 						</a>
 					</li>

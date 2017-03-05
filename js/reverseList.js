@@ -11,6 +11,9 @@ var disableCheckStateSave = 'undefined';
 
 var dataID = $(this).attr('toggle-id');
 
+var packageLink;
+var cydiaLink;
+
 ReverseList = (function(list) {
 	
 	list = $(list);
@@ -20,9 +23,44 @@ ReverseList = (function(list) {
 	
 });
 
-IsInputChecked = (function(wasClicked = false) {
+OpenInBrowser = (function(item, replaceWithPackageLink = true) {
 	
-	$('#toggle').each(function() {
+	packageLink = item.children('a').attr('web-link').toString();
+	cydiaLink = item.children('a').attr('cydia-link').toString();
+	
+	if(replaceWithPackageLink) {
+		
+		item.children('a').attr('href', 'depic/' + packageLink + '/index.html');
+		
+		$('.package-right').each(function() {
+			$(this).html('Open In Safari');
+		});
+		
+	} else {
+		
+		item.children('a').attr('href', cydiaLink);
+		
+		$('.package-right').each(function() {
+			$(this).html('Open In Cydia');
+		});
+		
+	}
+	
+	replaceWithPackageLink = false;
+	
+});
+
+IsInputChecked = (function(wasClicked = false, toggleID = -1) {
+	
+	$('.toggle-input').each(function() {
+		
+		dataID = $(this).attr('toggle-id');
+		
+		/*if(toggleID == -1) {
+			dataID = $(this).attr('toggle-id');
+		} else {
+			dataID = toggleID;
+		}*/
 		
 		var dataType = $(this).attr('toggle-type').toString();
 		
@@ -56,12 +94,37 @@ IsInputChecked = (function(wasClicked = false) {
 			}
 		} else {
 			localStorage.setItem('HKG_Toggle_Check_ID_' + dataID, 'unchecked');
+			toggleIsOn = false;
 		}
 		
 		//////////////////////////////////////////////////////////////////////
 		
+		dataID = $(this).attr('toggle-id');
+		
 		toggleValues[dataID] = toggleIsOn;
 		toggleTypes[dataID] = dataType;
+		
+		/*if(toggleID != 0 && toggleID != -1) {
+			return;
+		}*/
+		
+		if(toggleID == 1 || dataID == 1) {
+			
+			toggleValues[toggleID] = toggleIsOn;
+			
+			if(toggleValues[toggleID] == true) {
+				replaceWithPackageLink = true;
+			}
+			
+			$('#package-link').each(function() {
+				OpenInBrowser($(this), toggleValues[dataID]);
+			});
+			
+		}
+		
+		if(toggleID > 0 || dataID > 0) {
+			return;
+		}
 		
 		if(toggleTypes[dataID].toString() == 'reverse') {
 			
@@ -88,9 +151,9 @@ IsInputChecked = (function(wasClicked = false) {
 
 IsInputChecked();
 
-$('#toggle').click(function() {
+$('.toggle-input').click(function() {
 	hasBeenClicked = true;
-	IsInputChecked(true);
+	IsInputChecked(true, $(this).attr('toggle-id'));
 });
 
 /*IsInputChecked = (function(dataType) {

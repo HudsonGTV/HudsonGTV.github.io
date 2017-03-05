@@ -45,9 +45,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.6.0-r1';
+var repoVersionRaw = '2.7.0-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F6EE1';
+var repoVersionHex = '01F95F1';
 
 var year = (new Date).getFullYear();
 
@@ -418,30 +418,34 @@ $(function() {
 			}
 		});
 		
-		var packageName = $('body').attr('package-name').toString();
-		var packageIcon = $('body').attr('package-icon').toString();
-		var packageVersion = $('body').attr('package-version').toString();
-		
-		$('.repo-link').addClass('repo-link-dark');
-		$('.light-link').addClass('link').removeClass('light-link');
-		$('.light-chevron').addClass('chevron').removeClass('light-chevron');
-		$('body').css('background', '#1B1B1B');
-		
-		$('head').append('<link rel="icon" type="image/png" href="http://repo.hudsongreen.com/icon/' + packageIcon + '" />');
-		
-		$('#web-view-header').html(
-			'<div id="web-header">' +
-				'<div id="package-icon">' +
-					'<div>' +
-						'<span><img src="http://repo.hudsongreen.com/icon/' + packageIcon + '"></span>' +
+		if(!$('body').hasClass('main-page')) {
+			
+			var packageName = $('body').attr('package-name').toString();
+			var packageIcon = $('body').attr('package-icon').toString();
+			var packageVersion = $('body').attr('package-version').toString();
+			
+			$('.repo-link').addClass('repo-link-dark');
+			$('.light-link').addClass('link').removeClass('light-link');
+			$('.light-chevron').addClass('chevron').removeClass('light-chevron');
+			$('body').css('background', '#1B1B1B');
+			
+			$('head').append('<link rel="icon" type="image/png" href="http://repo.hudsongreen.com/icon/' + packageIcon + '" />');
+			
+			$('#web-view-header').html(
+				'<div id="web-header">' +
+					'<div id="package-icon">' +
+						'<div>' +
+							'<span><img src="http://repo.hudsongreen.com/icon/' + packageIcon + '"></span>' +
+						'</div>' +
 					'</div>' +
-				'</div>' +
-				'<div id="web-content">' +
-					'<p id="web-name">' + packageName + '</p>' +
-					'<p id="web-latest">' + packageVersion + '</p>' +
-				'</div>' +
-			'</div>'
-		);
+					'<div id="web-content">' +
+						'<p id="web-name">' + packageName + '</p>' +
+						'<p id="web-latest">' + packageVersion + '</p>' +
+					'</div>' +
+				'</div>'
+			);
+			
+		}
 		
 	}
 	
