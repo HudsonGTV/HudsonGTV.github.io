@@ -57,6 +57,12 @@ footer {
 	}
 }
 
+@media (min-width:1280px) {
+	#content {
+		width: 100%;
+	}
+}
+
 body>p,h2,header .date,p[class="footer"] {
 	margin: 15px;
 	/*color: #6d6d72;*/
