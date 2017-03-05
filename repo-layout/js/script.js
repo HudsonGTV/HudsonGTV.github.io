@@ -427,6 +427,8 @@ $(function() {
 		$('.light-chevron').addClass('chevron').removeClass('light-chevron');
 		$('body').css('background', '#1B1B1B');
 		
+		$('head').append('<link rel="icon" type="image/png" href="http://repo.hudsongreen.com/icon/' + packageIcon + '" />');
+		
 		$('#web-view-header').html(
 			'<div id="web-header">' +
 				'<div id="package-icon">' +
