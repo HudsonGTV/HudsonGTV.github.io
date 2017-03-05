@@ -116,7 +116,7 @@ IsInputChecked = (function(wasClicked = false, toggleID = -1) {
 				replaceWithPackageLink = true;
 			}
 			
-			$('#package-link').each(function() {
+			$('li#package-link').each(function() {
 				OpenInBrowser($(this), toggleValues[dataID]);
 			});
 			
