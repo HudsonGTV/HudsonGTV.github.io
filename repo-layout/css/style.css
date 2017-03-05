@@ -7,6 +7,8 @@ a,button {
 	text-decoration: none;
 }
 
+@media (max-width: 1024px) {
+
 #inner-body-wrapper {
 	/*background: #efeff4;*/
 	background: #1B1B1B;
@@ -57,11 +59,11 @@ footer {
 	}
 }
 
-@media (min-width:1280px) {
+/*@media (min-width:1280px) {
 	#content {
 		width: 100%;
 	}
-}
+}*/
 
 body>p,h2,header .date,p[class="footer"] {
 	margin: 15px;
@@ -342,7 +344,7 @@ body.alert-body-bg {
 	display: inline;
 	color: #358;
 }
-
+}
 
 
 
