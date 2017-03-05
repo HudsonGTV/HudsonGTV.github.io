@@ -16,19 +16,23 @@
     
     <iframe src="http://repo.hudsongreen.com/index.html" style="position: absolute; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;">Your browser doesn't support iframes</iframe>
     
+	test
+	
     <script>
 		
-		$(document).on("click", "a", function(event) {
-			
-			// Stop the default behavior of the browser, which
-			// is to change the URL of the page.
-			event.preventDefault();
+		if(window.navigator.standalone) {
+			$(document).on("click touchend", "a", function(event) {
+				event.preventDefault();
 
-			// Manually change the location of the page to stay in
-			// "Standalone" mode and change the URL at the same time.
-			location.href = $(event.target).attr("href");
-			
-		});
+				var aurl = $(event.target).attr("href");
+				
+				if(aurl) {
+					location.href = $(event.target).attr("href");
+				} else {
+					location.href = this;
+				}
+			});
+		}
 		
     </script>
     
