@@ -22,13 +22,7 @@
 			$(document).on("click", "a", function(event) {
 				event.preventDefault();
 
-				var aurl = $(event.target).attr("href");
-				
-				if(aurl) {
-					location.href = $(event.target).attr("href");
-				} else {
-					location.href = this;
-				}
+				location.href = $( event.target ).attr( "href" );
 			});
 		}
 		
