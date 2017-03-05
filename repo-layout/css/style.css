@@ -7,8 +7,6 @@ a,button {
 	text-decoration: none;
 }
 
-@media (max-width: 1024px) {
-
 #inner-body-wrapper {
 	/*background: #efeff4;*/
 	background: #1B1B1B;
@@ -27,6 +25,8 @@ body {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none; /* Disable selection/copy in UIWebView */
 }
+
+@media (max-width: 1024px) {
 
 footer {
 	background: linear-gradient(to bottom, #222 0%,#222 50%,#222 50%,#97979A 50%,#97979A 100%);
@@ -344,9 +344,11 @@ body.alert-body-bg {
 	display: inline;
 	color: #358;
 }
+
 }
 
-
-
+@media (min-width: 1025px) {
+	
+}
 
 
