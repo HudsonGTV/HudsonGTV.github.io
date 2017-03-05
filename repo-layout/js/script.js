@@ -174,7 +174,7 @@ alertBox = (function(alertTitle, alertStr, dismissButton, tvosStyleEnabled) {
 		
 		alertStr = '' +
 			'To Use The Navigation Menu with 3D touch, 3D touch on the the H.K.G. Repo text. You must have a 3D touch enabled ' +
-			'device AND must be viewing this <a target="xxx" href="http://repo.hudsongreen.com/">' +
+			'device AND must be viewing this <a target="_system" href="http://repo.hudsongreen.com/">' +
 			'<hkg class="safari-link">in Safari</hkg></a> due to Cydia\'s built in browser lacking 3D touch support. ' +
 			'If you are viewing this in Cydia and/or do not have a 3D touch enabled device, double tap the H.K.G. Repo text.';
 	}
@@ -448,6 +448,21 @@ $(function() {
 		}
 		
 	}
+	
+});
+
+
+$(document).on('click', 'a[target="_system"]', function(ev) {
+	
+	var url;
+	
+	ev.preventDefault();
+	
+	url = $(this).attr('href');
+	
+	window.open(url, '_system');
+	
+	consoleEx.println('Opened in system browser...');
 	
 });
 
