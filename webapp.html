@@ -19,7 +19,7 @@
     <script>
 		
 		if(window.navigator.standalone) {
-			$(document).on("click", "a", function(event) {
+			$(document).on("click touchend", "a", function(event) {
 				event.preventDefault();
 
 				location.href = $( event.target ).attr( "href" );
