@@ -24,6 +24,7 @@ body {
 }
 
 #ipad-frame-nav {
+	position: absolute;
 	width: 25%;
 	min-width: 360px;
 	max-width: 374px;
@@ -42,7 +43,7 @@ body {
 }
 
 #ipadcontentframe {
-	position: fixed;
+	position: absolute;
 	width: calc(100% - 405px);
 	width: 75%;
 	min-width: calc(100% - 404px);
@@ -51,6 +52,7 @@ body {
 	right: 15px;
 	top: 60px;
 	overflow-x: hidden;
+	overflow-y: scroll !important;
 }
 
 .link:active {
