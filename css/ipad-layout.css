@@ -6,7 +6,6 @@ body {
 	background: #1B1B1B;
 	margin: 0px;
 	text-align: left;
-	overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -33,7 +32,6 @@ body {
 	top: 0;
 	border-right: 1px solid #111;
 	text-align: center;
-	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
@@ -52,7 +50,6 @@ body {
 	height: calc(100vh - 60px);
 	right: 15px;
 	top: 60px;
-	overflow-y: scroll;
 	overflow-x: hidden;
 }
 
