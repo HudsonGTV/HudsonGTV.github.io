@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+	
+		<meta charset="UTF-8">
+		
+		<title>HKG Repository</title>
+		
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+		
+		<link rel="icon" type="image/png" href="assets/favicon.png">
+		
+		<link rel="stylesheet" href="repo-layout/css/style.css" />
+		<link rel="stylesheet" href="css/ipad-layout.css" />
+		<link rel="stylesheet" href="repo-layout/css/link.css" />
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+		
+		<!-- IDK Why I put this in the header -->
+		<div class="repo-header"></div>
+		
+	</head>
+
+	<body class="main-page">
+		
+		<div id="ipad-frameset">
+		
+			<div id="ipad-frame-nav" src="index.html">
+				
+				<ul id="nav-header-left" class="repo-link" style="background: #111 !important; border-bottom: 1px solid #222; height: 60px;">
+					<li class="link-no-click">
+						<a class="link-inner force-touch-nav info" link-type="notFrameLink">
+							<div>
+								<div class="info-btn-main"></div>
+								<div class="nav-header-left">
+									<img class="icon icon-top" src="assets/favicon.png">
+								</div>
+								<label class="link-no-click" style="">&nbsp;</label>
+								<label class="version-num info-right info-about" style="float: left;"></label>
+							</div>
+						</a>
+						<div class="info-btn-right" onClick="alertBox('H.K.G. Repository', '__strInsertTechnicalInfo', 'Dismiss', true)"></div>
+					</li>
+				</ul>
+				
+				<br />
+				<br />
+				<br />
+				<br />
+				
+				<div id="inner-body-wrapper">
+					
+					<main id="content" role="main">
+						
+						<ul>
+							<li class="link">
+								<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="link-inner chevron">
+									<div>
+										<img class="icon" src="assets/cydia.png">
+										<label>Add to Cydia</label>
+									</div>
+								</a>
+							</li>
+							
+							<li>
+								<p>H.K.G. Repository</p>
+								<p>The first repository (that I know of) to use a black UI. #BlackReposMatter</p>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="link" ontouchstart="">
+								<a href="discussion.html" target="_blank" class="link-inner chevron">
+									<div>
+										<img class="icon" src="assets/discussion.png">
+										<label>Discussion</label>
+										<label class="chevron-right">Under Development</label>
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="link" ontouchstart="">
+								<a href="tweaks.html" target="_blank" class="link-inner chevron">
+									<div>
+										<img class="icon" src="assets/tweak.png">
+										<label>Latest Tweaks</label>
+										<label class="chevron-right"></label>
+									</div>
+								</a>
+							</li>
+							<li class="link" ontouchstart="">
+								<a href="themes.html" target="_blank" class="link-inner chevron">
+									<div>
+										<img class="icon" src="assets/theme.png">
+										<label>Latest Themes</label>
+										<label class="chevron-right"></label>
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+						<ul>
+							<li class="link" ontouchstart="">
+								<a href="twitter:///user?screen_name=HKGTV" class="link-inner chevron" target="_blank">
+									<div>
+										<img class="icon" src="assets/twitter.png">
+										<label>Twitter</label>
+										<label class="chevron-right">@HKGTV</label>
+									</div>
+								</a>
+							</li>
+						</ul>
+						
+					</main>
+					
+				</div>
+				
+			</div>
+			
+			<iframe id="ipadcontentframe" name="ipadcontentframe" src="tweaks.html"></iframe>
+			
+		</div>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="repo-layout/js/pressure.js" id="pressure-js"></script>
+		<script src="repo-layout/js/script.js" id="pressure-js"></script>
+		
+		<script>
+			
+			var sessionStorageFrame = sessionStorage.getItem('HKG_SESSION_IPAD_IFRAME');
+			
+			$('a').each(function() {
+			
+				//var linkTarget = $(this).attr('target');
+				
+				if($(this).attr('href') != 'undefined' && $(this).attr('link-type') != 'notFrameLink') {
+					$(this).attr('target', 'ipadcontentframe');
+				}
+				
+				consoleEx.tagln('DEBUG', 'Replaced link targets to target="ipadcontentframe"', '#500', '#f09000');
+				
+			});
+			
+			$(document).ready(function() {
+			
+				/*var iframeSrc = 'tweaks.html';
+				
+				$('#ipadcontentframe').attr('src', iframeSrc);*/
+				
+				$('#ipadcontentframe').load(function() {
+					
+					var contentFrame = $('#ipadcontentframe').contents();
+					
+					$('.nav-header-right').remove();
+					
+					$('#ipad-frameset').prepend('' +
+						'<div class="nav-header-right">' +
+							'<h2 class="back-button" onclick="goBack()"><i class="fa fa-chevron-left"></i> Back</h2>' +
+							'<h2 class="nav-header-center">' + window.frames.ipadcontentframe.document.title + '</h2>' +
+						'</div>'
+					);
+					
+					var framePath = window.frames.ipadcontentframe.location.toString();
+					var frameSrc = framePath.substring(framePath.lastIndexOf('/') + 1, framePath.length);
+					
+					if(frameSrc == 'index.html' || frameSrc == 'screenshot.html' || frameSrc == 'changelog.html' || frameSrc == 'discussion.html') {
+						
+						framePathTmp = framePath.substr(framePath.indexOf('depic/') + 1);
+						
+						frameSrc = 'd' + framePathTmp;
+						
+						if(~frameSrc.indexOf('Tweaks')) {
+							localStorage.setItem('HKG_SESSION_IPAD_IFRAME_MAIN', 'tweaks.html');
+						} else if(~frameSrc.indexOf('Themes')) {
+							localStorage.setItem('HKG_SESSION_IPAD_IFRAME_MAIN', 'themes.html');
+						} else {
+							console.log('Error: Could not find page category. Reverting to "tweaks.html"');
+							localStorage.setItem('HKG_SESSION_IPAD_IFRAME_MAIN', 'tweaks.html');
+						}
+						
+					}
+					
+					sessionStorage.setItem('HKG_SESSION_IPAD_IFRAME', frameSrc);
+					
+					//contentFrame.find('footer').remove();
+					
+					if(!(contentFrame.find('body').hasClass('main-page'))) {
+						$('.back-button').css('display', 'initial');
+					} else {
+						$('.back-button').css('display', 'none');
+						contentFrame.find('.repo-link').remove();
+					}
+					
+				});
+				
+				$('#ipadcontentframe').attr('src', sessionStorageFrame);
+				
+			});
+			
+			$(document).ready(function() {
+				sessionStorageFrame = sessionStorage.getItem('HKG_SESSION_IPAD_IFRAME');
+				if(sessionStorageFrame == undefined || sessionStorageFrame == 'about:blank') {
+					$('#ipadcontentframe').attr('src', 'tweaks.html');
+				}
+			});
+			
+		</script>
+		
+	</body>
+</html>

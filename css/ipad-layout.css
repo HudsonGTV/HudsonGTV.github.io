@@ -1,0 +1,120 @@
+iframe {
+	border: 0;
+}
+
+body {
+	background: #1B1B1B;
+	margin: 0px;
+	text-align: left;
+}
+
+#ipad-frameset {
+	display: inline-table;
+	width: 100%;
+	height: 100%;
+}
+
+#ipad-frame-nav {
+	width: 25%;
+	min-width: 360px;
+	max-width: 374px;
+	height: 100vh;
+	left: 0;
+	top: 0;
+	border-right: 1px solid #111;
+	text-align: center;
+}
+
+#ipad-frame-nav > div > #content {
+	width: 25%;
+	min-width: 360px;
+	max-width: 374px;
+}
+
+#ipadcontentframe {
+	position: fixed;
+	width: calc(100% - 405px);
+	width: 75%;
+	min-width: calc(100% - 404px);
+	max-width: calc(100% - 390px);
+	height: calc(100vh - 60px);
+	right: 15px;
+	top: 60px;
+	overflow: hidden;
+}
+
+.link:active {
+	background: #222 !important;
+}
+
+#nav-header-left {
+	position: fixed;
+	width: 25%;
+	min-width: 360px;
+	max-width: 374px;
+}
+
+.nav-header-left {
+	text-align: center;
+	font-size: 16px;
+	position: fixed;
+	top: 0;
+	/*background: #111;*/
+	width: 25%;
+	min-width: 360px;
+	max-width: 374px;
+	margin-left: 0;
+	border: 0px;
+	pointer-events: none;
+	border-bottom: 0px;
+	height: 60px;
+}
+
+.info {
+	line-height: 60px;
+	background-position-y: 75% !important;
+}
+
+.info-right {
+	margin-top: 0px !important;
+}
+
+.info-btn-right {
+	margin-top: -30px;
+}
+
+.nav-header-left > .nav-header-center {
+	text-align: center !important;
+	line-height: 30px;
+}
+
+.back-button {
+	position: absolute;
+	color: #007AFF;
+	font-size: 16px;
+	line-height: 30px;
+}
+
+.nav-header-center {
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+
+.nav-header-right {
+	background: #111;
+	border-bottom: 1px solid #222;
+	border-left: 1px solid rgba(33, 33, 33, 0.5);
+	position: fixed;
+	z-index: 500;
+	width: 75%;
+	min-width: calc(100% - 360px);
+	max-width: calc(100% - 374px);
+	height: 60px;
+	top: 0;
+	right: 0;
+	text-align: left;
+	font-size: 16px;
+}

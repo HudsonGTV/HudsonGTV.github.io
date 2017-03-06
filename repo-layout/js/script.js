@@ -45,9 +45,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.7.0-r1';
+var repoVersionRaw = '2.8.0-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01F95F1';
+var repoVersionHex = '01FBD01';
 
 var year = (new Date).getFullYear();
 
@@ -410,14 +410,6 @@ $(function() {
 	
 	if(!isInCydiaFrame) {
 		
-		$('a').each(function() {
-			var linkTarget = $(this).attr('target');
-			if(linkTarget == '_blank' || linkTarget == '_popup' || linkTarget == '_system') {
-				$(this).attr('target', '_self');
-				consoleEx.tagln('DEBUG', 'Replaced link targets to target="_self"', '#500', '#f09000');
-			}
-		});
-		
 		if(!$('body').hasClass('main-page')) {
 			
 			var packageName = $('body').attr('package-name').toString();
@@ -447,6 +439,14 @@ $(function() {
 			
 		}
 		
+		$('a').each(function() {
+			var linkTarget = $(this).attr('target');
+			if(linkTarget == '_blank' || linkTarget == '_popup' || linkTarget == '_system') {
+				$(this).attr('target', '_self');
+				consoleEx.tagln('DEBUG', 'Replaced link targets to target="_self"', '#500', '#f09000');
+			}
+		});
+		
 	}
 	
 });
@@ -465,6 +465,22 @@ $(document).on('click', 'a[target="_system"]', function(ev) {
 	consoleEx.println('Opened in system browser...');
 	
 });
+
+function goBack() {
+	
+	var iframe = $('#ipadcontentframe');
+	var storedItem = localStorage.getItem('HKG_SESSION_IPAD_IFRAME_MAIN');
+	
+	if(storedItem == undefined) {
+		window.open('tweaks.html', 'ipadcontentframe');
+		return;
+	}
+	
+	window.open(storedItem, 'ipadcontentframe');
+	
+	//window.history.back();
+	
+}
 
 
 
