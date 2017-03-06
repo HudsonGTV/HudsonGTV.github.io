@@ -6,6 +6,7 @@ body {
 	background: #1B1B1B;
 	margin: 0px;
 	text-align: left;
+	overflow: hidden;
 }
 
 #ipad-frameset {
@@ -23,6 +24,7 @@ body {
 	top: 0;
 	border-right: 1px solid #111;
 	text-align: center;
+	overflow-y: scroll;
 }
 
 #ipad-frame-nav > div > #content {
@@ -40,7 +42,7 @@ body {
 	height: calc(100vh - 60px);
 	right: 15px;
 	top: 60px;
-	overflow: hidden;
+	overflow-y: scroll;
 }
 
 .link:active {

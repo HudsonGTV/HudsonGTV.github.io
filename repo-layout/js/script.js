@@ -45,9 +45,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.8.0-r1';
+var repoVersionRaw = '2.8.0-r2';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01FBD01';
+var repoVersionHex = '01FBD02';
 
 var year = (new Date).getFullYear();
 
