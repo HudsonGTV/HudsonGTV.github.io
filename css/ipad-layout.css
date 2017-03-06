@@ -25,6 +25,7 @@ body {
 	border-right: 1px solid #111;
 	text-align: center;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 #ipad-frame-nav > div > #content {
@@ -43,6 +44,7 @@ body {
 	right: 15px;
 	top: 60px;
 	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .link:active {
