@@ -28,7 +28,7 @@ Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.h
 MD5sum: ee5b50b3c73bb48ed404a87d32bce63f
 SHA1: 446ff6246aeca066b81e5704f4c3e1271933ca3b
 SHA256: ef2ae8d6b1878b88db9e3bb16bbdd888176b57d7c2dea0c6b18c4a6861ef1a9e
-Icon: file:///Library/HudsonRepoIcons/Themes/AndroidSettingsIcons/Icon.png
+Icon: http://repo.hudsongreen.com/CydiaIcon.png
 
 
 Package: com.hudsongreen.cydia.RepoIcons
