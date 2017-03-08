@@ -1,0 +1,18 @@
+Package: com.macciti.blaztic
+Name: Blaztic
+Version: 1.0
+Architecture: iphoneos-arm
+Depends: com.anemonetheming.anemone
+Priority: standard
+Section: Themes (SpringBoard)
+Filename: pool/main/c/com.macciti.blaztic/com.macciti.blaztic_1.0_iphoneos-arm.deb
+Size: 2110766
+SHA256: 7634e5bc89f3bdbcb4d07db55ceaf7c9cf31b7a3543935db409a7fdceda1e553
+SHA1: afd8f2b31c29bf092ad568e158581d4b94c06829
+MD5sum: acdff51a9e1b87153b93c3650a39c747
+Description: a consistent theme of cool colors.
+Maintainer: iC <apt@macciti.com>
+Author: SkyThemes <SkyThemes007@gmail.com>
+Sponsor: MacCiti <http://www.macciti.com/cydia/pages/sponsor.php>
+Depiction: http://www.macciti.com/pages/blaztic/index.php
+tag: cydia::commercial
