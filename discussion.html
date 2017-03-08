@@ -12,6 +12,7 @@
 		
 		<link rel="stylesheet" href="repo-layout/css/style.css" />
 		<link rel="stylesheet" href="repo-layout/css/link.css" />
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 		
 		<!-- IDK Why I put this in the header -->
 		<div class="repo-header"></div>
@@ -19,6 +20,20 @@
 	</head>
 	
 	<body class="depiction main-page">
+		
+		<ul class="repo-link" style="background: #111 !important; border-bottom: 1px solid rgba(57, 59, 57, 0.5);">
+			<li class="link-no-click">
+				<a class="link-inner force-touch-nav info">
+					<div>
+						<div class="info-btn-main"></div>
+						<img class="icon icon-top" src="assets/favicon-alt.png">
+						<label class="link-no-click">HKG Repository</label>
+						<label class="version-num info-right info-about"></label>
+						<div class="info-btn-right" onClick="alertBox('H.K.G. Repository', '__strInsertTechnicalInfo', 'Dismiss', true)"></div>
+					</div>
+				</a>
+			</li>
+		</ul>
 		
 		<div id="inner-body-wrapper">
 			
