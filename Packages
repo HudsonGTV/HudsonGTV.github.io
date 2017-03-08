@@ -54,6 +54,7 @@ SHA256: 3ca345cf26a45eb72c58876b40a2aaeb067b33d9a02bf26d94b6604eab06c275
 Icon: http://repo.hudsongreen.com/CydiaIcon.png
 Tag: cydia::extension
 
+
 Package: com.fidele007.hotdog
 Version: 3.3.3-1+debug
 Architecture: iphoneos-arm
