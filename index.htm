@@ -186,7 +186,12 @@
 					
 					sessionStorage.setItem('HKG_SESSION_IPAD_IFRAME', frameSrc);
 					
-					//contentFrame.find('footer').remove();
+					contentFrame.find('ul').each(function() {
+						$(this).css({
+							'border': '0px transparent',
+							'border-radius': '5px'
+						});
+					});
 					
 					if(!(contentFrame.find('body').hasClass('main-page'))) {
 						$('.back-button').css('display', 'initial');
