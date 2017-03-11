@@ -40,16 +40,16 @@ Architecture: iphoneos-arm
 Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Filename: debs//Themes/RoundFolders/com.hudsongreen.roundfolders.deb
-Size: 37000
+Size: 37542
 Section: HKG_-_Themes
-Description: Broken RoundFolders theme
+Description: Dark Round Folder Icons
 Depiction: http://repo.hudsongreen.com/depic/Themes/RoundFolders/index.html
 Name: Round Folders
 MD5sum: c7afced7f8257d27a458ec37e23e4dff
 SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc
 SHA256: 742c2d0c2192e4e73f85b6f3fcb67c9a4e612eb7491fd7c77ec8c6348f7a992c
 Icon: uri//CydiaIcon.png
-tag: purpose::x
+tag: purpose::uikit
 
 
 
@@ -70,7 +70,7 @@ Essential: Yes
 MD5sum: 4b4fb2c1b4227aeadea7abffb0267e05
 SHA1: b4f8548fb013e83e389d29635c4d30234b806d54
 SHA256: 9e1fa0cab1343062b532b448e7b849d8922b46d939ba0afe1343b0610a598894
-Icon: uri//CydiaIcon.png
+Icon: file:///Applications/Cydia.app/Sections/Repositories.png
 Tag: purpose::extension
 
 Package: com.hudsongreen.cydia.RepoIcons
@@ -90,6 +90,6 @@ Essential: Yes
 MD5sum: de7164d09966af6070bc771c91cb71ff
 SHA1: cda3efa6ae678779cdaf99a68cbf3ff40ee44575
 SHA256: 3ca345cf26a45eb72c58876b40a2aaeb067b33d9a02bf26d94b6604eab06c275
-Icon: uri//CydiaIcon.png
+Icon: file:///Applications/Cydia.app/Sections/Repositories.png
 Tag: purpose::extension
 
