@@ -67,9 +67,9 @@ Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
 Replaces: com.hudsongreen.cydia.RepoIcons
 Required: Yes
 Essential: Yes
-MD5: 4b4fb2c1b4227aeadea7abffb0267e05
-SHA-1: b4f8548fb013e83e389d29635c4d30234b806d54
-SHA-256: 9e1fa0cab1343062b532b448e7b849d8922b46d939ba0afe1343b0610a598894
+MD5sum: 4b4fb2c1b4227aeadea7abffb0267e05
+SHA1: b4f8548fb013e83e389d29635c4d30234b806d54
+SHA256: 9e1fa0cab1343062b532b448e7b849d8922b46d939ba0afe1343b0610a598894
 Icon: uri//CydiaIcon.png
 Tag: purpose::extension
 
