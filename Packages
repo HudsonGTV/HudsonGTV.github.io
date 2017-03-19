@@ -1,5 +1,22 @@
 Package: com.hudsongreen.androidsettingsicons
 Name: Android Settings Icons
+Size: 27692
+Version: 0.7.4-r1
+Architecture: iphoneos-arm
+Section: HKG_-_Themes
+Author: Hudson Green <cydia@hudsongreen.com>
+Maintainer: Hudson Green <cydia@hudsongreen.com>
+Description: Some icons in the iOS settings page to match those of Android
+Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
+Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
+MD5sum: cfbdbfd899923bf922d0a5c169bdd237
+SHA1: c5f3ea7ce93322c50265914017ab513509e87a1f
+SHA256: e779f90e27b318e3b380de4db27ccff4bc9b6441ff8fd10993eddb2176720c26
+Icon: file:///Library/HKG/PackageIcons/Themes/AndroidSettingsIcons/Icon.png
+Tag: purpose::uikit
+
+Package: com.hudsongreen.androidsettingsicons
+Name: Android Settings Icons
 Size: 24712
 Version: 0.7.3-r2
 Architecture: iphoneos-arm
@@ -7,7 +24,7 @@ Section: HKG_-_Themes
 Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
-Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
+Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons_0.7.3-r2.deb
 Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
 MD5sum: 0040db084c7fab4454ac8d2c3503f440
 SHA1: 1abdfe8a8775cc24d287a12f8e692d98c4feced4
