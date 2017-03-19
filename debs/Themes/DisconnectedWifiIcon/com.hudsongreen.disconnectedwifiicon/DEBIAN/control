@@ -1,0 +1,9 @@
+Package: com.hudsongreen.disconnectedwifiicon
+Name: Disconnected Wifi Icon (Zepplelin Logo)
+Version: 1.0-r1
+Architecture: iphoneos-arm
+Description: Use activator and Moveable9 to hide/show icon.
+Author: Hudson Green <cydia@hudsongreen.com>
+Section: HKG_-_Themes
+Homepage: http://repo.hudsongreen.com/
+Icon: file:///Library/HKG/PackageIcons/Themes/DisconnectedWifiIcon/Icon.png

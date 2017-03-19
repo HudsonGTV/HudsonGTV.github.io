@@ -110,3 +110,21 @@ SHA256: 3ca345cf26a45eb72c58876b40a2aaeb067b33d9a02bf26d94b6604eab06c275
 Icon: file:///Applications/Cydia.app/Sections/Repositories.png
 Tag: purpose::extension
 
+
+
+Package: com.hudsongreen.disconnectedwifiicon
+Name: Disconnected Wifi Icon (Zepplelin Logo)
+Size: 3542
+Version: 1.0-r1
+Architecture: iphoneos-arm
+Section: HKG_-_Themes
+Author: Hudson Green <cydia@hudsongreen.com>
+Maintainer: Hudson Green <cydia@hudsongreen.com>
+Description: Use Activator and Moveable9 to hide/show icon.
+Filename: debs//Themes/DisconnectedWifiIcon/com.hudsongreen.disconnectedwifiicon
+Depiction: http://repo.hudsongreen.com/depic/Themes/DisconnectedWifiIcon/index.html
+MD5sum: ed4e32efeb30cdec54fc5276d5278271
+SHA1: 521882591f6ef49dac0266549c3f7f4519246fd3
+SHA256: 87481a91792415ebb4bdc0db66cc6ff0ef110b0b66c19493f44f53d929fd70d8
+Icon: file:///Library/HKG/PackageIcons/Themes/DisconnectedWifiIcon/Icon.png
+Tag: purpose::uikit
