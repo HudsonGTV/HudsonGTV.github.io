@@ -10,6 +10,7 @@
 	<compatibility>
 		<miniOS>3.0</miniOS>
 		<maxiOS>10.2</maxiOS>
+		<compatibilityString>&lt; iOS 10.2</compatibilityString>
 	</compatibility>
 	
 	<description>Use activator and Moveable9 to hide/show icon.</description>
