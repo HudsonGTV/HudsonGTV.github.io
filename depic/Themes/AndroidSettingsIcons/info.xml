@@ -25,7 +25,7 @@
 		<currentChanges>
 			<logVersion>0.7.4-r1</logVersion>
 			<listItem>Fixed Cydia Package Icon Bugs</listItem>
-			<listItem>Added Disconnected Wifi Icon to Statusbar if Anemone is Installed (Has Not Been Tested)</listItem>
+			<listItem>Added "No Wifi" Icon to Statusbar if Anemone is Installed (Untested)</listItem>
 			<itemCount>2</itemCount>
 		</currentChanges>
 		
