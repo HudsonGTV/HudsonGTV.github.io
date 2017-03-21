@@ -50,6 +50,8 @@ $(document).ready(function() {
 			
 			document.title = packageName;
 			
+			jQuery('link[rel="icon"]').attr('href', packageIcon);
+			
 			$('#web-header>#package-icon>div>span>img').attr('src', packageIcon);
 			
 			$('#web-content>#web-name').html(packageName);
