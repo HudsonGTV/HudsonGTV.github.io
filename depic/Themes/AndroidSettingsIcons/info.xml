@@ -16,8 +16,8 @@
 	<description>Android Settings Icons is a small theme for those android lovers. All it does currently is change a few of the icons on the settings app.</description>
 	
 	<screenshots>
-		<screenshotCount>1</screenshotCount>
 		<screenshot>Themes/AndroidSettingsIcons/assets/screenshotOne.png</screenshot>
+		<screenshotCount>1</screenshotCount>
 	</screenshots>
 	
 	<changelog>
@@ -26,25 +26,31 @@
 			<logVersion>0.7.4-r1</logVersion>
 			<listItem>Fixed Cydia package icon bugs</listItem>
 			<listItem>Released to public</listItem>
+			<itemCount>2</itemCount>
 		</currentChanges>
 		
 		<olderChanges>
+			
+			<listCount>3</listCount>
 			
 			<changelogItem>
 				<logVersion>0.7.2</logVersion>
 				<listItem>Added Package Icon</listItem>
 				<listItem>Fixed Bugs</listItem>
+				<itemCount>2</itemCount>
 			</changelogItem>
 			
 			<changelogItem>
 				<logVersion>0.6.0</logVersion>
 				<listItem>Fixed Broken deb Package</listItem>
 				<listItem>Fixed bug causing Cydia to give an error regarding invalid hash values</listItem>
+				<itemCount>2</itemCount>
 			</changelogItem>
 			
 			<changelogItem>
 				<logVersion>0.5.0</logVersion>
 				<listItem>Initial Release</listItem>
+				<itemCount>1</itemCount>
 			</changelogItem>
 			
 		</olderChanges>

@@ -16,9 +16,9 @@
 	<description>Use activator and Moveable9 to hide/show icon.</description>
 	
 	<screenshots>
-		<screenshotCount>2</screenshotCount>
 		<screenshot>image1.png</screenshot>
 		<screenshot>image2.png</screenshot>
+		<screenshotCount>2</screenshotCount>
 	</screenshots>
 	
 	<changelog>
@@ -27,20 +27,25 @@
 			<logVersion>1.0.0-r1</logVersion>
 			<listItem>Fixed small visual bugs</listItem>
 			<listItem>Released to public</listItem>
+			<itemCount>2</itemCount>
 		</currentChanges>
 		
 		<olderChanges>
+			
+			<listCount>2</listCount>
 			
 			<changelogItem>
 				<logVersion>0.9.4-r4</logVersion>
 				<listItem>Fixed size bugs</listItem>
 				<listItem>Fixed visual glitches</listItem>
+				<itemCount>2</itemCount>
 			</changelogItem>
 			
 			<changelogItem>
 				<logVersion>0.9.4-r3</logVersion>
 				<listItem>test</listItem>
 				<listItem>foo</listItem>
+				<itemCount>2</itemCount>
 			</changelogItem>
 			
 		</olderChanges>
@@ -48,6 +53,7 @@
 		<issues>
 			<listItem>everything</listItem>
 			<listItem>foo</listItem>
+			<itemCount>2</itemCount>
 		</issues>
 		
 	</changelog>
