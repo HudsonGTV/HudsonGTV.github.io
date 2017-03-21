@@ -16,6 +16,7 @@
 	<description>Use activator and Moveable9 to hide/show icon.</description>
 	
 	<screenshots>
+		<screenshotCount>2</screenshotCount>
 		<screenshot>image1.png</screenshot>
 		<screenshot>image2.png</screenshot>
 	</screenshots>
