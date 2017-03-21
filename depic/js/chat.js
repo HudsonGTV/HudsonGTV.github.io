@@ -1,6 +1,15 @@
+$.urlParam = function(name) {
+	var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+	if(results == null) {
+		return null;
+	} else {
+		return results[1] || 0;
+	}
+}
+
 var disqus_config = function () {
 	this.page.url = window.location.url;
-	this.page.identifier = (window.location.pathname).replace('index', '').replace('screenshot', '').replace('changelog', '').replace('discussion', '').replace('.html', '');
+	this.page.identifier = $.urlParam('package');
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
