@@ -24,7 +24,7 @@ $(document).ready(function() {
 			var latestChangesVer = $(xml).find('package>changelog>currentChanges>logVersion').text();
 			var latestChangesItemOne*/
 			
-			$('#web-content>#web-name').html(packageName);			$('#web-content>#web-latest').html(packageVersion);			$('#web-header>#package-icon>div>span>img').attr('src', packageIcon);						$('.support-number.right').html(compatibilityString);						if(iOS != false) {								if(iOS < supportedVersionMin || iOS > supportedVersionMax) {					$('.is-supported').addClass('is-unsupported');					$('.is-supported').removeClass('is-supported');				}							} else {				$('.is-supported').addClass('is-unsupported');				$('.is-supported').removeClass('is-supported');				iOS = 0;			}
+			$('#web-content>#web-name').html(packageName);			$('#web-content>#web-latest').html(packageVersion);			$('#web-header>#package-icon>div>span>img').attr('src', packageIcon);						if(iOS != false) {								if(iOS < supportedVersionMin || iOS > supportedVersionMax) {					$('.is-supported').addClass('is-unsupported');					$('.is-supported').removeClass('is-supported');				}							} else {				$('.is-supported').addClass('is-unsupported');				$('.is-supported').removeClass('is-supported');				iOS = 0;			}						$('.support-number').html('&' + compatibilityString);
 			
 		},
 		cache : false,
