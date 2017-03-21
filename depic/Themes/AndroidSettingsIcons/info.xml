@@ -17,7 +17,7 @@
 	
 	<screenshots>
 		<screenshotCount>1</screenshotCount>
-		<screenshot>Themes/AndroidSettingsIcons/screenshotOne.png</screenshot>
+		<screenshot>Themes/AndroidSettingsIcons/assets/screenshotOne.png</screenshot>
 	</screenshots>
 	
 	<changelog>
