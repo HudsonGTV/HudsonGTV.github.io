@@ -6,18 +6,18 @@
 	
 		<meta charset="UTF-8">
 		
-		<title>Changelog - Android Settings Icons</title>
+		<title>Changelog - H.K.G. Repository</title>
 		
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
 		
-		<link rel="stylesheet" href="../../../repo-layout/css/style.css" />
-		<link rel="stylesheet" href="../../../repo-layout/css/link.css" />
+		<link rel="stylesheet" href="../repo-layout/css/style.css" />
+		<link rel="stylesheet" href="../repo-layout/css/link.css" />
 		
 		<!-- IDK Why I put this in the header -->
 		<div class="repo-header"></div>
 		
 	</head>
-	<body class="depiction" package-name="Android Settings Icons" package-version="0.7.4-r1" package-icon="androidsettingsicons.png">
+	<body class="depiction" package-name="Loading..." package-version="-" package-icon="blankicon.png">
 		
 		<div id="inner-body-wrapper">
 			
@@ -27,9 +27,9 @@
 					<li class="link is-supported">
 						<a class="link-inner">
 							<div>
-								<img class="icon" src="../../../assets/compatible.png">
+								<img class="icon" src="../assets/compatible.png">
 								<label class="support-text">Supports</label>
-								<label class="support-number right">&le; iOS 10.2</label>
+								<label class="support-number right">Loading...</label>
 							</div>
 						</a>
 					</li>
@@ -39,7 +39,7 @@
 					<li class="link">
 						<a href="index.html" class="link-inner chevron">
 							<div>
-								<img class="icon" src="../../../assets/description.png">
+								<img class="icon" src="../assets/description.png">
 								<label>Back to Description</label>
 							</div>
 						</a>
@@ -47,9 +47,9 @@
 					<li class="link">
 						<a class="link-inner">
 							<div>
-								<img class="icon" src="../../../assets/current-version.png">
+								<img class="icon" src="../assets/current-version.png">
 								<label class="version-text">Latest Version</label>
-								<label class="version-number right">0.7.4-r1</label>
+								<label class="version-number right">-</label>
 							</div>
 						</a>
 					</li>
@@ -57,12 +57,11 @@
 				
 				<h2 id="in-this-version" class="table-header">In this version</h2>
 				<ul>
-					<li class="changelog-list">
+					<li id="latest-version-table" class="changelog-list">
 					
-						<p class="version-number listed latest-ver">0.7.2</p>
+						<p class="version-number listed latest-ver">-</p>
 						
-						<p>- Added Package Icon.</p>
-						<p>- Fixed Bugs.</p>
+						<!-- XML INJECTED HERE -->
 						
 					</li>
 				</ul>
@@ -70,7 +69,13 @@
 				<h2 id="in-this-version" class="table-header">Older Versions</h2>
 				<ul>
 					
-					<li class="changelog-list">
+					<li id="older-version-table" class="changelog-list">
+						
+						<!-- XML INJECTED HERE -->
+						
+						<!--
+						
+						EXAMPLE HTML
 						
 						<p class="version-number listed">0.6.0</p>
 						
@@ -82,6 +87,8 @@
 						<p class="version-number listed">0.5.0</p>
 						
 						<p>- Theme Released.</p>
+						
+						-->
 						
 					</li>
 					
@@ -106,10 +113,12 @@
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		<script src="../../../repo-layout/js/pressure.js"></script>
-		<script src="../../../repo-layout/js/repo.js"></script>
-		<script src="../../../repo-layout/js/page/changelog.js"></script>
-		<script src="../../../repo-layout/js/script.js"></script>
+		<script src="js/pressure.js"></script>
+		<script src="js/repo.js"></script>
+		<script src="js/page/changelog.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/XML/header.js"></script>
+		<script src="js/XML/changelog.js"></script>
 		
 	</body>
 	
