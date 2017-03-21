@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+
+<package>
+	
+	<id>themeDisconnectedWifiIcon</id>
+	<name>Disconnected Wifi Icon</name>
+	<version>1.0.0-r1</version>
+	<favicon>../../../icon/theme.png</favicon>
+	
+	<compatibility>
+		<miniOS>3.0</miniOS>
+		<maxiOS>10.2</maxiOS>
+	</compatibility>
+	
+	<description>Use activator and Moveable9 to hide/show icon.</description>
+	
+	<screenshots>
+		<screenshot>image1.png</screenshot>
+		<screenshot>image2.png</screenshot>
+	</screenshots>
+	
+	<changelog>
+		
+		<currentChanges>
+			<logVersion>1.0.0-r1</logVersion>
+			<listItem>Fixed small visual bugs</listItem>
+			<listItem>Released to public</listItem>
+		</currentChanges>
+		
+		<olderChanges>
+			
+			<changelogItem>
+				<logVersion>0.9.4-r4</logVersion>
+				<listItem>Fixed size bugs</listItem>
+				<listItem>Fixed visual glitches</listItem>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>0.9.4-r3</logVersion>
+				<listItem>test</listItem>
+				<listItem>foo</listItem>
+			</changelogItem>
+			
+		</olderChanges>
+		
+		<issues>
+			<listItem>everything</listItem>
+			<listItem>foo</listItem>
+		</issues>
+		
+	</changelog>
+	
+</package>
