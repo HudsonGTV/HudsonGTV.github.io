@@ -2,7 +2,7 @@
 
 <package>
 	
-	<id>themeDisconnectedWifiIcon</id>
+	<id>DisconnectedWifiIcon</id>
 	<name>Disconnected Wifi Icon</name>
 	<version>1.0.0-r1</version>
 	<favicon>../icon/theme.png</favicon>

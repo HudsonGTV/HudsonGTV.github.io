@@ -3,7 +3,7 @@ LoadScreenshotLinks = (function() {
 	$('.table-insert-after').after(
 		'<ul>' +
 			'<li class="link">' +
-				'<a href="changelog.html" class="link-inner chevron">' +
+				'<a href="changelog.html?package=" id="package-link" class="link-inner chevron">' +
 					'<div>' +
 						'<img class="icon" src="../assets/changelog.png">' +
 						'<label>Recent Changes</label>' +
@@ -11,7 +11,7 @@ LoadScreenshotLinks = (function() {
 				'</a>' +
 			'</li>' +
 			'<li class="link">' +
-				'<a href="discussion.html" class="link-inner chevron">' +
+				'<a href="discussion.html?package=" id="package-link" class="link-inner chevron">' +
 					'<div>' +
 						'<img class="icon" src="../assets/discussion.png">' +
 						'<label>Discussion</label>' +

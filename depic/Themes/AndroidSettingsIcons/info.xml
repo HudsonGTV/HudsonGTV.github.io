@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+
+<package>
+	
+	<id>AndroidSettingsIcons</id>
+	<name>Android Settings Icons</name>
+	<version>0.7.4-r1</version>
+	<favicon>Themes/AndroidSettingsIcons/icon.png</favicon>
+	
+	<compatibility>
+		<miniOS>3.0</miniOS>
+		<maxiOS>10.2</maxiOS>
+		<displayedVer>le; iOS 10.2</displayedVer>
+	</compatibility>
+	
+	<description>Android Settings Icons is a small theme for those android lovers. All it does currently is change a few of the icons on the settings app.</description>
+	
+	<screenshots>
+		<screenshotCount>1</screenshotCount>
+		<screenshot>Themes/AndroidSettingsIcons/screenshotOne.png</screenshot>
+	</screenshots>
+	
+	<changelog>
+		
+		<currentChanges>
+			<logVersion>0.7.4-r1</logVersion>
+			<listItem>Fixed Cydia package icon bugs</listItem>
+			<listItem>Released to public</listItem>
+		</currentChanges>
+		
+		<olderChanges>
+			
+			<changelogItem>
+				<logVersion>0.7.2</logVersion>
+				<listItem>Added Package Icon</listItem>
+				<listItem>Fixed Bugs</listItem>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>0.6.0</logVersion>
+				<listItem>Fixed Broken deb Package</listItem>
+				<listItem>Fixed bug causing Cydia to give an error regarding invalid hash values</listItem>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>0.5.0</logVersion>
+				<listItem>Initial Release</listItem>
+			</changelogItem>
+			
+		</olderChanges>
+		
+		<issues>
+			<listItem>Inconsistent Icon Sizes</listItem>
+			<listItem><strike>Package Icon Still Not Appearing In Cydia</strike></listItem>
+		</issues>
+		
+	</changelog>
+	
+</package>
