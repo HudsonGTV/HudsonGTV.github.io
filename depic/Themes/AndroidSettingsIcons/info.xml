@@ -24,8 +24,8 @@
 		
 		<currentChanges>
 			<logVersion>0.7.4-r1</logVersion>
-			<listItem>Fixed Cydia package icon bugs</listItem>
-			<listItem>Released to public</listItem>
+			<listItem>Fixed Cydia Package Icon Bugs</listItem>
+			<listItem>Added Disconnected Wifi Icon to Statusbar if Anemone is Installed (Has Not Been Tested)</listItem>
 			<itemCount>2</itemCount>
 		</currentChanges>
 		
@@ -43,7 +43,7 @@
 			<changelogItem>
 				<logVersion>0.6.0</logVersion>
 				<listItem>Fixed Broken deb Package</listItem>
-				<listItem>Fixed bug causing Cydia to give an error regarding invalid hash values</listItem>
+				<listItem>Fixed Bug Causing Cydia to Give an Error Regarding Invalid Hash Values</listItem>
 				<itemCount>2</itemCount>
 			</changelogItem>
 			
