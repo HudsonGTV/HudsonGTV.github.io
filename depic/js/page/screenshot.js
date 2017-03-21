@@ -5,7 +5,7 @@ LoadScreenshotLinks = (function() {
 			'<li class="link">' +
 				'<a href="changelog.html" class="link-inner chevron">' +
 					'<div>' +
-						'<img class="icon" src="../../../assets/changelog.png">' +
+						'<img class="icon" src="../assets/changelog.png">' +
 						'<label>Recent Changes</label>' +
 					'</div>' +
 				'</a>' +
@@ -13,7 +13,7 @@ LoadScreenshotLinks = (function() {
 			'<li class="link">' +
 				'<a href="discussion.html" class="link-inner chevron">' +
 					'<div>' +
-						'<img class="icon" src="../../../assets/discussion.png">' +
+						'<img class="icon" src="../assets/discussion.png">' +
 						'<label>Discussion</label>' +
 					'</div>' +
 				'</a>' +
@@ -23,7 +23,7 @@ LoadScreenshotLinks = (function() {
 			'<li class="link">' +
 				'<a href="twitter:///user?screen_name=HKGTV" class="link-inner chevron" target="_new">' +
 					'<div>' +
-						'<img class="icon" src="../../../assets/twitter.png">' +
+						'<img class="icon" src="../assets/twitter.png">' +
 						'<label>Follow Developer</label>' +
 						'<label class="chevron-right">@HKGTV</label>' +
 					'</div>' +
