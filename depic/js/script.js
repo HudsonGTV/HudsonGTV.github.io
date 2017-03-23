@@ -37,6 +37,8 @@ var fulliOS = ('' + (/CPU.*OS ([0-9_]{1,8})|(CPU like).*AppleWebKit.*Mobile/i.ex
 //var verMinor = fulliOS.split('.')[1];
 //var verFix   = fulliOS.split('.')[2];
 
+var fullDeviceName = (WURFL.complete_device_name).replace('Apple ', '');
+
 var supportedVersionMin = $('.depiction').data('version-min');
 var supportedVersionMax = $('.depiction').data('version-max');
 
@@ -90,7 +92,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	addFooter = (function() {
 		
 		$('footer').html('</div><h2 id="detected-version">'
-							+ navigator.platform + ' - iOS ' + fulliOS +
+							+ fullDeviceName + ' - iOS ' + fulliOS +
 						'</h2>' +
 						'<h2 id="copyright">'
 							+ '&copy; ' + year + ' H.K.G. - All rights reserved' +
