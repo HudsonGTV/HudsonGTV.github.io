@@ -8,7 +8,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons.deb
-Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
+Depiction: http://repo.hudsongreen.com/depic/?package=AndroidSettingsIcons
 MD5sum: cfbdbfd899923bf922d0a5c169bdd237
 SHA1: c5f3ea7ce93322c50265914017ab513509e87a1f
 SHA256: e779f90e27b318e3b380de4db27ccff4bc9b6441ff8fd10993eddb2176720c26
@@ -25,7 +25,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons_0.7.3-r2.deb
-Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
+Depiction: http://repo.hudsongreen.com/depic/?package=AndroidSettingsIcons
 MD5sum: 0040db084c7fab4454ac8d2c3503f440
 SHA1: 1abdfe8a8775cc24d287a12f8e692d98c4feced4
 SHA256: 5875810a8ab25ba98f8828bd3ba9815be661ebb147648ea0ac2aef23eb6f59e1
@@ -42,7 +42,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Some icons in the iOS settings page to match those of Android
 Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidsettingsicons_0.7.3-r1.deb
-Depiction: http://repo.hudsongreen.com/depic/Themes/AndroidSettingsIcons/index.html
+Depiction: http://repo.hudsongreen.com/depic/?package=AndroidSettingsIcons
 MD5sum: ee5b50b3c73bb48ed404a87d32bce63f
 SHA1: 446ff6246aeca066b81e5704f4c3e1271933ca3b
 SHA256: ef2ae8d6b1878b88db9e3bb16bbdd888176b57d7c2dea0c6b18c4a6861ef1a9e
@@ -61,7 +61,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: Use Activator and Moveable9 to hide/show icon.
 Filename: debs//Themes/DisconnectedWifiIcon/com.hudsongreen.disconnectedwifiicon.deb
-Depiction: http://repo.hudsongreen.com/depic?package=DisconnectedWifiIcon
+Depiction: http://repo.hudsongreen.com/depic/?package=DisconnectedWifiIcon
 MD5sum: ed4e32efeb30cdec54fc5276d5278271
 SHA1: 521882591f6ef49dac0266549c3f7f4519246fd3
 SHA256: 87481a91792415ebb4bdc0db66cc6ff0ef110b0b66c19493f44f53d929fd70d8
