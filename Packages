@@ -79,7 +79,7 @@ Filename: debs//Themes/RoundFolders/com.hudsongreen.roundfolders.deb
 Size: 37542
 Section: HKG_-_Themes
 Description: Dark Round Folder Icons
-Depiction: http://repo.hudsongreen.com/depic/Themes/RoundFolders/index.html
+Depiction: http://repo.hudsongreen.com/depic?package=RoundFolders
 Name: Round Folders
 MD5sum: c7afced7f8257d27a458ec37e23e4dff
 SHA1: 1b8bb8406973c57b05b1c96f58dc8d8a953724dc

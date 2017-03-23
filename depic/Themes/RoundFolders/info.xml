@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<package>
+	
+	<id>RoundFolders</id>
+	<name>Round Folders</name>
+	<version>0.1</version>
+	<favicon>../icon/theme.png</favicon>
+	
+	<compatibility>
+		<miniOS>3.0</miniOS>
+		<maxiOS>10.2</maxiOS>
+		<displayedVer>le; iOS 10.2</displayedVer>
+	</compatibility>
+	
+	<description>Broken test theme.</description>
+	
+	<screenshots>
+		<screenshotCount>0</screenshotCount>
+	</screenshots>
+	
+	<changelog>
+		
+		<currentChanges>
+			<logVersion>0.1</logVersion>
+			<listItem>Initial Release</listItem>
+			<itemCount>1</itemCount>
+		</currentChanges>
+		
+		<olderChanges>
+			
+			<listCount>0</listCount>
+			
+		</olderChanges>
+		
+		<issues>
+			<listItem>This repo is an issue</listItem>
+			<itemCount>1</itemCount>
+		</issues>
+		
+	</changelog>
+	
+</package>
