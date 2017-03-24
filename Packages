@@ -99,7 +99,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: HKG Repo Icons (repo.hudsongreen.com)
 Filename: debs//Tweaks/RepoIcons/com.hudsongreen.cydia.RepoIcons.deb
-Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
+Depiction: http://repo.hudsongreen.com/depic?package=RepoIcons
 Replaces: com.hudsongreen.cydia.RepoIcons
 Required: Yes
 Essential: Yes
@@ -119,7 +119,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Description: HKG Repo Icons (repo.hudsongreen.com)
 Filename: debs//Tweaks/RepoIcons/com.hudsongreen.cydia.RepoIcons_1.1.6-r1.deb
-Depiction: http://repo.hudsongreen.com/depic/Tweaks/RepoIcons/index.html
+Depiction: http://repo.hudsongreen.com/depic?package=RepoIcons
 Replaces: com.hudsongreen.cydia.RepoIcons
 Required: Yes
 Essential: Yes

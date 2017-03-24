@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+
+<package>
+	
+	<id>RepoIcons</id>
+	<name>HKG Repository Icons</name>
+	<version>1.1.6-r2</version>
+	<favicon>../../../icon/tweak.png</favicon>
+	
+	<compatibility>
+		<miniOS>3.0</miniOS>
+		<maxiOS>10.2</maxiOS>
+		<displayedVer>le; iOS 10.2</displayedVer>
+	</compatibility>
+	
+	<description>The required (not really, but let's pretend it is) HKG Repo Icons. This is NOT a Winterboard/Anenome theme!</description>
+	
+	<screenshots>
+		<screenshotCount>0</screenshotCount>
+	</screenshots>
+	
+	<changelog>
+		
+		<currentChanges>
+			<logVersion>1.1.6-r2</logVersion>
+			<listItem>Minor visual fixes</listItem>
+			<listItem>Moved file locations.</listItem>
+			<itemCount>2</itemCount>
+		</currentChanges>
+		
+		<olderChanges>
+			
+			<listCount>4</listCount>
+			
+			<changelogItem>
+				<logVersion>1.1.4</logVersion>
+				<listItem>Changed Repo Icon Section Names</listItem>
+				<itemCount>1</itemCount>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>1.1.3</logVersion>
+				<listItem>Fixed Another Installation Issue</listItem>
+				<itemCount>1</itemCount>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>1.1.0</logVersion>
+				<listItem>Fixed Installation Issue</listItem>
+				<itemCount>1</itemCount>
+			</changelogItem>
+			
+			<changelogItem>
+				<logVersion>1.0.0</logVersion>
+				<listItem>Initial Release</listItem>
+				<itemCount>1</itemCount>
+			</changelogItem>
+			
+		</olderChanges>
+		
+		<issues>
+			<itemCount>0</itemCount>
+		</issues>
+		
+	</changelog>
+	
+</package>
