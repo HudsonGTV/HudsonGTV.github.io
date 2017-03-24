@@ -5,7 +5,7 @@
 	<id>RepoIcons</id>
 	<name>HKG Repository Icons</name>
 	<version>1.1.6-r2</version>
-	<favicon>../../../icon/tweak.png</favicon>
+	<favicon>../../icon/tweak.png</favicon>
 	
 	<compatibility>
 		<miniOS>3.0</miniOS>
