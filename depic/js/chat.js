@@ -8,8 +8,10 @@ $.urlParam = function(name) {
 }
 
 var disqus_config = function () {
+	var packageID = $.urlParam('package');
+	packageID = packageID.substring(str.indexOf('/') + 1);
 	this.page.url = window.location.url;
-	this.page.identifier = $.urlParam('package');
+	this.page.identifier = packageID;
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

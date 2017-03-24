@@ -12,7 +12,7 @@ $(document).ready(function() {
 	$.ajax({
 		type : 'GET',
 		dataType : 'xml',
-		url : ('http://repo.hudsongreen.com/depic/Themes/' + $.urlParam('package') + '/info.xml'),
+		url : ('http://repo.hudsongreen.com/depic/' + $.urlParam('package') + '/info.xml'),
 		success : function(xml) {
 			
 			var screenshotCount = parseInt($(xml).find('package>screenshots>screenshotCount').text());
