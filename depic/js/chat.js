@@ -9,7 +9,7 @@ $.urlParam = function(name) {
 
 var disqus_config = function () {
 	var packageID = $.urlParam('package');
-	packageID = packageID.substring(str.indexOf('/') + 1);
+	packageID = packageID.substring(packageID.indexOf('/') + 1);
 	this.page.url = window.location.url;
 	this.page.identifier = packageID;
 };
