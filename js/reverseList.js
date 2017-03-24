@@ -30,7 +30,7 @@ OpenInBrowser = (function(item, replaceWithPackageLink = true) {
 	
 	if(replaceWithPackageLink) {
 		
-		item.children('a').attr('href', 'depic/' + packageLink + '/index.html');
+		item.children('a').attr('href', 'depic' + packageLink + '');
 		
 		$('.package-right').each(function() {
 			$(this).html('Open In Safari');

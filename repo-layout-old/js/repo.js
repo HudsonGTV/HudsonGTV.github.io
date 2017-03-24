@@ -6,7 +6,7 @@ InsertRepoLink = (function() {
 			'<li class="link">' +
 				'<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_blank">' +
 					'<div>' +
-						'<img class="icon icon-top" src="../../../assets/favicon-alt.png">' +
+						'<img class="icon icon-top" src="../assets/favicon-alt.png">' +
 						'<label class="light-link">HKG Repository</label>' +
 					'</div>' +
 				'</a>' +
@@ -25,7 +25,7 @@ InsertRepoLink();
 			<li class="link">
 				<a href="http://repo.hudsongreen.com/" class="link-inner light-chevron" target="_new">
 					<div>
-						<img class="icon icon-top" src="../../../assets/favicon.png">
+						<img class="icon icon-top" src="../assets/favicon.png">
 						<label class="light-link">HKG Repository</label>
 					</div>
 				</a>
