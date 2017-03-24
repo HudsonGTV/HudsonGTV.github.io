@@ -162,9 +162,19 @@
 		border-top: 1px solid rgba(55, 0, 0, 0.25);
 		border-bottom: 1px solid rgba(55, 0, 0, 0.25);
 	}
+	
+	.link.is-supported-loading, .link.is-supported-loading:link, .link.is-supported-loading:hover, .link.is-supported-loading:active {
+		background-color: #111 !important;
+		border-top: 0px !important;
+		border-bottom: 0px !important;
+	}
 
 	.link.is-unsupported > a > div > label.right {
 		color: red !important;
+	}
+	
+	.link.is-supported-loading > a > div > .support-text {
+		color: #fff !important;
 	}
 
 	/*ul.is-supported:after, ul.is-supported:before {
