@@ -48,7 +48,18 @@
 	height: 20px;
 }
 
-@media (max-width: 1023px) {
+img.icon {
+	height: auto;
+	/* XXX: small differences due to font bugs 
+	margin: -7px 6px -9px 5px; /*June*/
+	margin: 8px 6px -9px 5px; /*June*/
+	max-height: 30px;
+	min-width: 30px;
+	width: 30px;
+	border-radius: 5px;
+}
+
+/*@media (max-width: 1023px) {*/
 	
 	li.link-inner {
 		display: inline-block;
@@ -69,16 +80,6 @@
 		/*color: #000;*/
 		color: #fff;
 		font-family: Arial, -apple-system-font;
-	}
-
-	img.icon {
-		height: auto;
-		/* XXX: small differences due to font bugs 
-		margin: -7px 6px -9px 5px; /*June*/
-		margin: 8px 6px -9px 5px; /*June*/
-		max-height: 30px;
-		min-width: 30px;
-		width: 30px;
 	}
 
 	p {
@@ -347,9 +348,9 @@
 		color: #000;
 	}
 	
-}
+/*}*/
 
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
 	
 	li.link-inner {
 		display: inline-block;
@@ -367,19 +368,9 @@
 	}
 
 	.link-inner > div > label {
-		/*color: #000;*/
+		/*color: #000;*\/
 		color: #fff;
 		font-family: Arial, -apple-system-font;
-	}
-
-	img.icon {
-		height: auto;
-		/* XXX: small differences due to font bugs 
-		margin: -7px 6px -9px 5px; /*June*/
-		margin: 8px 6px -9px 5px; /*June*/
-		max-height: 30px;
-		min-width: 30px;
-		width: 30px;
 	}
 
 	p {
@@ -406,7 +397,7 @@
 		padding-bottom: 0px;
 		vertical-align: middle;
 		background: #222 !important;
-		/*color: rgba(255, 255, 255, 0.25) !important;*/
+		/*color: rgba(255, 255, 255, 0.25) !important;*\/
 	}
 
 	.link-disabled > a {
@@ -415,11 +406,11 @@
 
 	/*.icon-disabled {
 		opacity: 0.25;
-	}*/
+	}*\/
 
 	/*.link:link, .link:hover, .link:active {
 		background: #222 !important;
-	}*/
+	}*\/
 
 	.link-active {
 		background: #222 !important;
@@ -431,7 +422,7 @@
 
 	/*.repo-link > .link:link, .repo-link > .link:hover, .repo-link > .link:active {
 		background: #d9d9d9 !important;
-	}*/
+	}*\/
 
 	.repo-link > .link-active {
 		background: #d9d9d9 !important;
@@ -479,7 +470,7 @@
 
 	ul.is-unsupported:after, ul.is-unsupported:before {
 		background: rgba(255, 0, 0, 0.0);
-	}*/
+	}*\/
 
 	.support-text {
 		color: #000 !important;
@@ -508,7 +499,7 @@
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
 		color: #8e8e9f !important;
-		margin-top: 15px; /*June*/
+		margin-top: 15px; /*June*\/
 	}
 
 	.chevron-right {
@@ -516,7 +507,7 @@
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
 		color: #8e8e9f !important;
-		margin-top: 15px; /*June*/
+		margin-top: 15px; /*June*\/
 		margin-right: 25px;
 	}
 
@@ -525,14 +516,14 @@
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
 		color: #8e8e9f !important;
-		margin-top: 15px; /*June*/
+		margin-top: 15px; /*June*\/
 		margin-right: 25px;
 	}
 
 	ul.repo-link {
 		background: white !important;
 		border-top: 1px solid rgba(200, 199, 204, 0.5);
-		/*border-bottom: 1px solid rgba(200, 199, 204, 0.5);*/
+		/*border-bottom: 1px solid rgba(200, 199, 204, 0.5);*\/
 		border-bottom: 1px solid #c8c7cc;
 		margin-bottom: -9px;
 		position: relative;
@@ -553,15 +544,15 @@
 		display: block;
 		color: white;
 		font-family: Arial;
-		/*font-weight: bold;*/
+		/*font-weight: bold;*\/
 		position: fixed;
 		/*background: #090909;
-		border-radius: 10px;*/
+		border-radius: 10px;*\/
 		margin: 12.5px;
 		text-align: left;
-		/*width: calc(100vw - 25px);*/
+		/*width: calc(100vw - 25px);*\/
 		top: -50px;
-		/*opacity: 0.75;*/
+		/*opacity: 0.75;*\/
 		min-height: 50px;
 		transform: translateY(90px);
 		transition: transform 0.25s;
@@ -584,7 +575,7 @@
 		padding-left: 15px;
 		padding-right: 50px;
 		padding-top: 3px;
-		/*border-radius: 10px;*/
+		/*border-radius: 10px;*\/
 		color: white;
 		display: block;
 		line-height: 100%;
@@ -611,7 +602,7 @@
 	}
 
 	.ft-top {
-		/*margin-top: -3px !important;*/
+		/*margin-top: -3px !important;*\/
 		border-top-left-radius: 10px;
 		border-top-right-radius: 10px;
 	}
@@ -626,7 +617,7 @@
 		border-bottom-right-radius: 10px;
 	}
 
-	.ft-selected, /*.force-touch-link:link, */.force-touch-link:active, .force-touch-link:hover {
+	.ft-selected, /*.force-touch-link:link, *\/.force-touch-link:active, .force-touch-link:hover {
 		opacity: 1.0 !important;
 	}
 
@@ -638,7 +629,7 @@
 		color: #000;
 	}
 	
-}
+}*/
 
 /*
 static const int ButtonBarWidth_ = 60;

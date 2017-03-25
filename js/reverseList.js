@@ -33,7 +33,7 @@ OpenInBrowser = (function(item, replaceWithPackageLink = true) {
 		item.children('a').attr('href', 'depic' + packageLink + '');
 		
 		$('.package-right').each(function() {
-			$(this).html('Open In Safari');
+			$(this).html('Open in Safari');
 		});
 		
 	} else {
@@ -41,7 +41,7 @@ OpenInBrowser = (function(item, replaceWithPackageLink = true) {
 		item.children('a').attr('href', cydiaLink);
 		
 		$('.package-right').each(function() {
-			$(this).html('Open In Cydia');
+			$(this).html('Open in Cydia');
 		});
 		
 	}
