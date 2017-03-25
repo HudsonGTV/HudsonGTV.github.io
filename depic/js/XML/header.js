@@ -32,8 +32,8 @@ $(document).ready(function() {
 			$('.depiction').attr('version-min', compatibleVerMin);
 			$('.depiction').attr('version-max', compatibleVerMax);
 			
-			var supportedVersionMin = $('.depiction').data('version-min');
-			var supportedVersionMax = $('.depiction').data('version-max');
+			var supportedVersionMin = $('.depiction').attr('version-min');
+			var supportedVersionMax = $('.depiction').attr('version-max');
 			
 			if(iOS != false) {
 				
