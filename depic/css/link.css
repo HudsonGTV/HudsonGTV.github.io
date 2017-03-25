@@ -124,6 +124,10 @@ img.icon {
 	.link-active {
 		background: #222 !important;
 	}
+	
+	.link-fadeout {
+		transition: background 0.3s ease;
+	}
 
 	.repo-link {
 		margin-top: -1px;

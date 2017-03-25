@@ -131,12 +131,15 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 				if(isInFocus) {
 					setTimeout(function() {
 						selectedElement.blur();
+						selectedElement.addClass('link-fadeout');
 						selectedElement.removeClass('link-active');
-						//alert('Browser is in focus');
 						clearInterval(checkIfInFocus);
-					}, 150);
+						setTimeout(function() {
+							selectedElement.removeClass('link-fadeout');
+						}, 250);
+					}, 0);
 				}
-			}, 500);
+			}, 250);
 		}, timeout);
 	});
 
@@ -181,7 +184,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 		selectedElement = $(this);
 		
-		TouchSelectHightlight(selectedElement, 600);
+		TouchSelectHightlight(selectedElement, 500);
 		
 	});
 
