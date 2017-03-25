@@ -88,8 +88,6 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		iOS = 0;
 		fulliOS = '[Not iOS]';
 	}
-	
-	$('.is-supported-loading').removeClass('is-supported-loading');
 
 	addFooter = (function() {
 		

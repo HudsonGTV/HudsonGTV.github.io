@@ -30,7 +30,7 @@ $(document).ready(function() {
 			var compatibleString = $(xml).find('package>compatibility>displayedVer').text();
 			
 			$('.depiction').attr('version-min', compatibleVerMin);
-			$('.depiction').attr('version-min', compatibleVerMax);
+			$('.depiction').attr('version-max', compatibleVerMax);
 			
 			var supportedVersionMin = $('.depiction').data('version-min');
 			var supportedVersionMax = $('.depiction').data('version-max');
@@ -47,6 +47,8 @@ $(document).ready(function() {
 				$('.is-supported').removeClass('is-supported');
 				iOS = 0;
 			}
+			
+			$('.is-supported-loading').removeClass('is-supported-loading');
 			
 			document.title = packageName;
 			
