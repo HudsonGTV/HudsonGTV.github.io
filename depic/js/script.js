@@ -149,7 +149,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 		selectedElement = $(this);
 		
-		TouchSelectHightlight(selectedElement, 600);
+		TouchSelectHightlight(selectedElement, 800);
 		
 	});
 
