@@ -47,7 +47,7 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.9.0-r1';
+var repoVersionRaw = '2.9.0-r1+debug';
 var repoVersion = 'v' + repoVersionRaw;
 var repoVersionHex = '01FE411';
 
@@ -102,10 +102,12 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	});
 
 	TouchSelectHightlight = (function(selectedElement, timeout) {
-		setTimeout(function() {
-			selectedElement.blur();
-			selectedElement.removeClass('link-active');
-		}, timeout);
+		if(document.hasFocus()) {
+			setTimeout(function() {
+				selectedElement.blur();
+				selectedElement.removeClass('link-active');
+			}, timeout);
+		}
 	});
 
 	addFooter();
