@@ -47,7 +47,7 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.9.0-r1+debug';
+var repoVersionRaw = '2.9.0-r1+beta';
 var repoVersion = 'v' + repoVersionRaw;
 var repoVersionHex = '01FE411';
 
@@ -100,14 +100,44 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		);
 		
 	});
+	
+	var isInFocus = false;
+	var hidden, visibilityChange; 
+	
+	if(typeof document.hidden !== "undefined") {
+		hidden = "hidden";
+		visibilityChange = "visibilitychange";
+	} else if(typeof document.msHidden !== "undefined") {
+		hidden = "msHidden";
+		visibilityChange = "msvisibilitychange";
+	} else if(typeof document.webkitHidden !== "undefined") {
+		hidden = "webkitHidden";
+		visibilityChange = "webkitvisibilitychange";
+	}
+	
+	function handleVisibilityChange() {
+		if(document[hidden]) {
+			isInFocus = false;
+		} else {
+			isInFocus = true;
+		}
+	}
+	
+	document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
 	TouchSelectHightlight = (function(selectedElement, timeout) {
-		if(document.hasFocus()) {
-			setTimeout(function() {
-				selectedElement.blur();
-				selectedElement.removeClass('link-active');
-			}, timeout);
-		}
+		setTimeout(function() {
+			var checkIfInFocus = setInterval(function() {
+				if(isInFocus) {
+					setTimeout(function() {
+						selectedElement.blur();
+						selectedElement.removeClass('link-active');
+						alert('Browser is in focus');
+						clearInterval(checkIfInFocus);
+					}, 150);
+				}
+			}, 500);
+		}, timeout);
 	});
 
 	addFooter();
@@ -151,7 +181,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 		selectedElement = $(this);
 		
-		TouchSelectHightlight(selectedElement, 800);
+		TouchSelectHightlight(selectedElement, 600);
 		
 	});
 
