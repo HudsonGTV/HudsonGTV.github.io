@@ -46,6 +46,7 @@ var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
+var isInFocus = false;
 
 var repoVersionRaw = '2.9.1-r1';
 var repoVersion = 'v' + repoVersionRaw;
@@ -101,7 +102,6 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 	});
 	
-	var isInFocus = false;
 	var hidden, visibilityChange; 
 	
 	if(typeof document.hidden !== "undefined") {
@@ -137,7 +137,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 						setTimeout(function() {
 							selectedElement.removeClass('link-fadeout');
 						}, 400);
-					}, 0);
+					}, 50);
 				}
 			}, 250);
 		}, timeout);
