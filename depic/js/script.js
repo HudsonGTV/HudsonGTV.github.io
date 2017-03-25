@@ -136,7 +136,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 						clearInterval(checkIfInFocus);
 						setTimeout(function() {
 							selectedElement.removeClass('link-fadeout');
-						}, 300);
+						}, 400);
 					}, 0);
 				}
 			}, 250);
