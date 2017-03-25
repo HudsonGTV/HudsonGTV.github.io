@@ -47,9 +47,9 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
 
-var repoVersionRaw = '2.9.0-r1+beta';
+var repoVersionRaw = '2.9.1-r1';
 var repoVersion = 'v' + repoVersionRaw;
-var repoVersionHex = '01FE411';
+var repoVersionHex = '01FE475';
 
 var year = (new Date).getFullYear();
 
@@ -132,7 +132,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 					setTimeout(function() {
 						selectedElement.blur();
 						selectedElement.removeClass('link-active');
-						alert('Browser is in focus');
+						//alert('Browser is in focus');
 						clearInterval(checkIfInFocus);
 					}, 150);
 				}
