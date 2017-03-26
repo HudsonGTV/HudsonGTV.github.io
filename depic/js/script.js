@@ -46,7 +46,7 @@ var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
-var isInFocus = false;
+var isInFocus = true;
 
 var repoVersionRaw = '2.9.1-r1';
 var repoVersion = 'v' + repoVersionRaw;
@@ -123,10 +123,9 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		}
 	}
 	
-	//document.addEventListener(visibilityChange, handleVisibilityChange, false);
+	document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
 	TouchSelectHightlight = (function(selectedElement, timeout) {
-		document.addEventListener(visibilityChange, handleVisibilityChange, false);
 		setTimeout(function() {
 			var checkIfInFocus = setInterval(function() {
 				if(isInFocus) {
