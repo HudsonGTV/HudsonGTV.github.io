@@ -102,7 +102,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 	});
 	
-	var hidden, visibilityChange; 
+	var hidden, visibilityChange;
 	
 	if(typeof document.hidden !== "undefined") {
 		hidden = "hidden";
@@ -113,6 +113,9 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	} else if(typeof document.webkitHidden !== "undefined") {
 		hidden = "webkitHidden";
 		visibilityChange = "webkitvisibilitychange";
+	} else if(typeof document.mozHidden !== "undefined") {
+		hidden = "mozHidden";
+		visibilityChange = "mozvisibilitychange";
 	}
 	
 	function handleVisibilityChange() {
