@@ -46,7 +46,7 @@ var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
-var isInFocus = true;
+var isInFocus = false;
 
 var repoVersionRaw = '2.9.1-r1';
 var repoVersion = 'v' + repoVersionRaw;
