@@ -70,7 +70,7 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		a.title=a.title.split(" \u00b7 ")[0],
 		a.documentElement.classList.add("cydia"),
 		isInCydiaFrame = true,
-		isIsFocus = false
+		isInFocus = false
 	):a.documentElement.classList.remove("cydia","depiction");
 	
 })(document);
