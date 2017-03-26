@@ -46,7 +46,7 @@ var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
-var isInFocus = false;
+var isInFocus = true;
 
 var repoVersionRaw = '2.9.1-r2';
 var repoVersion = 'v' + repoVersionRaw;
@@ -69,7 +69,8 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 	navigator.userAgent.indexOf("Cydia") != -1 ? (
 		a.title=a.title.split(" \u00b7 ")[0],
 		a.documentElement.classList.add("cydia"),
-		isInCydiaFrame = true
+		isInCydiaFrame = true,
+		isIsFocus = false
 	):a.documentElement.classList.remove("cydia","depiction");
 	
 })(document);
@@ -179,18 +180,20 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 			
 			selectedElement.addClass('link-active');
 			
+			TouchSelectHightlight(selectedElement, 500);
+			
 		}
 		
 	});
 	
 	/* RUN ON TOUCH END */
-	$("a").parent().on(clickEnded, function(e) {
+	/*$("a").parent().on(clickEnded, function(e) {
 		
 		selectedElement = $(this);
 		
 		TouchSelectHightlight(selectedElement, 500);
 		
-	});
+	});*/
 
 })();
 
