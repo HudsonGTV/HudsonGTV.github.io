@@ -178,6 +178,8 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		
 		if(selectedElement.hasClass('link')) {
 			
+			$('.link-active').removeClass('link-active');
+			
 			selectedElement.addClass('link-active');
 			
 			TouchSelectHightlight(selectedElement, 500);
