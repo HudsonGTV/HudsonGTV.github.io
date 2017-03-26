@@ -1,5 +1,5 @@
 /**
-	TERRIBLY WRITTEN CONSOLE.LOG ALTERNATIVE
+	TERRIBLY WRITTEN CONSOLE.LOG() ALTERNATIVE
 **/
 
 var consoleEx = $(document);
@@ -46,7 +46,7 @@ var supportedVersionMinBug = $('.depiction').data('version-min-bug');
 var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 
 var isInCydiaFrame = false;
-var isInFocus = false;
+var isInFocus = true;
 
 var repoVersionRaw = '2.9.1-r1';
 var repoVersion = 'v' + repoVersionRaw;
@@ -123,9 +123,10 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 		}
 	}
 	
-	document.addEventListener(visibilityChange, handleVisibilityChange, false);
+	//document.addEventListener(visibilityChange, handleVisibilityChange, false);
 
 	TouchSelectHightlight = (function(selectedElement, timeout) {
+		document.addEventListener(visibilityChange, handleVisibilityChange, false);
 		setTimeout(function() {
 			var checkIfInFocus = setInterval(function() {
 				if(isInFocus) {
@@ -133,10 +134,10 @@ fulliOS = fulliOS.replace('undefined', '3_2').replace('_', '.').replace('_', '.'
 						selectedElement.blur();
 						selectedElement.addClass('link-fadeout');
 						selectedElement.removeClass('link-active');
-						clearInterval(checkIfInFocus);
 						setTimeout(function() {
 							selectedElement.removeClass('link-fadeout');
 						}, 400);
+						clearInterval(checkIfInFocus);
 					}, 50);
 				}
 			}, 250);
@@ -431,7 +432,7 @@ UserOpenedDevTools();
 
 $(document).keydown(function(event) {
 	
-	console.clear();
+	//console.clear();
 	setTimeout(console.clear.bind(console, '', '', ''));
 	
 	UserOpenedDevTools();
