@@ -52,7 +52,7 @@ img.icon {
 	height: auto;
 	/* XXX: small differences due to font bugs 
 	margin: -7px 6px -9px 5px; /*June*/
-	margin: 8px 6px -9px 5px; /*June*/
+	margin: 6px 6px 6px 6px; /*June*/
 	max-height: 30px;
 	min-width: 30px;
 	width: 30px;
@@ -67,7 +67,7 @@ img.icon {
 
 	a.link-inner {
 		display: block;
-		height: 47px;
+		height: 42px;
 	}
 
 	.link-inner > div {
@@ -78,7 +78,7 @@ img.icon {
 
 	.link-inner > div > label {
 		position: absolute;
-		margin-top: 14px;
+		margin-top: 12px;
 		/*color: #000;*/
 		color: #fff;
 		font-family: Arial, -apple-system-font;
