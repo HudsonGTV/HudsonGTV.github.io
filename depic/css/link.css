@@ -77,6 +77,8 @@ img.icon {
 	}
 
 	.link-inner > div > label {
+		position: absolute;
+		margin-top: 15px;
 		/*color: #000;*/
 		color: #fff;
 		font-family: Arial, -apple-system-font;
@@ -214,6 +216,7 @@ img.icon {
 	}
 
 	.right {
+		position: inherit !important;
 		float: right;
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
@@ -222,6 +225,7 @@ img.icon {
 	}
 
 	.chevron-right {
+		position: inherit !important;
 		float: right;
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
@@ -231,6 +235,7 @@ img.icon {
 	}
 
 	.info-right {
+		position: inherit !important;
 		float: right;
 		font-family: Arial, -apple-system-font;
 		font-weight: normal;
