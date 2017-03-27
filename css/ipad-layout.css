@@ -122,8 +122,8 @@ body {
 	position: fixed;
 	z-index: 500;
 	width: 75%;
-	min-width: calc(100% - 360px);
-	max-width: calc(100% - 374px);
+	min-width: calc(100% - 374px);
+	max-width: calc(100% - 360px);
 	height: 60px;
 	top: 0;
 	right: 0;
