@@ -48,7 +48,7 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 var isInCydiaFrame = false;
 var isInFocus = true;
 
-var repoVersionRaw = '2.9.1-r3+debug';
+var repoVersionRaw = '2.9.1-r3';
 var repoVersion = 'v' + repoVersionRaw;
 var repoVersionHex = '01FE477';
 
@@ -349,7 +349,7 @@ AlertKill = (function() {
 				});
 			}
 			
-			jQuery('body').bind('touchmove', function(e) { 
+			jQuery('#inner-body-wrapper').bind('touchmove', function(e) { 
 				e.preventDefault();
 			});
 			
@@ -360,7 +360,7 @@ AlertKill = (function() {
 	$('.force-touch-link').on(clickEnded, function() {
 		var selectedLink = $(this).attr('ft-href');
 		//if(selectedLink != undefined && selectedLink != '#') {
-		window.location.replace(selectedLink);
+		window.location.href = selectedLink, true;
 		//}
 	});
 	
