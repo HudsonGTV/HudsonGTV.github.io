@@ -288,7 +288,7 @@ AlertKill = (function() {
 		change: function(force, event) {
 			ForceTouchMenu(force, event);
 		}
-	}, {only: 'touch'});
+	}/*, {only: 'touch'}*/);
 	
 	ForceTouchMenu = (function(force, e) {
 			
@@ -303,7 +303,7 @@ AlertKill = (function() {
 				
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a href="index.html" class="force-touch-link ft-top ft-1">' +
+						'<a href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
@@ -315,9 +315,9 @@ AlertKill = (function() {
 							'<i class="forceTouchIcon fa fa-plus" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Add To Cydia</i>' +
 						'</a>' +
-						'<a onClick="KillAllMenus()" class="force-touch-link ft-bottom ft-4">' +
-							'<i class="forceTouchIcon fa fa-times" aria-hidden="true"></i>' +
-							'<i class="forceTouchText">Force Close</i>' +
+						'<a href="cydia://url/http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-bottom ft-4">' +
+							'<i class="forceTouchIcon fa fa-external-link" aria-hidden="true"></i>' +
+							'<i class="forceTouchText">Open In Cydia</i>' +
 						'</a>' +
 					'</div>'
 				);
