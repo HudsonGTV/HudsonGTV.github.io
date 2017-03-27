@@ -330,6 +330,8 @@ AlertKill = (function() {
 				$('#force-touch-popup').addClass('ft-open');
 				$('#force-touch-popup').show(250);
 				
+				$('#inner-body-wrapper').attr('onclick', 'KillAllMenus()');
+				
 				forceMenuExists = true;
 				window.navigator.vibrate(200);
 				
@@ -418,6 +420,7 @@ AlertKill = (function() {
 		}, 245);
 		
 		$('body').removeClass('ft-bg');
+		$('#inner-body-wrapper').removeAttr('onclick', '');
 		$('#inner-body-wrapper > .alert-blur.ft-blur').contents().unwrap();
 		
 		isAlreadyWrapped = false;

@@ -100,6 +100,10 @@ img.icon {
 		padding-bottom: 0px;
 		vertical-align: middle;
 	}
+	
+	label.link-no-click {
+		pointer-events: none;
+	}
 
 	.link-disabled {
 		text-align: left;
