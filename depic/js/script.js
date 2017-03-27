@@ -349,21 +349,13 @@ AlertKill = (function() {
 				});
 			}
 			
-			jQuery('#inner-body-wrapper').bind('touchmove', function(e) { 
+			jQuery('body').bind('touchmove', function(e) { 
 				e.preventDefault();
 			});
 			
 	});
 	
 	var tapped = false;
-	
-	$('.force-touch-link').on(clickEnded, function(e) {
-		var selectedLink = $(this).attr('ft-href');
-		//if(selectedLink != undefined && selectedLink != '#') {
-		$(location).href(selectedLink);
-		//}
-		e.preventDefault();
-	});
 	
 	$(".info-btn-main").on(clickStart, function(e) {
 		
@@ -440,6 +432,14 @@ AlertKill = (function() {
 	});
 	
 })();
+
+$('.force-touch-link').on(clickEnded, function(e) {
+	var selectedNavLink = $(this).attr('ft-href');
+	//if(selectedLink != undefined && selectedLink != '#') {
+	window.location.href = selectedNavLink;
+	//}
+	e.preventDefault();
+});
 
 UserOpenedDevTools = (function() {
 	
