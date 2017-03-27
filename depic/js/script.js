@@ -357,6 +357,13 @@ AlertKill = (function() {
 	
 	var tapped = false;
 	
+	$('.force-touch-link').on(clickEnded, function() {
+		var selectedLink = $(this).attr('href');
+		if(selectedLink != undefined && selectedLink != '#') {
+		   window.location.href = selectedLink;
+		}
+	});
+	
 	$(".info-btn-main").on(clickStart, function(e) {
 		
 		if(!tapped) { 							/* SINGLE TAP */
