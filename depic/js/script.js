@@ -48,7 +48,7 @@ var supportedVersionMaxBug = $('.depiction').data('version-max-bug');
 var isInCydiaFrame = false;
 var isInFocus = true;
 
-var repoVersionRaw = '2.9.1-r3+debug';
+var repoVersionRaw = '2.9.1-r3';
 var repoVersion = 'v' + repoVersionRaw;
 var repoVersionHex = '01FE477';
 
@@ -303,19 +303,19 @@ AlertKill = (function() {
 				
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
+						'<a ft-href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
-						'<a href="http://repo.hudsongreen.com/about" target="_popup" class="force-touch-link ft-middle ft-2">' +
+						'<a ft-href="http://repo.hudsongreen.com/about" target="_popup" class="force-touch-link ft-middle ft-2">' +
 							'<i class="forceTouchIcon fa fa-info-circle" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">About Us</i>' +
 						'</a>' +
-						'<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="force-touch-link ft-middle ft-3">' +
+						'<a ft-href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="force-touch-link ft-middle ft-3">' +
 							'<i class="forceTouchIcon fa fa-plus" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Add To Cydia</i>' +
 						'</a>' +
-						'<a href="cydia://url/http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-bottom ft-4">' +
+						'<a ft-href="cydia://url/http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-bottom ft-4">' +
 							'<i class="forceTouchIcon fa fa-external-link" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Open In Cydia</i>' +
 						'</a>' +
@@ -358,10 +358,10 @@ AlertKill = (function() {
 	var tapped = false;
 	
 	$('.force-touch-link').on(clickEnded, function() {
-		var selectedLink = $(this).attr('href');
-		if(selectedLink != undefined && selectedLink != '#') {
-		   window.location.href = selectedLink;
-		}
+		var selectedLink = $(this).attr('ft-href');
+		//if(selectedLink != undefined && selectedLink != '#') {
+		window.location.href = selectedLink;
+		//}
 	});
 	
 	$(".info-btn-main").on(clickStart, function(e) {
