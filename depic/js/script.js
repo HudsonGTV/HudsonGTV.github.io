@@ -303,19 +303,19 @@ AlertKill = (function() {
 				
 				$('body').append(
 					'<div id="force-touch-popup">' +
-						'<a ft-href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
+						'<a href="http://repo.hudsongreen.com/" class="force-touch-link ft-top ft-1">' +
 							'<i class="forceTouchIcon fa fa-home" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Home</i>' +
 						'</a>' +
-						'<a ft-href="http://repo.hudsongreen.com/about" target="_popup" class="force-touch-link ft-middle ft-2">' +
+						'<a href="http://repo.hudsongreen.com/about" target="_popup" class="force-touch-link ft-middle ft-2">' +
 							'<i class="forceTouchIcon fa fa-info-circle" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">About Us</i>' +
 						'</a>' +
-						'<a ft-href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="force-touch-link ft-middle ft-3">' +
+						'<a href="cydia://url/https://cydia.saurik.com/api/share#?source=http%3A%2F%2Frepo.hudsongreen.com/" target="_blank" class="force-touch-link ft-middle ft-3">' +
 							'<i class="forceTouchIcon fa fa-plus" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Add To Cydia</i>' +
 						'</a>' +
-						'<a ft-href="cydia://url/http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-bottom ft-4">' +
+						'<a href="cydia://url/http://repo.hudsongreen.com/" target="_blank" class="force-touch-link ft-bottom ft-4">' +
 							'<i class="forceTouchIcon fa fa-external-link" aria-hidden="true"></i>' +
 							'<i class="forceTouchText">Open In Cydia</i>' +
 						'</a>' +
@@ -432,14 +432,6 @@ AlertKill = (function() {
 	});
 	
 })();
-
-$('.force-touch-link').on(clickEnded, function(e) {
-	var selectedNavLink = $(this).attr('ft-href');
-	//if(selectedLink != undefined && selectedLink != '#') {
-	window.location.href = selectedNavLink;
-	//}
-	e.preventDefault();
-});
 
 UserOpenedDevTools = (function() {
 	
