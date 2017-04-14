@@ -1,6 +1,6 @@
 Package: com.hudsongreen.androidstatusbaricons
 Name: Android Statusbar Icons
-Size: 3718
+Size: 5478
 Version: 1.0.1-r1
 Architecture: iphoneos-arm
 Section: HKG_-_Themes
@@ -10,9 +10,9 @@ Depends: net.tateu.moveable9
 Description: Moveable 9 Statusbar Theme
 Filename: debs//Themes/AndroidStatusbarIcons/com.hudsongreen.androidstatusbaricons.deb
 Depiction: http://repo.hudsongreen.com/depic/?package=Themes/AndroidStatusbarIcons
-MD5sum: 60fd138a7117c684498995ef7be4b458
-SHA1: 4397b1d5cce270399926f8b641fd8ee86acb8d59
-SHA256: 52117ad07c7bf8d571a3f5b5f7170b5189f7b2bf1a503b1723dbd00b8b7f8827
+MD5sum: 81835606906edbdc681be08630326894
+SHA1: f27523663248b0f700f41b495ac38fe761ce0105
+SHA256: 853b5aa06e70d9131febf1b99d0bd427e31260df227b6a0bd5a9820c4261e13c
 Icon: file:///Library/HKG/PackageIcons/Themes/AndroidStatusbarIcons/Icon.png
 Tag: purpose::extension
 
