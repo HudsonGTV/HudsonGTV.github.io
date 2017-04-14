@@ -8,7 +8,7 @@ Author: Hudson Green <cydia@hudsongreen.com>
 Maintainer: Hudson Green <cydia@hudsongreen.com>
 Depends: net.tateu.moveable9
 Description: Moveable 9 Statusbar Theme
-Filename: debs//Themes/AndroidSettingsIcons/com.hudsongreen.androidstatusbaricons.deb
+Filename: debs//Themes/AndroidStatusbarIcons/com.hudsongreen.androidstatusbaricons.deb
 Depiction: http://repo.hudsongreen.com/depic/?package=Themes/AndroidStatusbarIcons
 MD5sum: 60fd138a7117c684498995ef7be4b458
 SHA1: 4397b1d5cce270399926f8b641fd8ee86acb8d59
