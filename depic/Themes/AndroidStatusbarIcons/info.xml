@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+
+<package>
+	
+	<id>AndroidStatusbarIcons</id>
+	<name>Android Statusbar Icons</name>
+	<version>1.0.1-r1</version>
+	<favicon>Themes/AndroidStatusbarIcons/icon.png</favicon>
+	
+	<compatibility>
+		<miniOS>9.0</miniOS>
+		<maxiOS>10.2</maxiOS>
+		<displayedVer>le; iOS 10.2</displayedVer>
+	</compatibility>
+	
+	<description>Android Statusbar Icons is a Moveable9 theme that themes the statusbar icons using the built-in theming in Moveable9. This tweak was made specifically for iOS 10 since Anemone doesn't properly theme the statusbar icons, but can be used on any version that supports Moveable9. To enable the icons, open the Settings app and navigate to "Moveable9 > Sort Order > SignalStrength (Cellular) > Display Type" and select "Theme Only." Then click the back button and click "Theme." Select "Android Cell." Repeat the same steps for "Android WiFi." You might need to tweak the padding to make the icons properly aligned, but other than that you should be good to go!</description>
+	
+	<screenshots>
+		<screenshot>Themes/AndroidStatusbarIcons/assets/screenshotOne.png</screenshot>
+		<screenshot>Themes/AndroidStatusbarIcons/assets/screenshotTwo.png</screenshot>
+		<screenshotCount>2</screenshotCount>
+	</screenshots>
+	
+	<changelog>
+		
+		<currentChanges>
+			<logVersion>1.0.1-r1</logVersion>
+			<listItem>Released to public</listItem>
+			<listItem>Fixed display bug</listItem>
+			<itemCount>2</itemCount>
+		</currentChanges>
+		
+		<olderChanges>
+			
+			<listCount>1</listCount>
+			
+			<changelogItem>
+				<logVersion>0.7.2</logVersion>
+				<listItem>Initial Release</listItem>
+				<itemCount>1</itemCount>
+			</changelogItem>
+			
+		</olderChanges>
+		
+		<issues>
+			<itemCount>0</itemCount>
+		</issues>
+		
+	</changelog>
+	
+</package>

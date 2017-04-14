@@ -1,0 +1,11 @@
+Package: com.hudsongreen.androidstatusbaricons
+Name: Android Statusbar Icons
+Version: 1.0.1-r1
+Architecture: iphoneos-arm
+Depends: net.tateu.moveable9
+Description: Moveable 9 Statusbar Theme
+Author: Hudson Green <cydia@hudsongreen.com>
+Section: HKG_-_Themes
+Homepage: http://repo.hudsongreen.com/
+Icon: file:///Library/HKG/PackageIcons/Themes/AndroidStatusbarIcons/Icon.png
+Tag: cydia::extension
