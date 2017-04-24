@@ -343,6 +343,12 @@ body.alert-body-bg {
 		display: inline;
 		color: #358;
 	}
+	
+	.screenshot-wrapper {
+		display: inline-block;
+		overflow: auto;
+		white-space: nowrap;
+	}
 
 /*}*/
 
