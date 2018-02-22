@@ -3,7 +3,7 @@ LoadIndexLinks = (function() {
 	$('.table-insert-after').after(
 		'<ul>' +
 			'<li class="link">' +
-				'<a href="changelog.html?package=" id="package-link" class="link-inner chevron">' +
+				'<a href="changelog?package=" id="package-link" class="link-inner chevron">' +
 					'<div>' +
 						'<img class="icon" src="../assets/changelog.png">' +
 						'<label>Recent Changes</label>' +
@@ -11,7 +11,7 @@ LoadIndexLinks = (function() {
 				'</a>' +
 			'</li>' +
 			'<li class="link">' +
-				'<a href="discussion.html?package=" id="package-link" class="link-inner chevron">' +
+				'<a href="discussion?package=" id="package-link" class="link-inner chevron">' +
 					'<div>' +
 						'<img class="icon" src="../assets/discussion.png">' +
 						'<label>Discussion</label>' +
